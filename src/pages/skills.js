@@ -1,14 +1,14 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 
-export default function Parcours() {
+export default function Skills() {
    return (
       <>
          <Head>
-            <title>Prime Van S: Parcours</title>
+            <title>Prime Van S: Compétences</title>
          </Head>
          <main>
-            <Title>PARCOURS</Title>
+            <Title>COMPETENCES</Title>
          </main>
       </>
    );
