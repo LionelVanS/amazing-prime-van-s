@@ -32,29 +32,29 @@ const NavLinks = [
    },
    {
       name: 'Parcours',
-      path: '/parcours',
+      path: '/career',
       subNav: [
          {
             name: 'Expériences',
-            path: '/parcours',
+            path: '/career',
          },
          {
             name: 'Formations',
-            path: '/parcours',
+            path: '/career',
          },
       ],
    },
    {
       name: 'Compétences',
-      path: '/competences',
+      path: '/skills',
       subNav: [
          {
             name: 'Techniques',
-            path: '/competences',
+            path: '/skills',
          },
          {
             name: 'Transversales',
-            path: '/competences',
+            path: '/skills',
          },
       ],
    },
