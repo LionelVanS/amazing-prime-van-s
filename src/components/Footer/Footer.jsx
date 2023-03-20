@@ -5,7 +5,7 @@ export default function Footer() {
       <StyledFooter>
          <StyledP>
             © 2023 - Lionel Van Schellebeck - Développeur Web - Javascript |
-            React / NextJS.
+            NextJS.
          </StyledP>
       </StyledFooter>
    );
