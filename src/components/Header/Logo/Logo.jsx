@@ -22,12 +22,13 @@ export default function Logo() {
 //STYLES
 const LogoDiv = styled.div`
    height: 100%;
-   margin-right: 4rem;
+   margin-right: 4vw;
    display: flex;
    align-items: center;
    justify-content: center;
 `;
 
 const Image = styled.img`
-   margin: auto;
+   width: 7.8vw;
+   height: 1.5vw;
 `;
