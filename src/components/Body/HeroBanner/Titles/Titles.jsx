@@ -12,6 +12,7 @@ export default function Titles({ title, secondPartTitle, subtitle }) {
    );
 }
 
+// STYLES
 const Title = styled.div`
    h1 {
       font-size: 2.5vw;
