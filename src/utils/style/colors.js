@@ -1,7 +1,6 @@
-const colors = {
-   background: '#00050d',
-   notHoveredText: '#aaaaaa',
-   backgroundHoveredText: '#191e25',
+export const colors = {
+   appBackground: '#00050d',
+   text: '#aaaaaa',
+   hoveredText: '#191e25',
+   spanBackground: '#33373d',
 };
-
-export default colors;

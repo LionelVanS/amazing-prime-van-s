@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-// IMPORTED UTILS
-import colors from '@/utils/style/colors';
+// UTILS
+import { colors } from '@/utils/style/colors';
 
 // IMPORTED COMPONENTS
 import Footer from '@/components/Footer/footer';
@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
       body {
           padding:0;
           margin:0;
-          background-color: ${colors.background};
+          background-color: ${colors.appBackground};
           font-family: 'Amazon Ember', sans-serif;
       }
 
@@ -48,7 +48,5 @@ const GlobalStyle = createGlobalStyle`
       ul {
          margin:0;
          padding:0;
-      }
-
-      
+      }      
     `;
