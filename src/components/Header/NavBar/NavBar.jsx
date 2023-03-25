@@ -1,4 +1,8 @@
+// LIBS
 import styled from 'styled-components';
+
+// LINKS
+import { navLinks } from '@/utils/data/NavLinks';
 
 // IMPORTED COMPONENTS
 import NavBarItem from './NavBarItem/NavBarItem';
@@ -8,7 +12,7 @@ export default function NavBar() {
    return (
       <Nav>
          <ul>
-            {NavLinks.map((link, index) => (
+            {navLinks.map((link, index) => (
                <NavBarItem key={index} link={link} />
             ))}
          </ul>
@@ -23,53 +27,3 @@ const Nav = styled.nav`
       align-items: center;
    }
 `;
-
-// LINKS
-const NavLinks = [
-   {
-      name: 'Accueil',
-      path: '/',
-   },
-   {
-      name: 'Parcours',
-      path: '/career',
-      subNav: [
-         {
-            name: 'Expériences',
-            path: '/career',
-         },
-         {
-            name: 'Formations',
-            path: '/career',
-         },
-      ],
-   },
-   {
-      name: 'Compétences',
-      path: '/skills',
-      subNav: [
-         {
-            name: 'Techniques',
-            path: '/skills',
-         },
-         {
-            name: 'Transversales',
-            path: '/skills',
-         },
-      ],
-   },
-   {
-      name: 'Portfolios',
-      path: '/portfolios',
-      subNav: [
-         {
-            name: 'Développement',
-            path: '/portfolios',
-         },
-         {
-            name: 'Photo',
-            path: '/portfolios',
-         },
-      ],
-   },
-];
