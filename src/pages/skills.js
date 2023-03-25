@@ -1,6 +1,13 @@
+// LIBS
 import Head from 'next/head';
-import styled from 'styled-components';
 
+// DATA
+import { skillsPageData } from '@/utils/data/HeroBannerData';
+
+// IMPORTED COMPONENTS
+import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
+
+// EXPORTED COMPONENT
 export default function Skills() {
    return (
       <>
@@ -8,13 +15,8 @@ export default function Skills() {
             <title>Prime Van S: Compétences</title>
          </Head>
          <main>
-            <Title>COMPETENCES</Title>
+            <HeroBanner data={skillsPageData} />
          </main>
       </>
    );
 }
-
-const Title = styled.h1`
-   color: white;
-   text-align: center;
-`;

@@ -1,6 +1,9 @@
 // LIBS
 import Head from 'next/head';
 
+// DATA
+import { portfolioPageData } from '@/utils/data/HeroBannerData';
+
 // IMPORTED COMPONENTS
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 
@@ -12,17 +15,8 @@ export default function Portfolio() {
             <title>Prime Van S: Portfolios</title>
          </Head>
          <main>
-            <HeroBanner data={InfoCardData} />
+            <HeroBanner data={portfolioPageData} />
          </main>
       </>
    );
 }
-
-// DATA
-const InfoCardData = {
-   title: 'Lionel VAN SCHELLEBECK',
-   subtitle: "Le développeur qu'il vous faut",
-   technologies: 'Javascript | React',
-   image: '/assets/images/homepage-background.jpg',
-   link: '/',
-};

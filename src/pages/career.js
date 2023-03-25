@@ -1,6 +1,13 @@
+// LIBS
 import Head from 'next/head';
-import styled from 'styled-components';
 
+// DATA
+import { careerPageData } from '@/utils/data/HeroBannerData';
+
+// IMPORTED COMPONENTS
+import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
+
+// EXPORTED COMPONENT
 export default function Career() {
    return (
       <>
@@ -8,13 +15,8 @@ export default function Career() {
             <title>Prime Van S: Parcours</title>
          </Head>
          <main>
-            <Title>PARCOURS</Title>
+            <HeroBanner data={careerPageData} />
          </main>
       </>
    );
 }
-
-const Title = styled.h1`
-   color: white;
-   text-align: center;
-`;
