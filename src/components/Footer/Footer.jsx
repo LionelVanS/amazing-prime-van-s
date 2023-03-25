@@ -5,7 +5,7 @@ export default function Footer() {
       <StyledFooter>
          <StyledP>
             © 2023 - Lionel Van Schellebeck - Développeur Web - Javascript |
-            NextJS.
+            React.
          </StyledP>
       </StyledFooter>
    );
@@ -20,4 +20,5 @@ const StyledFooter = styled.footer`
 `;
 const StyledP = styled.p`
    text-align: center;
+   font-size: 1vw;
 `;
