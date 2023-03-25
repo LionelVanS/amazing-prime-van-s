@@ -1,8 +1,12 @@
+// LIBS
 import styled from 'styled-components';
+
+// UTILS
+import { devices } from '../../utils/style/breakpoints';
 
 // IMPORTED COMPONENTS
 import NavBar from './NavBar/NavBar';
-import SearchIcon from './Icons/SearchIcon/SearchIcon';
+import SearchIcon from './Icons/SearchIcon';
 import ProfilUser from './ProfilUser/ProfilUser';
 import Logo from './Logo/Logo';
 
@@ -20,8 +24,9 @@ export default function Header() {
 
 //STYLES
 const StyledHeader = styled.header`
-   height: 4rem;
+   height: 3.5vw;
+   margin: auto;
    display: flex;
-   justify-content: center;
    align-items: center;
+   justify-content: center;
 `;
