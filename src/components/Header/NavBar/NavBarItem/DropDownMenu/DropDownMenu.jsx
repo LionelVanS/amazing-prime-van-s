@@ -1,6 +1,9 @@
-import colors from '@/utils/style/colors';
+// LIBS
 import Link from 'next/link';
 import styled from 'styled-components';
+
+// UTILS
+import { colors } from '@/utils/style/colors';
 
 // EXPORTED COMPONENT
 export default function DropDownMenu({ link, setOpenLink }) {
@@ -30,11 +33,13 @@ export default function DropDownMenu({ link, setOpenLink }) {
 
 // STYLES
 const DropDownMenuDiv = styled.div`
-   background-color: ${colors.backgroundHoveredText};
+   background-color: ${colors.hoveredText};
    position: absolute;
+   top: 3.5vw;
    right: 0;
    left: 0;
    border-radius: 0 0 0.5rem 0.5rem;
+   z-index: 2;
    overflow: hidden;
    ul {
       display: flex;
@@ -48,9 +53,9 @@ const DropDownMenuDiv = styled.div`
             transition: none;
          }
          :hover {
-            background-color: white !important;
+            background-color: white;
             a {
-               color: black !important;
+               color: black;
             }
          }
       }
