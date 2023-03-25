@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+// EXPORTED COMPONENT
 export default function ArrowIcon() {
    return (
       <>
@@ -21,5 +20,3 @@ export default function ArrowIcon() {
       </>
    );
 }
-
-// STYLES
