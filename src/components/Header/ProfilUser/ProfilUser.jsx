@@ -1,6 +1,10 @@
+// LIBS
 import Image from 'next/image';
 import styled from 'styled-components';
-import colors from '@/utils/style/colors';
+
+// UTILS
+import { colors } from '@/utils/style/colors';
+import { devices } from '@/utils/style/breakpoints';
 
 // REACT HOOKS
 import { useState } from 'react';
@@ -17,7 +21,7 @@ export default function ProfilUser() {
          onMouseOver={() => setUserMenuIsOpen(true)}
          onMouseOut={() => setUserMenuIsOpen(false)}
       >
-         <p>Van Schellebeck Lionel</p>
+         <p>Lionel</p>
          <Image
             src="/assets/images/profil-picture.jpg"
             alt="Image de profil"
@@ -31,7 +35,7 @@ export default function ProfilUser() {
 
 // STYLES
 const ProfilDiv = styled.div`
-   height: 100%;
+   height: 3.5vw;
    display: flex;
    align-items: center;
    cursor: pointer;
@@ -41,14 +45,22 @@ const ProfilDiv = styled.div`
       box-shadow: inset 0 -1rem 1rem -1.5rem black;
    }
    > p {
-      font-size: 20px;
+      font-size: 1vw;
       font-weight: 450;
       margin: 0;
-      color: ${colors.notHoveredText};
-      padding: 1rem;
+      padding-left: 1vw;
+      color: ${colors.text};
    }
    > img {
+      width: 2.3vw;
+      height: 2.3vw;
       border-radius: 50%;
-      margin-right: 1rem !important;
+      margin: 0 1vw;
+   }
+
+   @media (${devices.tablet}) {
+      > p {
+         display: none;
+      }
    }
 `;
