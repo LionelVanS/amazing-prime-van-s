@@ -1,19 +1,18 @@
 // LIBS
 import styled from 'styled-components';
-import Link from 'next/link';
-import colors from '@/utils/style/colors';
+
+// UTILS
+import { colors } from '@/utils/style/colors';
 
 // REACT HOOKS
-import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 // IMPORTED COMPONENTS
-import ArrowIcon from '../../Icons/ArrowIcon/ArrowIcon';
 import DropDownMenu from './DropDownMenu/DropDownMenu';
+import NavLink from './NavLink/NavLink';
 
 // EXPORTED COMPONENT
 export default function NavBarItem({ link }) {
-   const router = useRouter();
    const [openLink, setOpenLink] = useState('');
 
    return (
@@ -21,13 +20,7 @@ export default function NavBarItem({ link }) {
          onMouseOver={() => setOpenLink(link.name)}
          onMouseOut={() => setOpenLink('')}
       >
-         <Link
-            href={link.path}
-            className={router.pathname == link.path ? 'active' : ''}
-         >
-            {link.name}
-            <ArrowIcon />
-         </Link>
+         <NavLink link={link} />
          {openLink == link.name ? (
             <DropDownMenu link={link} setOpenLink={setOpenLink} />
          ) : (
@@ -40,18 +33,22 @@ export default function NavBarItem({ link }) {
 // STYLES
 const NavItem = styled.li`
    position: relative;
+   margin-bottom: 0;
    a {
-      height: 4rem;
+      height: 3.5vw;
       padding: 1rem;
-      font-size: 20px;
+      font-size: 1vw;
       font-weight: 450;
-      color: ${colors.notHoveredText};
+      color: ${colors.text};
       transition: color 150ms linear;
       display: flex;
+      align-items: center;
+      line-height: 1px;
       :hover {
          color: white;
       }
       svg {
+         width: 1vw;
          transition: transform 150ms ease-in-out;
       }
    }
@@ -65,11 +62,12 @@ const NavItem = styled.li`
 
    .active::after {
       content: '';
+      z-index: 3;
       width: 100%;
-      height: 0.2rem;
+      height: 0.2vw;
       position: absolute;
       bottom: 0;
-      left: 0%;
+      left: 0;
       background-color: white;
    }
 `;
