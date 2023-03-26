@@ -8,7 +8,7 @@ export default function Logo() {
          <LogoDiv>
             <Link href="/">
                <Image
-                  src="/assets/images/logo.png"
+                  src="/images/logo.png"
                   alt="logo prime van s"
                   width="104"
                   height="20"

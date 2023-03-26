@@ -1,6 +1,6 @@
 // IMPORT STATIC IMAGE
-import homeBackground from '../../../public/assets/images/homepage-background.jpg';
-import careerBackground from '../../../public/assets/images/careerpage-background.jpg';
+import homeBackground from '../../../public/images/homepage-background.jpg';
+import careerBackground from '../../../public/images/careerpage-background.jpg';
 
 // EXPORTED HOME PAGE DATA
 export const homePageData = {

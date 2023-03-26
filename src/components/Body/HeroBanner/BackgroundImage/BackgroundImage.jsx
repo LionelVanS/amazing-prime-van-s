@@ -6,7 +6,7 @@ import styled from 'styled-components';
 export default function BackgroundImage({ image }) {
    return (
       <ImageDiv>
-         <Image src={image} alt="background" />
+         <Image src={image} alt="background" width="2500" height="1667" />
       </ImageDiv>
    );
 }

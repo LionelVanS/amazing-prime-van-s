@@ -23,7 +23,7 @@ export default function ProfilUser() {
       >
          <p>Lionel</p>
          <Image
-            src="/assets/images/profil-picture.jpg"
+            src="/images/profil-picture.jpg"
             alt="Image de profil"
             width="40"
             height="40"
