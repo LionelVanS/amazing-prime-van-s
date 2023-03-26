@@ -39,7 +39,6 @@ export default function HeroBanner({ data }) {
 const ContainerSection = styled.section`
    width: 93vw;
    height: 31vw;
-   margin: auto;
    padding-left: 3.5vw;
    border-radius: 0.5rem;
    overflow: hidden;
