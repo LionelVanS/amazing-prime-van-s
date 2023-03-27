@@ -17,7 +17,7 @@ export default function HeroBanner({ data }) {
 
    return (
       <>
-         <ContainerSection>
+         <HeroBannerSection>
             <ContentDiv>
                <Titles
                   title={title}
@@ -30,15 +30,16 @@ export default function HeroBanner({ data }) {
                {link ? <AboutLink link={link} /> : ''}
             </AboutDiv>
             <BackgroundImage image={image} />
-         </ContainerSection>
+         </HeroBannerSection>
       </>
    );
 }
 
 // STYLES
-const ContainerSection = styled.section`
+const HeroBannerSection = styled.section`
    width: 93vw;
    height: 31vw;
+   margin: 0 3.5vw;
    padding-left: 3.5vw;
    border-radius: 0.5rem;
    overflow: hidden;
