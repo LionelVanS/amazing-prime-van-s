@@ -1,8 +1,8 @@
 // LIBS
 import Head from 'next/head';
 
-// DATA
-import { careerPageData } from '@/utils/data/HeroBannerData';
+// IMPORT STATIC IMAGE
+import careerBackground from '../../public/images/careerpage-background.jpg';
 
 // IMPORTED COMPONENTS
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
@@ -15,8 +15,16 @@ export default function Career() {
             <title>Prime Van S: Parcours</title>
          </Head>
          <main>
-            <HeroBanner data={careerPageData} />
+            <HeroBanner data={HeroBannerData} />
          </main>
       </>
    );
 }
+
+// DATA
+export const HeroBannerData = {
+   title: 'Mon Parcours',
+   subtitle: "Suivez l'histoire de ma vie !",
+   image: careerBackground,
+   link: '/',
+};
