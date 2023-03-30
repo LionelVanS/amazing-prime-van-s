@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // IMPORTED COMPONENT
-import ArrowIcon from '../../../Icons/ArrowIcon';
+import ArrowIcon from '../../../../Icons/ArrowIcon';
 
 // EXPORTED COMPONENT
 export default function NavLink({ link }) {
