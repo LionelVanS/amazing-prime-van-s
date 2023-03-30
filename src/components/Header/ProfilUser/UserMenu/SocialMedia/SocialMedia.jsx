@@ -7,7 +7,12 @@ export default function SocialMedia({ mediaLinks }) {
       <>
          <p>Réseaux</p>
          {mediaLinks.map((link, index) => (
-            <Link key={index} href={link.url}>
+            <Link
+               key={index}
+               href={link.url}
+               target="_blank"
+               rel="noopener noreferrer"
+            >
                {link.name}
             </Link>
          ))}
