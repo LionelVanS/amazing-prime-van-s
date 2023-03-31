@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { colors } from '@/utils/style/colors';
 
 // IMPORTED COMPONENT
-import TickIcon from '../../Icons/TickIcon';
+import TickIcon from '../../../Icons/TickIcon';
 
 // EXPORTED COMPONENT
 export default function AboutTech({ technologies }) {
@@ -23,9 +23,6 @@ export default function AboutTech({ technologies }) {
 // STYLES
 const IncludeDiv = styled.div`
    display: flex;
-   > svg {
-      width: 1.5vw;
-   }
    p {
       font-size: 1vw;
       margin-left: 1rem;
