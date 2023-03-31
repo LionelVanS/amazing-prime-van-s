@@ -8,12 +8,9 @@ import AboutLink from './AboutLink/AboutLink';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
 
 // EXPORTED COMPONENT
-export default function HeroBanner({ data }) {
-   if (!data) {
-      return;
-   }
-
-   const { title, secondPartTitle, subtitle, technologies, image, link } = data;
+export default function HeroBanner({ datas }) {
+   const { title, secondPartTitle, subtitle, technologies, image, link } =
+      datas;
 
    return (
       <>
@@ -37,9 +34,7 @@ export default function HeroBanner({ data }) {
 
 // STYLES
 const HeroBannerSection = styled.section`
-   width: 93vw;
    height: 31vw;
-   margin: 0 3.5vw;
    padding-left: 3.5vw;
    border-radius: 0.5rem;
    overflow: hidden;
