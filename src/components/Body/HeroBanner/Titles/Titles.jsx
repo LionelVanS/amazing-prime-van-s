@@ -4,7 +4,7 @@ export default function Titles({ title, secondPartTitle, subtitle }) {
    return (
       <>
          <Title>
-            <h1>{title} </h1>
+            <h1>{title}</h1>
             {secondPartTitle ? <h1>{secondPartTitle}</h1> : ''}
             <h2>{subtitle}</h2>
          </Title>
@@ -21,9 +21,5 @@ const Title = styled.div`
    h2 {
       font-size: 1.3vw;
       margin: 0 0 2rem 0;
-   }
-   h1,
-   h2 {
-      color: white;
    }
 `;
