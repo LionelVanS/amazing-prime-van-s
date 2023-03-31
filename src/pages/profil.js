@@ -5,7 +5,7 @@ import Head from 'next/head';
 // IMPORTED COMPONENTS
 
 // EXPORTED COMPONENT
-export default function Home() {
+export default function Profil() {
    return (
       <>
          <Head>
