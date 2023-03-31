@@ -3,7 +3,7 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 // IMPORTED COMPONENTS
-import PlayIcon from '../../Icons/PlayIcon';
+import PlayIcon from '../../../Icons/PlayIcon';
 
 // EXPORTED COMPONENT
 export default function AboutLink({ link }) {
@@ -20,12 +20,6 @@ export default function AboutLink({ link }) {
 const AboutLinkDiv = styled.div`
    a {
       display: flex;
-      svg {
-         width: 5vw;
-         transition: transform 75ms linear;
-         :hover {
-            transform: scale(1.1);
-         }
       }
       p {
          font-size: 2vw;
