@@ -41,7 +41,7 @@ const ProfilDiv = styled.div`
    cursor: pointer;
    position: relative;
    &:hover {
-      background-color: #191e25;
+      background-color: ${colors.lightGreyBackground};
       box-shadow: inset 0 -1rem 1rem -1.5rem black;
    }
    > p {

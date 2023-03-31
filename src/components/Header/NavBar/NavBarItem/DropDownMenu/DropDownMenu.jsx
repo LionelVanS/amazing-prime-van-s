@@ -33,7 +33,7 @@ export default function DropDownMenu({ link, setOpenLink }) {
 
 // STYLES
 const DropDownMenuDiv = styled.div`
-   background-color: ${colors.hoveredText};
+   background-color: ${colors.lightGreyBackground};
    position: absolute;
    top: 3.5vw;
    right: 0;

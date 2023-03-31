@@ -53,7 +53,7 @@ const NavItem = styled.li`
       }
    }
    :hover {
-      background-color: #191e25;
+      background-color: ${colors.lightGreyBackground};
       box-shadow: inset 0 -1rem 1rem -1.5rem black;
       svg {
          transform: rotate(180deg);
