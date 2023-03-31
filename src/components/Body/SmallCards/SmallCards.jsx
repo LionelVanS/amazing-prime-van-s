@@ -27,7 +27,7 @@ export default function smallCards({ datas, isHoveredCards }) {
 // STYLES
 
 const CardsContainer = styled.div`
-   height: ${(props) => (props.isHoveredCard ? '30vw' : '')};
+   height: ${(props) => (props.isHoveredCards ? '30vw' : '')};
    display: grid;
    grid-template-columns: repeat(5, 1fr);
    grid-auto-rows: min-content;
