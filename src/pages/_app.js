@@ -1,3 +1,5 @@
+// LIBS
+import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 
 // UTILS
@@ -6,7 +8,6 @@ import { colors } from '@/utils/style/colors';
 // IMPORTED COMPONENTS
 import Footer from '@/components/Footer/footer';
 import Header from '@/components/Header/Header';
-import Head from 'next/head';
 
 // EXPORTED COMPONENT
 export default function App({ Component, pageProps }) {
@@ -30,7 +31,7 @@ export default function App({ Component, pageProps }) {
 const GlobalStyle = createGlobalStyle`
       html,
       body {
-          padding:0;
+          padding:0 1.5vw;
           margin:0;
           background-color: ${colors.appBackground};
           @font-face {
@@ -45,21 +46,23 @@ const GlobalStyle = createGlobalStyle`
       * {
          box-sizing: border-box;
       }
-
-      main {
-         margin: 0 3.5vw;
+      h1,h2, p, a {
+         color:#fff;
       }
-
+      h2 {
+         margin: 2.5vw 0 1vw 0;
+         font-size: 1.5vw;
+      }
       li {
           list-style-type: none;
       }
 
       a {
-         color: white;
+         color: #fff;
          text-decoration: none;
       }
       p {
-         color: white;
+         color: #fff;
       }
 
       ul {
