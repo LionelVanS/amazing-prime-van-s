@@ -57,11 +57,15 @@ const navLinks = [
       subNav: [
          {
             name: 'Techniques',
-            path: '/skills',
+            path: '/skills#technical-skills',
          },
          {
             name: 'Transversales',
-            path: '/skills',
+            path: '/skills#transferable-skills',
+         },
+         {
+            name: 'Soft Skills',
+            path: '/skills#soft-skills',
          },
       ],
    },
