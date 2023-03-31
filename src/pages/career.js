@@ -15,7 +15,7 @@ export default function Career() {
             <title>Prime Van S: Parcours</title>
          </Head>
          <main>
-            <HeroBanner data={HeroBannerData} />
+            <HeroBanner datas={HeroBannerData} />
          </main>
       </>
    );
