@@ -1,17 +1,11 @@
-// LIBS
 import Head from 'next/head';
-
-// IMPORTED STATIC IMAGES
 import homeBackground from '../../public/images/homepage-background.jpg';
 import skillSmallCardsBg from '../../public/images/small-cards-skills.jpg';
 import careerSmallCardsBg from '../../public/images/small-cards-career.jpg';
 import portfolioSmallCardsBg from '../../public/images/small-cards-portfolio.jpg';
-
-// IMPORTED COMPONENTS
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import SmallCards from '@/components/Body/SmallCards/SmallCards';
 
-// EXPORTED COMPONENT
 export default function Home() {
    return (
       <>
@@ -29,7 +23,6 @@ export default function Home() {
    );
 }
 
-// DATAS
 const HeroBannerData = {
    title: 'Lionel',
    secondPartTitle: 'VAN SCHELLEBECK',

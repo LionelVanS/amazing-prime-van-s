@@ -1,15 +1,11 @@
-// LIBS
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 
-// IMPORTED COMPONENTS
 import Footer from '@/components/Footer/footer';
 import Header from '@/components/Header/Header';
 
-// EXPORTED COMPONENT
 export default function App({ Component, pageProps }) {
    return (
       <>
@@ -27,7 +23,6 @@ export default function App({ Component, pageProps }) {
    );
 }
 
-// STYLES
 const GlobalStyle = createGlobalStyle`
       html,
       body {
@@ -37,10 +32,10 @@ const GlobalStyle = createGlobalStyle`
           @font-face {
             font-family: Amazon-Ember;
             src: url(./font/AmazonEmber.woff2);
+            font-display: swap;
           }
 
           font-family: 'Amazon-Ember', sans-serif;
-
       }
 
       * {

@@ -1,8 +1,6 @@
-// LIBS
 import Head from 'next/head';
 import styled from 'styled-components';
-
-// IMPORTED STATIC
+import SmallCards from '../components/Body/SmallCards/SmallCards';
 import bg1 from '../../public/images/stack/1.jpg';
 import bg2 from '../../public/images/stack/2.jpg';
 import bg3 from '../../public/images/stack/3.jpg';
@@ -10,10 +8,6 @@ import bg4 from '../../public/images/stack/4.jpg';
 import bg5 from '../../public/images/stack/5.jpg';
 import bg6 from '../../public/images/stack/6.jpg';
 
-// IMPORTED COMPONENTS
-import SmallCards from '../components/Body/SmallCards/SmallCards';
-
-// EXPORTED COMPONENT
 export default function Skills() {
    return (
       <>
@@ -47,7 +41,6 @@ const H1 = styled.h1`
    margin: 2vw 0 0 0;
 `;
 
-// DATAS
 const hardSkillsData = [
    { title: 'HTML', image: bg1 },
    { title: 'CSS', image: bg2 },
