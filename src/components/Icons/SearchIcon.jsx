@@ -1,7 +1,5 @@
-// LIBS
 import styled from 'styled-components';
 
-// EXPORTED COMPONENT
 export default function SearchIcon() {
    return (
       <>
@@ -23,7 +21,6 @@ export default function SearchIcon() {
    );
 }
 
-// STYLES
 const SearchIconDiv = styled.div`
    height: 100%;
    width: 4vw;

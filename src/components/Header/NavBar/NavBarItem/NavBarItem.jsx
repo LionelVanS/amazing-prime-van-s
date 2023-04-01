@@ -1,17 +1,12 @@
-// LIBS
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 
-// REACT HOOKS
 import { useState } from 'react';
 
-// IMPORTED COMPONENTS
 import DropDownMenu from './DropDownMenu/DropDownMenu';
 import NavLink from './NavLink/NavLink';
 
-// EXPORTED COMPONENT
 export default function NavBarItem({ link }) {
    const [openLink, setOpenLink] = useState('');
 
@@ -30,7 +25,6 @@ export default function NavBarItem({ link }) {
    );
 }
 
-// STYLES
 const NavItem = styled.li`
    position: relative;
    margin-bottom: 0;

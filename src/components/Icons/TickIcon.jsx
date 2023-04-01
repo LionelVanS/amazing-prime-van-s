@@ -1,7 +1,5 @@
-// LIBS
 import styled from 'styled-components';
 
-// EXPORTED COMPONENT
 export default function TickIcon() {
    return (
       <Icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -14,7 +12,6 @@ export default function TickIcon() {
    );
 }
 
-// STYLES
 const Icon = styled.svg`
    width: 1.5vw;
 `;

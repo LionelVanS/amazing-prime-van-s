@@ -1,11 +1,8 @@
-// LIBS
 import Link from 'next/link';
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 
-// EXPORTED COMPONENT
 export default function DropDownMenu({ link, setOpenLink }) {
    const subMenuLinks = link.subNav;
 
@@ -31,7 +28,6 @@ export default function DropDownMenu({ link, setOpenLink }) {
    );
 }
 
-// STYLES
 const DropDownMenuDiv = styled.div`
    background-color: ${colors.lightGreyBackground};
    position: absolute;

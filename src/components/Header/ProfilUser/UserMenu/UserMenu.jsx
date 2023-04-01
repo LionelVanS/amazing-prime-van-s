@@ -1,14 +1,10 @@
-// LIBS
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 
-// IMPORTED COMPONENTS
 import ContactInfo from './ContactInfo/ContactInfo';
 import SocialMedia from './SocialMedia/SocialMedia';
 
-// EXPORTED COMPONENT
 export default function UserMenu() {
    return (
       <UserMenuDiv>
@@ -23,7 +19,6 @@ export default function UserMenu() {
    );
 }
 
-// STYLES
 const UserMenuDiv = styled.div`
    position: absolute;
    padding: 1rem;

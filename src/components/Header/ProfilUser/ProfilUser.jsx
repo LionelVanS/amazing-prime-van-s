@@ -1,18 +1,13 @@
-// LIBS
 import Image from 'next/image';
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 import { devices } from '@/utils/style/breakpoints';
 
-// REACT HOOKS
 import { useState } from 'react';
 
-// IMPORTED COMPONENT
 import UserMenu from './UserMenu/UserMenu';
 
-// EXPORTED COMPONENT
 export default function ProfilUser() {
    const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
 
@@ -33,7 +28,6 @@ export default function ProfilUser() {
    );
 }
 
-// STYLES
 const ProfilDiv = styled.div`
    height: 3.5vw;
    display: flex;

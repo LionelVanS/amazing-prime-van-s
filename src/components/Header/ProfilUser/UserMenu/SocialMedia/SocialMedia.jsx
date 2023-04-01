@@ -1,7 +1,5 @@
-// LIBS
 import Link from 'next/link';
 
-// EXPORTED COMPONENT
 export default function SocialMedia({ mediaLinks }) {
    return (
       <>

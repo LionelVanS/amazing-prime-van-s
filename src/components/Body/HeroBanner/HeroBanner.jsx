@@ -1,13 +1,9 @@
-// LIBS
 import styled from 'styled-components';
-
-// IMPORTED COMPONENTS
 import Titles from './Titles/Titles';
 import AboutTech from './AboutTech/AboutTech';
 import AboutLink from './AboutLink/AboutLink';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
 
-// EXPORTED COMPONENT
 export default function HeroBanner({ datas }) {
    const { title, secondPartTitle, subtitle, technologies, image, link } =
       datas;
@@ -15,24 +11,25 @@ export default function HeroBanner({ datas }) {
    return (
       <>
          <HeroBannerSection>
-            <ContentDiv>
+            <TitleDiv>
                <Titles
                   title={title}
                   secondPartTitle={secondPartTitle}
                   subtitle={subtitle}
                />
-            </ContentDiv>
+            </TitleDiv>
             <AboutDiv>
                {technologies ? <AboutTech technologies={technologies} /> : ''}
                {link ? <AboutLink link={link} /> : ''}
             </AboutDiv>
-            <BackgroundImage image={image} />
+            <BackgroundDiv>
+               <BackgroundImage image={image} />
+            </BackgroundDiv>
          </HeroBannerSection>
       </>
    );
 }
 
-// STYLES
 const HeroBannerSection = styled.section`
    height: 31vw;
    padding-left: 3.5vw;
@@ -41,7 +38,7 @@ const HeroBannerSection = styled.section`
    position: relative;
 `;
 
-const ContentDiv = styled.div`
+const TitleDiv = styled.div`
    z-index: 1;
    position: absolute;
    top: 4vw;
@@ -51,4 +48,15 @@ const AboutDiv = styled.div`
    z-index: 1;
    position: absolute;
    bottom: 6vw;
+`;
+
+const BackgroundDiv = styled.div`
+   position: absolute;
+   right: 0;
+   bottom: -50px;
+   left: 0;
+   img {
+      width: 100%;
+      height: 100%;
+   }
 `;

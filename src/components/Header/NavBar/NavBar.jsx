@@ -1,10 +1,7 @@
-// LIBS
 import styled from 'styled-components';
 
-// IMPORTED COMPONENTS
 import NavBarItem from './NavBarItem/NavBarItem';
 
-// EXPORTED COMPONENT
 export default function NavBar() {
    return (
       <Nav>
@@ -17,7 +14,6 @@ export default function NavBar() {
    );
 }
 
-// STYLES
 const Nav = styled.nav`
    ul {
       display: flex;
@@ -25,7 +21,6 @@ const Nav = styled.nav`
    }
 `;
 
-// LINKS
 const navLinks = [
    {
       name: 'Accueil',

@@ -1,13 +1,10 @@
-// LIBS
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-// IMPORTED COMPONENT
 import DropDownCardsContent from './DropDownCardsContent/DropDownCardsContent';
 import DropDownCardsHeader from './DropDownCardsHeader/DropDownCardsHeader';
 import DropDownCardsResume from './DropDownCardsResume/DropDownCardsResume';
 
-// EXPORTED COMPONENT
 export default function DropDownCards({ data }) {
    if (!data) {
       return;
@@ -27,7 +24,6 @@ export default function DropDownCards({ data }) {
    );
 }
 
-// STYLES
 const DropDownDiv = styled(motion.div)`
    height: 17vw;
    padding: 1.5vw;

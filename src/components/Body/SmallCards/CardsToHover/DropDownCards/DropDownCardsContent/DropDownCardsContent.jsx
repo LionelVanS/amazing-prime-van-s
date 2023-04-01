@@ -1,11 +1,8 @@
-// LIBS
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
 import ContentTime from './ContentTime/ContentTime';
 
-// EXPORTED COMPONENT
 export default function DropDownCardsContent({ data }) {
    return (
       <ContentDiv>
@@ -16,7 +13,6 @@ export default function DropDownCardsContent({ data }) {
    );
 }
 
-// STYLES
 const ContentDiv = styled.div`
    position: absolute;
    top: 5vw;

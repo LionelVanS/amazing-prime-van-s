@@ -11,7 +11,6 @@ export default function Footer() {
    );
 }
 
-// STYLES
 const StyledFooter = styled.footer`
    margin-top: 4rem;
 `;

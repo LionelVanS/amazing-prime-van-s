@@ -1,8 +1,6 @@
-// LIBS
 import Image from 'next/image';
 import styled from 'styled-components';
 
-// EXPORTED COMPONENT
 export default function SimpleCards({ data }) {
    return (
       <Content>

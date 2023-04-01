@@ -1,15 +1,9 @@
-// LIBS
 import Link from 'next/link';
 import Image from 'next/image';
 import styled from 'styled-components';
-
-// REACT HOOKS
 import { useState } from 'react';
-
-// IMPORTED COMPONENT
 import DropDownCards from './DropDownCards/DropDownCards';
 
-// EXPORTED COMPONENT
 export default function CardsContentWithHover({ data }) {
    const [openingCard, setOpeningCard] = useState(' ');
    const isHoveredCard = openingCard == data.title;
@@ -34,7 +28,6 @@ export default function CardsContentWithHover({ data }) {
    );
 }
 
-// STYLES
 const Content = styled.article`
    width: 100%;
    height: 100%;

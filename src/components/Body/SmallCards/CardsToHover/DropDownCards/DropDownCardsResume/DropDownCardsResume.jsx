@@ -1,13 +1,10 @@
-// LIBS
 import styled from 'styled-components';
 import Link from 'next/link';
 
-// IMPORTED COMPONENT
 import PlayIcon from '@/components/Icons/PlayIcon';
 import PLusIcon from '@/components/Icons/PlusIcon';
 import DotIcon from '@/components/Icons/DotIcon';
 
-// EXPORTED COMPONENT
 export default function DropDownCardsResume({ data }) {
    return (
       <ResumeDiv>
@@ -23,7 +20,6 @@ export default function DropDownCardsResume({ data }) {
    );
 }
 
-// STYLES
 const ResumeDiv = styled.div`
    display: flex;
    align-items: center;

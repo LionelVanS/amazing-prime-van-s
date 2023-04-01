@@ -1,11 +1,8 @@
-// LIBS
 import Link from 'next/link';
 import styled from 'styled-components';
 
-// IMPORTED COMPONENTS
 import PlayIcon from '../../../Icons/PlayIcon';
 
-// EXPORTED COMPONENT
 export default function AboutLink({ link }) {
    return (
       <AboutLinkDiv>

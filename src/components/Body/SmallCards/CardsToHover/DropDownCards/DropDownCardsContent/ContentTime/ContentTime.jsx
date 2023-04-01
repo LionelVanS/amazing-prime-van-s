@@ -1,9 +1,7 @@
-// LIBS
 import styled from 'styled-components';
 
-// UTILS
 import { colors } from '@/utils/style/colors';
-// EXPORTED COMPONENT
+
 export default function ContentTime({ data }) {
    return (
       <TimeDiv>

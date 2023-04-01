@@ -1,8 +1,6 @@
-// LIBS
 import { colors } from '@/utils/style/colors';
 import styled from 'styled-components';
 
-// EXPORTED COMPONENT
 export default function DotIcon() {
    return (
       <IconDiv>

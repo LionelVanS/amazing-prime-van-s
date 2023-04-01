@@ -1,4 +1,3 @@
-// EXPORTED COMPONENT
 export default function ContactInfo({ infoLink }) {
    return (
       <>

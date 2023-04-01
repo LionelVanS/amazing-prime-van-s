@@ -1,11 +1,8 @@
-// LIBS
 import styled from 'styled-components';
 
-// IMPORTED COMPONENTS
 import CardsToHover from './CardsToHover/CardsToHover';
 import SimpleCards from './SimpleCards/SimpleCards';
 
-// EXPORTED COMPONENT
 export default function smallCards({ datas, isHoveredCards }) {
    return (
       <>
@@ -23,8 +20,6 @@ export default function smallCards({ datas, isHoveredCards }) {
       </>
    );
 }
-
-// STYLES
 
 const CardsContainer = styled.div`
    height: ${(props) => (props.isHoveredCards ? '30vw' : '')};
