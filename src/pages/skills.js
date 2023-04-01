@@ -42,27 +42,27 @@ const H1 = styled.h1`
 `;
 
 const hardSkillsData = [
-   { title: 'HTML', image: bg1 },
-   { title: 'CSS', image: bg2 },
-   { title: 'Sass', image: bg5 },
-   { title: 'Javascript', image: bg3 },
-   { title: 'React', image: bg5 },
-   { title: 'NextJs', image: bg4 },
-   { title: 'NodeJs', image: bg1 },
-   { title: 'Express', image: bg6 },
-   { title: 'TypeScript', image: bg1 },
-   { title: 'Angular', image: bg4 },
+   { title: 'HTML', background: bg1 },
+   { title: 'CSS', background: bg2 },
+   { title: 'Sass', background: bg5 },
+   { title: 'Javascript', background: bg3 },
+   { title: 'React', background: bg5 },
+   { title: 'NextJs', background: bg4 },
+   { title: 'NodeJs', background: bg1 },
+   { title: 'Express', background: bg6 },
+   { title: 'TypeScript', background: bg1 },
+   { title: 'Angular', background: bg4 },
 ];
 
 const transferableSkillsDatas = [
-   { title: 'Figma', image: bg1 },
-   { title: 'GitHub', image: bg3 },
-   { title: 'Photoshop', image: bg2 },
-   { title: 'Photoshop Lightroom', image: bg5 },
+   { title: 'Figma', background: bg1 },
+   { title: 'GitHub', background: bg3 },
+   { title: 'Photoshop', background: bg2 },
+   { title: 'Photoshop Lightroom', background: bg5 },
 ];
 
 const softSkillsDatas = [
-   { title: 'Passionné', image: bg4 },
-   { title: 'Curieux', image: bg2 },
-   { title: 'Sympathique', image: bg6 },
+   { title: 'Passionné', background: bg4 },
+   { title: 'Curieux', background: bg2 },
+   { title: 'Sympathique', background: bg6 },
 ];
