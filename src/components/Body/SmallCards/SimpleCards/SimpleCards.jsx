@@ -1,11 +1,13 @@
-import Image from 'next/image';
 import styled from 'styled-components';
+import BackgroundImage from '../BackgroundImage/BackgroundImage';
 
 export default function SimpleCards({ data }) {
    return (
       <Content>
          <h3>{data.title}</h3>
-         <Image src={data.image} alt={data.title} width="768" height="768" />
+         <ContentBackgroundDiv>
+            <BackgroundImage data={data} />
+         </ContentBackgroundDiv>
       </Content>
    );
 }
@@ -25,13 +27,16 @@ const Content = styled.article`
       color: white;
       z-index: 1;
    }
+`;
+
+const ContentBackgroundDiv = styled.div`
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
    img {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
    }
 `;
