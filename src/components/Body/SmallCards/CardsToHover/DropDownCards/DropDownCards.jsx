@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import DropDownCardsContent from './DropDownCardsContent/DropDownCardsContent';
-import DropDownCardsHeader from './DropDownCardsHeader/DropDownCardsHeader';
-import DropDownCardsResume from './DropDownCardsResume/DropDownCardsResume';
+import CardsContent from './CardsContent/CardsContent';
+import CardsHeader from './CardsHeader/CardsHeader';
+import CardsResume from './CardsResume/CardsResume';
 
 export default function DropDownCards({ data }) {
    if (!data) {
@@ -16,9 +16,9 @@ export default function DropDownCards({ data }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.1 }}
          >
-            <DropDownCardsHeader data={data} />
-            <DropDownCardsResume data={data} />
-            <DropDownCardsContent data={data} />
+            <CardsHeader data={data} />
+            <CardsResume data={data} />
+            <CardsContent data={data} />
          </DropDownDiv>
       </>
    );
@@ -26,7 +26,7 @@ export default function DropDownCards({ data }) {
 
 const DropDownDiv = styled(motion.div)`
    height: 17vw;
-   padding: 1.5vw;
+   padding: 0.5vw 1.5vw;
    position: absolute;
    left: 0;
    right: 0;

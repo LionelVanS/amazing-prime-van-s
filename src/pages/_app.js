@@ -41,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
       * {
          box-sizing: border-box;
       }
-      h1,h2, p, a {
+      h1,h2, h3, p, a {
          color:#fff;
       }
       h2 {

@@ -14,14 +14,10 @@ export default function DropDownCardsContent({ data }) {
 }
 
 const ContentDiv = styled.div`
-   position: absolute;
-   top: 5vw;
-   right: 1.5vw;
-   left: 1.5vw;
    display: flex;
    flex-flow: column;
+   margin-top: 0.5vw;
    h3 {
-      color: #fff;
       font-size: 1vw;
       margin: 0;
    }

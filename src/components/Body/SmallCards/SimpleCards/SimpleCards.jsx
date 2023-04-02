@@ -24,7 +24,6 @@ const Content = styled.article`
    overflow: hidden;
    h3 {
       font-size: 1vw;
-      color: white;
       z-index: 1;
    }
 `;

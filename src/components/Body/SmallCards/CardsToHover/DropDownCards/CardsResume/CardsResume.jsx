@@ -5,7 +5,7 @@ import PlayIcon from '@/components/Icons/PlayIcon';
 import PLusIcon from '@/components/Icons/PlusIcon';
 import DotIcon from '@/components/Icons/DotIcon';
 
-export default function DropDownCardsResume({ data }) {
+export default function CardsResume({ data }) {
    return (
       <ResumeDiv>
          <Link href={data.link}>
@@ -23,12 +23,11 @@ export default function DropDownCardsResume({ data }) {
 const ResumeDiv = styled.div`
    display: flex;
    align-items: center;
-   position: absolute;
-   top: 1.5vw;
+   margin-top: 0.5vw;
    a {
       display: flex;
       p {
-         font-size: 1vw;
+         font-size: 0.8vw;
          margin-left: 0.5vw;
       }
       > svg {
@@ -40,7 +39,7 @@ const OptionDiv = styled.div`
    width: 4vw;
    display: flex;
    justify-content: space-between;
-   margin-left: 1.5vw;
+   margin-left: 2.5vw;
    line-height: 0;
    svg {
       cursor: pointer;

@@ -2,19 +2,16 @@ import styled from 'styled-components';
 
 import TickIcon from '@/components/Icons/TickIcon';
 
-export default function DropDownCardsHeader() {
+export default function CardsHeader() {
    return (
-      <IncludeDiv>
+      <HeaderDiv>
          <TickIcon />
          <p>Included with me</p>
-      </IncludeDiv>
+      </HeaderDiv>
    );
 }
 
-const IncludeDiv = styled.div`
-   position: absolute;
-   top: 0.5vw;
-   left: 1.5vw;
+const HeaderDiv = styled.div`
    display: flex;
    > svg {
       width: 1vw;
