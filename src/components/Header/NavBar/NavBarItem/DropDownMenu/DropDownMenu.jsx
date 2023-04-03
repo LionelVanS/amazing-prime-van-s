@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import styled from 'styled-components';
 
 import { colors } from '@/utils/style/colors';
+import MenuItem from './MenuItem/MenuItem';
 
 export default function DropDownMenu({ link, setOpenLink }) {
    const subMenuLinks = link.subNav;
@@ -12,14 +12,11 @@ export default function DropDownMenu({ link, setOpenLink }) {
             <ul>
                {subMenuLinks
                   ? subMenuLinks.map((link, index) => (
-                       <li key={index}>
-                          <Link
-                             href={link.path}
-                             onClick={() => setOpenLink('')}
-                          >
-                             {link.name}
-                          </Link>
-                       </li>
+                       <MenuItem
+                          key={index}
+                          link={link}
+                          setOpenLink={setOpenLink}
+                       />
                     ))
                   : ''}
             </ul>
@@ -40,20 +37,5 @@ const DropDownMenuDiv = styled.div`
    ul {
       display: flex;
       flex-flow: column;
-      li {
-         width: 100%;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         a {
-            transition: none;
-         }
-         :hover {
-            background-color: white;
-            a {
-               color: black;
-            }
-         }
-      }
    }
 `;
