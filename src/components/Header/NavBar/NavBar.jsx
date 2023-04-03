@@ -22,6 +22,7 @@ const Nav = styled.nav`
 `;
 
 const navLinks = [
+   // HOMEPAGE
    {
       name: 'Accueil',
       path: '/',
@@ -32,20 +33,24 @@ const navLinks = [
          },
       ],
    },
+
+   // CAREER PAGE
    {
       name: 'Parcours',
       path: '/career',
       subNav: [
          {
             name: 'Expériences',
-            path: '/career',
+            path: '/career#experiences',
          },
          {
             name: 'Formations',
-            path: '/career',
+            path: '/formation',
          },
       ],
    },
+
+   // SKILLS PAGE
    {
       name: 'Compétences',
       path: '/skills',
@@ -64,6 +69,8 @@ const navLinks = [
          },
       ],
    },
+
+   // PORTFOLIO PAGE
    {
       name: 'Portfolio',
       path: '/portfolio',
