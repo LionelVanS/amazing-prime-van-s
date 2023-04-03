@@ -9,8 +9,8 @@ export default function Logo() {
                <Image
                   src="/images/logo.png"
                   alt="logo prime van s"
-                  width="104"
-                  height="20"
+                  width="127"
+                  height="24"
                />
             </Link>
          </LogoDiv>
@@ -21,13 +21,13 @@ export default function Logo() {
 //STYLES
 const LogoDiv = styled.div`
    height: 100%;
-   margin-right: 4vw;
+   margin-right: 3.5vw;
    display: flex;
    align-items: center;
    justify-content: center;
 `;
 
 const Image = styled.img`
-   width: 7.8vw;
-   height: 1.5vw;
+   width: 6.7vw;
+   height: 1.3vw;
 `;
