@@ -3,11 +3,8 @@ import Titles from './Titles/Titles';
 import AboutTech from './AboutTech/AboutTech';
 import AboutLink from './AboutLink/AboutLink';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
-import { useHeroBanner } from '@/utils/context/HeroBanner';
 
 export default function HeroBanner() {
-   const datas = useHeroBanner();
-   console.log(datas);
    return (
       <>
          <HeroBannerSection>
