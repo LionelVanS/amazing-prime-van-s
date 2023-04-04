@@ -1,12 +1,13 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-
 import PlayIcon from '../../../Icons/PlayIcon';
+import { useHeroBanner } from '@/utils/context/HeroBanner';
 
-export default function AboutLink({ link }) {
+export default function AboutLink() {
+   const datas = useHeroBanner();
    return (
       <AboutLinkDiv>
-         <Link href={link}>
+         <Link href={datas.link}>
             <PlayIcon />
             <p>En Savoir Plus</p>
          </Link>

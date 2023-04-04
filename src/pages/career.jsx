@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { HeroBannerProvider } from '@/utils/context/HeroBanner';
 import careerBackground from '../../public/images/careerpage-background.jpg';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 
@@ -9,15 +10,19 @@ export default function Career() {
             <title>Prime Van S: Parcours</title>
          </Head>
          <main>
-            <HeroBanner datas={HeroBannerData} />
+            <HeroBannerProvider heroBannerData={heroBannerData}>
+               <HeroBanner />
+            </HeroBannerProvider>
          </main>
       </>
    );
 }
 
-const HeroBannerData = {
+const heroBannerData = {
    title: 'Mon Parcours',
-   subtitle: "Suivez l'histoire de ma vie !",
+   secondPartTitle: 'De 2007 A 2023',
+   subtitle: 'Ne restez pas spectateur de ma réussite !',
    image: careerBackground,
-   link: '/',
+   infos: 'BTP | Logistique | Production',
+   link: '/formation',
 };

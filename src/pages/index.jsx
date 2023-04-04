@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { HeroBannerProvider } from '@/utils/context/HeroBanner';
 import homeBackground from '../../public/images/homepage-background.jpg';
 import skillSmallCardsBg from '../../public/images/small-cards-skills.jpg';
 import careerSmallCardsBg from '../../public/images/small-cards-career.jpg';
@@ -13,7 +14,9 @@ export default function Home() {
             <title>Prime Van S</title>
          </Head>
          <main>
-            <HeroBanner datas={HeroBannerData} />
+            <HeroBannerProvider heroBannerData={heroBannerData}>
+               <HeroBanner />
+            </HeroBannerProvider>
             <section>
                <h2>Ajoutés Récemment</h2>
                <SmallCards datas={smallCardsData} isHoveredCards={true} />
@@ -23,11 +26,11 @@ export default function Home() {
    );
 }
 
-const HeroBannerData = {
+const heroBannerData = {
    title: 'Lionel',
    secondPartTitle: 'VAN SCHELLEBECK',
    subtitle: 'A Brand New Front-End Developer !',
-   technologies: 'Javascript | React',
+   infos: 'Javascript | React',
    image: homeBackground,
    link: '/profil',
 };

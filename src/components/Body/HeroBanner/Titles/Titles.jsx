@@ -1,12 +1,14 @@
+import { useHeroBanner } from '@/utils/context/HeroBanner';
 import styled from 'styled-components';
 
-export default function Titles({ title, secondPartTitle, subtitle }) {
+export default function Titles() {
+   const datas = useHeroBanner();
    return (
       <>
          <Title>
-            <h1>{title}</h1>
-            {secondPartTitle ? <h1>{secondPartTitle}</h1> : ''}
-            <h2>{subtitle}</h2>
+            <h1>{datas.title}</h1>
+            <h1>{datas.secondPartTitle}</h1>
+            <h2>{datas.subtitle}</h2>
          </Title>
       </>
    );

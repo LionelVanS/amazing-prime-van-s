@@ -3,27 +3,23 @@ import Titles from './Titles/Titles';
 import AboutTech from './AboutTech/AboutTech';
 import AboutLink from './AboutLink/AboutLink';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
+import { useHeroBanner } from '@/utils/context/HeroBanner';
 
-export default function HeroBanner({ datas }) {
-   const { title, secondPartTitle, subtitle, technologies, image, link } =
-      datas;
-
+export default function HeroBanner() {
+   const datas = useHeroBanner();
+   console.log(datas);
    return (
       <>
          <HeroBannerSection>
             <TitleDiv>
-               <Titles
-                  title={title}
-                  secondPartTitle={secondPartTitle}
-                  subtitle={subtitle}
-               />
+               <Titles />
             </TitleDiv>
             <AboutDiv>
-               {technologies ? <AboutTech technologies={technologies} /> : ''}
-               {link ? <AboutLink link={link} /> : ''}
+               <AboutTech />
+               <AboutLink />
             </AboutDiv>
             <BackgroundDiv>
-               <BackgroundImage image={image} />
+               <BackgroundImage />
             </BackgroundDiv>
          </HeroBannerSection>
       </>

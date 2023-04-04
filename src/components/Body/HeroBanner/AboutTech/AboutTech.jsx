@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { colors } from '@/utils/style/colors';
 import TickIcon from '../../../Icons/TickIcon';
+import { useHeroBanner } from '@/utils/context/HeroBanner';
 
-export default function AboutTech({ technologies }) {
+export default function AboutTech() {
+   const datas = useHeroBanner();
    return (
       <IncludeDiv>
          <TickIcon />
          <p>
-            {technologies}
+            {datas.infos}
             <span>Et +</span>
          </p>
       </IncludeDiv>
