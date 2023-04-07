@@ -1,9 +1,5 @@
-// LIBS
 import Head from 'next/head';
 
-// IMPORTED COMPONENTS
-
-// EXPORTED COMPONENT
 export default function Portfolio() {
    return (
       <>
