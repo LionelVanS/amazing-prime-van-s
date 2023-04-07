@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 
 import { colors } from '@/utils/style/colors';
 
-import Footer from '@/components/Footer/footer';
+import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 
 export default function App({ Component, pageProps }) {
@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
           }
 
           font-family: 'Amazon-Ember', sans-serif;
+          overflow-x: hidden;
       }
 
       * {
