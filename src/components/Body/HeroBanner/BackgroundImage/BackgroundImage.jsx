@@ -1,4 +1,4 @@
-import { useHeroBanner } from '@/utils/context/HeroBanner';
+import { useHeroBanner } from '@/utils/context/heroBanner';
 import Image from 'next/image';
 
 export default function BackgroundImage() {

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import PlayIcon from '../../../Icons/PlayIcon';
-import { useHeroBanner } from '@/utils/context/HeroBanner';
+import { useHeroBanner } from '@/utils/context/heroBanner';
 
 export default function AboutLink() {
    const datas = useHeroBanner();

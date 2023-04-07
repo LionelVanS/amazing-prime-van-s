@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { colors } from '@/utils/style/colors';
 import TickIcon from '../../../Icons/TickIcon';
-import { useHeroBanner } from '@/utils/context/HeroBanner';
+import { useHeroBanner } from '@/utils/context/heroBanner';
 
 export default function AboutTech() {
    const datas = useHeroBanner();

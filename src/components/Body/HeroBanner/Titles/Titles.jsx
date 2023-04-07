@@ -1,4 +1,4 @@
-import { useHeroBanner } from '@/utils/context/HeroBanner';
+import { useHeroBanner } from '@/utils/context/heroBanner';
 import styled from 'styled-components';
 
 export default function Titles() {
