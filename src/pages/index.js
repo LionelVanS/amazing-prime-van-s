@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import { HeroBannerProvider } from '@/utils/context/HeroBanner';
+import { HeroBannerProvider } from '@/utils/context/heroBanner';
 import homeBackground from '../../public/images/homepage-background.jpg';
 import skillSmallCardsBg from '../../public/images/small-cards-skills.jpg';
 import careerSmallCardsBg from '../../public/images/small-cards-career.jpg';
 import portfolioSmallCardsBg from '../../public/images/small-cards-portfolio.jpg';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
-import SmallCards from '@/components/Body/SmallCards/SmallCards';
+import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
 
 export default function Home() {
    return (
@@ -19,7 +19,7 @@ export default function Home() {
             </HeroBannerProvider>
             <section>
                <h2>Ajoutés Récemment</h2>
-               <SmallCards datas={smallCardsData} isHoveredCards={true} />
+               <DropDownCards datas={smallCardsData} isHoveredCards={true} />
             </section>
          </main>
       </>
