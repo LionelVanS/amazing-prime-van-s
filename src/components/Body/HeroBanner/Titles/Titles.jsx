@@ -15,10 +15,6 @@ export default function Titles() {
 }
 
 const Title = styled.div`
-   h1 {
-      font-size: 2.5vw;
-      margin: 0;
-   }
    h2 {
       font-size: 1.3vw;
       margin: 0 0 2rem 0;
