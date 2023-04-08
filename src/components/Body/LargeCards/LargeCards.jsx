@@ -1,7 +1,7 @@
 import { colors } from '@/utils/style/colors';
 import Image from 'next/image';
 import styled from 'styled-components';
-
+import background from '../../../../public/images/profil-large-card.jpg';
 export default function LargeCards() {
    return (
       <>
@@ -9,7 +9,7 @@ export default function LargeCards() {
             <h1>MON PROFIL</h1>
             <BackgroundOverlayDiv />
             <Image
-               src="/../public/images/profil-large-card.jpg"
+               src={background}
                alt="background"
                width="4896"
                height="3264"
