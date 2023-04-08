@@ -6,8 +6,8 @@ export default function ContactInfo({ infoLink }) {
             <a
                key={index}
                href={link.url}
-               target={link.isWebLink ? '_blank' : ''}
-               rel={link.isWebLink ? 'noopener noreferrer' : ''}
+               target={link.isWebLink ? '_blank' : '_self'}
+               rel="noopener noreferrer"
             >
                {link.name}
             </a>
