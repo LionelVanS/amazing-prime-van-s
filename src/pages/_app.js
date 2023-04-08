@@ -47,6 +47,10 @@ const GlobalStyle = createGlobalStyle`
       h1,h2, h3, p {
          color:#fff;
       }
+      h1{
+         font-size: 2.5vw;
+      margin: 0;
+      }
       h2 {
          margin: 2.5vw 0 1vw 0;
          font-size: 1.5vw;
