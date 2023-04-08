@@ -4,13 +4,13 @@ import DropDown from './DropDown/DropDown';
 import CardLink from './CardLink/CardLink';
 
 export default function Card({ data }) {
-   // Checking what card is hovered
+   // Contains data.title of hovered card
    const [openingCard, setOpeningCard] = useState(' ');
 
-   // Boolean to know if the card is hovered or not
+   // Boolean to know which card is hovered and which is not
    const isHoveredCard = openingCard == data.title;
 
-   // Check if the link is an external link
+   // Check if the data.link is an external link
    const [isExternalLink, setIsExternalLink] = useState();
    useEffect(() => {
       if (data.link.includes('http')) {
@@ -21,7 +21,7 @@ export default function Card({ data }) {
    }, [data.link]);
 
    return (
-      <Content
+      <ContentArticle
          onMouseOver={() => setOpeningCard(data.title)}
          onMouseOut={() => setOpeningCard(' ')}
          isHovered={isHoveredCard}
@@ -36,11 +36,11 @@ export default function Card({ data }) {
          ) : (
             ''
          )}
-      </Content>
+      </ContentArticle>
    );
 }
 
-const Content = styled.article`
+const ContentArticle = styled.article`
    width: 18vw;
    height: 10vw;
    margin: 0 0.5vw;
