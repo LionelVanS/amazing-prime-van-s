@@ -22,7 +22,7 @@ const ContentArticle = styled.article`
    flex-flow: row wrap;
    align-items: center;
    padding-left: 1vw;
-   border-radius: 0.8rem;
+   border-radius: 0.8vw;
    position: relative;
    overflow: hidden;
    h3 {

@@ -31,7 +31,7 @@ const DropDownMenuDiv = styled.div`
    top: 3.5vw;
    right: 0;
    left: 0;
-   border-radius: 0 0 0.5rem 0.5rem;
+   border-radius: 0 0 0.5vw 0.5vw;
    z-index: 2;
    overflow: hidden;
    ul {

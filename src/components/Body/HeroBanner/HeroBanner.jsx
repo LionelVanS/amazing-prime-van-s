@@ -26,7 +26,7 @@ export default function HeroBanner() {
 const HeroBannerSection = styled.section`
    height: 31vw;
    padding-left: 3.5vw;
-   border-radius: 0.5rem;
+   border-radius: 0.5vw;
    overflow: hidden;
    position: relative;
 `;

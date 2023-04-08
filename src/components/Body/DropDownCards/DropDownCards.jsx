@@ -15,8 +15,8 @@ export default function DropDownCards({ datas, isHoveredCards }) {
 }
 
 const CardsContainer = styled.div`
-   width: 5000px;
-   height: 30vw;
+   width: 500vw;
+   height: 35vw;
    display: flex;
    overflow-x: visible;
    position: relative;

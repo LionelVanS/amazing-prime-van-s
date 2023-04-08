@@ -25,7 +25,7 @@ const ImageDiv = styled.div`
    overflow: hidden;
    transition: border-radius 100ms ease-in;
    border-radius: ${(props) =>
-      props.isHoveredCard ? '0.8rem 0.8rem 0 0' : '0.8rem'};
+      props.isHoveredCard ? '0.8vw 0.8vw 0 0' : '0.8vw'};
    background-color: ${(props) => (props.background ? '' : '#fff')};
    img {
       width: 100%;

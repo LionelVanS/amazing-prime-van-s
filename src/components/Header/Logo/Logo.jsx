@@ -21,7 +21,7 @@ export default function Logo() {
 //STYLES
 const LogoDiv = styled.div`
    height: 100%;
-   margin-right: 3.5vw;
+   margin: 0 3.5vw 0 2vw;
    display: flex;
    align-items: center;
    justify-content: center;
