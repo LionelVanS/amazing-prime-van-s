@@ -42,7 +42,7 @@ const GlobalStyle = createGlobalStyle`
       * {
          box-sizing: border-box;
       }
-      h1,h2, h3, p, a {
+      h1,h2, h3, p {
          color:#fff;
       }
       h2 {
@@ -57,10 +57,6 @@ const GlobalStyle = createGlobalStyle`
          color: #fff;
          text-decoration: none;
       }
-      p {
-         color: #fff;
-      }
-
       ul {
          margin:0;
          padding:0;
