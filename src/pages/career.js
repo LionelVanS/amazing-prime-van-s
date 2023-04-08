@@ -1,8 +1,11 @@
 import Head from 'next/head';
+import styled from 'styled-components';
 import { HeroBannerProvider } from '@/utils/context/heroBanner';
+
 import careerBackground from '../../public/images/careerpage-background.jpg';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
+
 import intermarcheBg from '../../public/images/career/intermarche.png';
 import ghndBg from '../../public/images/career/ghnd.png';
 import dsSmithBg from '../../public/images/career/ds-smith.png';
@@ -12,7 +15,6 @@ import tecumsehBg from '../../public/images/career/tecumseh.png';
 import vanSPhotoBg from '../../public/images/career/van-s-photo.png';
 import nemeraBg from '../../public/images/career/nemera.png';
 import votreLogoBg from '../../public/images/career/votre-logo.png';
-import styled from 'styled-components';
 
 export default function Career() {
    return (
