@@ -31,7 +31,7 @@ const DropDownDiv = styled(motion.div)`
    left: 0;
    right: 0;
    bottom: -17vw;
-   border-radius: 0 0 0.8rem 0.8rem;
+   border-radius: 0 0 0.8vw 0.8vw;
    background-color: #000;
    cursor: auto;
    p {
