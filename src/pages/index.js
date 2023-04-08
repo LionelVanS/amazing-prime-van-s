@@ -18,8 +18,10 @@ export default function Home() {
                <HeroBanner />
             </HeroBannerProvider>
             <section>
-               <h2>Ajoutés Récemment</h2>
-               <DropDownCards datas={smallCardsData} isHoveredCards={true} />
+               <DropDownCards
+                  datas={smallCardsData}
+                  title="Ajoutés Récemment"
+               />
             </section>
          </main>
       </>

@@ -17,21 +17,23 @@ export default function Skills() {
          <Head>
             <title>Prime Van S: Compétences</title>
          </Head>
-         <main>
+         <SkillsMain>
             <H1>Mes Compétences</H1>
             {smallCardsData.map((datas) => (
-               <section key={datas.name}>
+               <section key={datas.name} id={datas.name}>
                   <h2>{datas.name}</h2>
                   <CardsDiv>
                      <SimpleCard datas={datas} />
                   </CardsDiv>
                </section>
             ))}
-         </main>
+         </SkillsMain>
       </>
    );
 }
-
+const SkillsMain = styled.main`
+   margin: 0 3vw 4vw 3vw;
+`;
 const H1 = styled.h1`
    font-size: 2vw;
    margin: 2vw 0 0 0;

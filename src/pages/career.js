@@ -26,18 +26,16 @@ export default function Career() {
             <HeroBannerProvider heroBannerData={heroBannerData}>
                <HeroBanner />
             </HeroBannerProvider>
-            <ExperiencesSection id="experiences">
-               <h2>Mes Expériences Professionnelles</h2>
-               <DropDownCards datas={smallCardsData} isHoveredCards={true} />
-            </ExperiencesSection>
+            <section id="experiences">
+               <DropDownCards
+                  datas={smallCardsData}
+                  title="Mes Expériences Professionnelles"
+               />
+            </section>
          </main>
       </>
    );
 }
-
-const ExperiencesSection = styled.section`
-   overflow-x: visible;
-`;
 
 const heroBannerData = {
    title: 'Mon Parcours',
@@ -55,7 +53,7 @@ const smallCardsData = [
       link: 'https://ghnd.fr/',
       date: '1989',
       duration: '34 ans',
-      text: 'Une hache pour seul outil, aucune technologie ne saurait lui résister. Sa cible, la réussite.',
+      text: '',
    },
    {
       title: 'Van S Photographie',
@@ -63,7 +61,7 @@ const smallCardsData = [
       link: '/portfolio',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'Célestin Matériaux',
@@ -71,7 +69,7 @@ const smallCardsData = [
       link: 'https://www.celestin-materiaux.fr/',
       date: '2007',
       duration: '16 ans',
-      text: "Au début de sa carrière, Lionel, un jeune homme plein de vitalité, cherche sa place dans ce monde. Entre métiers du BTP, logistique et ses propres rêves, il devra affronter bien des dangers pour devenir celui qu'il est supposer être. Saura-t-il relevé le défi ?",
+      text: '',
    },
    {
       title: 'M+ Matériaux',
@@ -79,7 +77,7 @@ const smallCardsData = [
       link: 'https://www.mplus-materiaux.fr/',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'DS Smith',
@@ -87,7 +85,7 @@ const smallCardsData = [
       link: 'https://www.dssmith.com/fr/',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'Tecumseh',
@@ -95,7 +93,7 @@ const smallCardsData = [
       link: 'https://www.tecumseh.com/fr/eu/products/',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'Nemera',
@@ -103,7 +101,7 @@ const smallCardsData = [
       link: 'https://www.nemera.net/',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'Intermarché',
@@ -111,7 +109,7 @@ const smallCardsData = [
       link: 'https://www.mousquetaires.com/nos-filiales/logistique/alimentaire/',
       date: '2022',
       duration: '1 an',
-      text: "Découvrez la suite tant attendu du premier épisode, succès mondial en Isère, mais censuré en moins de 24h. Aujourdhui, notre artiste favoris de tous nous revient avec une série d'appli codé par lui Himself. ",
+      text: '',
    },
    {
       title: 'Votre Entreprise',
@@ -119,6 +117,6 @@ const smallCardsData = [
       link: '/career#experiences',
       date: '2023 - 2024',
       duration: 'Au moins 2 ans',
-      text: 'Ne restez pas spectateur de ma réussite ! Vous pouvez',
+      text: 'Ne restez pas spectateur de ma réussite !',
    },
 ];

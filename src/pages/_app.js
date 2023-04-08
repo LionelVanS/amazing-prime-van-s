@@ -26,19 +26,21 @@ export default function App({ Component, pageProps }) {
 const GlobalStyle = createGlobalStyle`
       html,
       body {
-          padding:0 1.5vw;
-          margin:0;
-          background-color: ${colors.appBackground};
-          @font-face {
+         margin:0;
+         background-color: ${colors.appBackground};
+         @font-face {
             font-family: Amazon-Ember;
             src: url(./font/AmazonEmber.woff2);
             font-display: swap;
-          }
-
-          font-family: 'Amazon-Ember', sans-serif;
-          overflow-x: hidden;
+         }
+         
+         font-family: 'Amazon-Ember', sans-serif;
+         overflow-x: hidden;
+         position:relative;
       }
-
+      main{
+         margin-bottom:5vw;
+      }
       * {
          box-sizing: border-box;
       }
