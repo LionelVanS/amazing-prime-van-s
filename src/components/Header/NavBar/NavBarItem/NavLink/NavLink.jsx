@@ -1,15 +1,14 @@
 import Link from 'next/link';
 import { colors } from '@/utils/style/colors';
-
 import { useRouter } from 'next/router';
 
 import ArrowIcon from '../../../../Icons/ArrowIcon';
 import styled from 'styled-components';
 
-export default function NavLink({ link }) {
+export default function NavLink({ link, isHoveredLink }) {
    const router = useRouter();
    return (
-      <NavBarLinkDiv>
+      <NavBarLinkDiv isHoveredLink={isHoveredLink}>
          <Link
             href={link.path}
             className={router.pathname == link.path ? 'active' : ''}
@@ -24,31 +23,36 @@ export default function NavLink({ link }) {
 const NavBarLinkDiv = styled.div`
    height: 100%;
    line-height: 1px;
-   a {
+   > a {
       height: inherit;
-      padding: 0 1rem;
+      padding: 0 1vw;
       display: flex;
       align-items: center;
-      color: ${colors.text};
       transition: color 150ms linear;
+
+      // Conduct when user is travelling through DropDownMenu
+      background-color: ${(props) =>
+         props.isHoveredLink != '' ? colors.lightGreyBackground : ''};
+      box-shadow: ${(props) =>
+         props.isHoveredLink != '' ? 'inset 0 -1rem 3rem -2rem #000}' : ''};
+
       :hover {
          color: white;
       }
+      color: ${(props) =>
+         props.isHoveredLink != '' ? colors.text : colors.text};
       svg {
-         width: 1vw;
+         transform: ${(props) =>
+            props.isHoveredLink != '' ? 'rotate(180deg)' : 'rotate(0)'};
+         width: 1.2vw;
+         height: 1.2vw;
+         margin-left: 0.5vw;
          transition: transform 150ms ease-in-out;
-      }
-   }
-   :hover {
-      background-color: ${colors.lightGreyBackground};
-      box-shadow: inset 0 -1rem 1rem -1.5rem black;
-      svg {
-         transform: rotate(180deg);
       }
    }
 
    .active {
-      color: #fff;
+      /* color: #fff; */
       ::after {
          content: '';
          z-index: 3;
@@ -57,7 +61,7 @@ const NavBarLinkDiv = styled.div`
          position: absolute;
          bottom: 0;
          left: 0;
-         background-color: #fff;
+         /* background-color: #fff; */
       }
    }
 `;

@@ -6,7 +6,7 @@ export default function NavBar() {
    return (
       <Nav>
          <ul>
-            {navLinks.map((link, index) => (
+            {links.map((link, index) => (
                <NavBarItem key={index} link={link} />
             ))}
          </ul>
@@ -21,7 +21,7 @@ const Nav = styled.nav`
    }
 `;
 
-const navLinks = [
+const links = [
    // HOMEPAGE
    {
       name: 'Accueil',

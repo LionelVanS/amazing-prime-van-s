@@ -11,7 +11,7 @@ export default function NavBarItem({ link }) {
          onMouseOver={() => setOpenLink(link.name)}
          onMouseOut={() => setOpenLink('')}
       >
-         <NavLink link={link} />
+         <NavLink link={link} isHoveredLink={openLink} />
          {openLink == link.name ? (
             <DropDownMenu link={link} setOpenLink={setOpenLink} />
          ) : (

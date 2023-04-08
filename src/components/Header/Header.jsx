@@ -28,7 +28,7 @@ export default function Header() {
       };
    }, []);
 
-   // Slide animation to the top when scrolling down
+   // Slide animation from the top when scrolling down
    const slideAnimation = {
       top: isScroll ? '1vw' : '0',
    };
@@ -47,7 +47,7 @@ export default function Header() {
    return (
       <HeaderPosition>
          <StyledHeader animate={[slideAnimation, boxShadow]}>
-            <Overlay animate={[slideAnimation]}></Overlay>
+            {/* <Overlay animate={[slideAnimation]}></Overlay> */}
             <Logo />
             <NavBar />
             <SearchIcon />
@@ -69,7 +69,7 @@ const StyledHeader = styled(motion.header)`
    left: 0;
    right: 0;
    background-color: ${colors.appBackground};
-   border-radius: 0.8rem;
+   border-radius: 0.5vw;
 `;
 
 const HeaderPosition = styled.div`
@@ -80,7 +80,6 @@ const HeaderPosition = styled.div`
 const Overlay = styled(motion.div)`
    width: 100%;
    height: inherit;
-   /* background-color: ${colors.appBackground}; */
    position: fixed;
-   z-index: ;
+   /* background-color: ${colors.appBackground}; */
 `;
