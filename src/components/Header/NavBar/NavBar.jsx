@@ -45,7 +45,7 @@ const links = [
          },
          {
             name: 'Formations',
-            path: '/formation',
+            path: '/career#formations',
          },
       ],
    },
@@ -57,15 +57,15 @@ const links = [
       subNav: [
          {
             name: 'Techniques',
-            path: '/skills#technical-skills',
+            path: '/skills#Techniques',
          },
          {
             name: 'Transversales',
-            path: '/skills#transferable-skills',
+            path: '/skills#Transversales',
          },
          {
             name: 'Soft Skills',
-            path: '/skills#soft-skills',
+            path: '/skills#Soft Skills',
          },
       ],
    },
