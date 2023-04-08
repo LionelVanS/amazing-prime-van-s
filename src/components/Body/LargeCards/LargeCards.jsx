@@ -9,7 +9,7 @@ export default function LargeCards() {
             <h1>MON PROFIL</h1>
             <BackgroundOverlayDiv />
             <Image
-               src="/../public/images/7603.jpg"
+               src="/../public/images/profil-large-card.jpg"
                alt="background"
                width="4896"
                height="3264"
