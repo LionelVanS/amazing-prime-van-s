@@ -70,12 +70,4 @@ const smallCardsData = [
          { title: 'Photoshop Lightroom', background: bg5 },
       ],
    },
-   {
-      name: 'Soft Skills',
-      datas: [
-         { title: 'Passionné', background: bg4 },
-         { title: 'Curieux', background: bg2 },
-         { title: 'Sympathique', background: bg6 },
-      ],
-   },
 ];
