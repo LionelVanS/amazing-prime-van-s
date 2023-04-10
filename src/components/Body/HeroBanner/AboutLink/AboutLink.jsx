@@ -18,11 +18,13 @@ export default function AboutLink() {
 const AboutLinkDiv = styled.div`
    a {
       display: flex;
+      svg {
+         fill: #fff;
       }
-      p {
-         font-size: 2vw;
-         font-weight: bold;
-         margin-left: 2rem;
-      }
+   }
+   p {
+      font-size: 2vw;
+      font-weight: bold;
+      margin-left: 2rem;
    }
 `;
