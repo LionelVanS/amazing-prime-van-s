@@ -63,10 +63,6 @@ const links = [
             name: 'Transversales',
             path: '/skills#Transversales',
          },
-         {
-            name: 'Soft Skills',
-            path: '/skills#Soft Skills',
-         },
       ],
    },
 
