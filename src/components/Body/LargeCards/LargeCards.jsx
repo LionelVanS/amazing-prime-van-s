@@ -1,56 +1,51 @@
-import { colors } from '@/utils/style/colors';
-import Image from 'next/image';
 import styled from 'styled-components';
-import background from '../../../../public/images/profil-large-card.jpg';
+import Background from './Background/Background';
+import SoftSkills from './SoftSkills/SoftSkills';
+import Infos from './Infos/Infos';
+import Text from './Text/Text';
+import IncludeWithMe from './IncludeWithMe';
+import Contact from './Contact/Contact';
+import Social from './Social/Social';
+import { useLargeCard } from '@/utils/context/largeCard';
+
 export default function LargeCards() {
+   const datas = useLargeCard();
    return (
       <>
          <CardsSection>
-            <h1>MON PROFIL</h1>
-            <BackgroundOverlayDiv />
-            <Image
-               src={background}
-               alt="background"
-               width="4896"
-               height="3264"
-            />
+            <ContentDiv>
+               <h1>{datas.title}</h1>
+               <Text />
+               <Infos />
+               <SoftSkills />
+               <IncludeWithMe />
+               <LinksDiv>
+                  <Contact />
+                  <Social />
+               </LinksDiv>
+            </ContentDiv>
+            <Background />
          </CardsSection>
       </>
    );
 }
 
+const LinksDiv = styled.div``;
+
 const CardsSection = styled.section`
    width: 100%;
-   height: 93vh;
+   height: 45vw;
    padding: 9.5vw 0 0 4vw;
    position: relative;
-   img {
-      background: linear-gradient(to right, transparent);
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 0;
-   }
 `;
 
-const BackgroundOverlayDiv = styled.div`
+const ContentDiv = styled.div`
+   width: 40%;
    position: absolute;
-   top: 0;
-   bottom: 0;
-   left: 0;
-   right: 0;
-   width: 75%;
-   height: 100%;
-   background: linear-gradient(
-      to right,
-      ${colors.appBackground},
-      60%,
-      transparent
-   );
-   z-index: 1;
+   z-index: 2;
+   div,
+   ul,
+   a {
+      display: flex;
+   }
 `;
