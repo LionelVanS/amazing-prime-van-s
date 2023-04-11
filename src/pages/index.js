@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { HeroBannerProvider } from '@/utils/context/heroBanner';
-import homeBackground from '../../public/images/homepage-background.jpg';
-import skillSmallCardsBg from '../../public/images/small-cards-skills.jpg';
-import careerSmallCardsBg from '../../public/images/small-cards-career.jpg';
-import portfolioSmallCardsBg from '../../public/images/small-cards-portfolio.jpg';
+import homeBackground from '../../public/images/hero-banner/homepage-background.jpg';
+import skillSmallCardsBg from '../../public/images/small-card/small-cards-skills.jpg';
+import careerSmallCardsBg from '../../public/images/small-card/small-cards-career.jpg';
+import portfolioSmallCardsBg from '../../public/images/small-card/small-cards-portfolio.jpg';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
 
@@ -31,7 +31,7 @@ export default function Home() {
 const heroBannerData = {
    title: 'Lionel',
    secondPartTitle: 'VAN SCHELLEBECK',
-   subtitle: 'A Brand New Front-End Developer !',
+   subtitle: 'Développeur Front-End React',
    infos: 'Javascript | React',
    image: homeBackground,
    link: '/profil',

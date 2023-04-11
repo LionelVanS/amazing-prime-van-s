@@ -1,4 +1,7 @@
+import LargeCards from '@/components/Body/LargeCards/LargeCards';
+import { LargeCardProvider } from '@/utils/context/largeCard';
 import Head from 'next/head';
+import background from 'public/images/large-card/portfolio-large-card.jpg';
 
 export default function Portfolio() {
    return (
@@ -6,7 +9,39 @@ export default function Portfolio() {
          <Head>
             <title>Prime Van S: Portfolios</title>
          </Head>
-         <main></main>
+         <main>
+            <LargeCardProvider largeCardData={largeCardData}>
+               <LargeCards />
+            </LargeCardProvider>
+         </main>
       </>
    );
 }
+
+const largeCardData = {
+   title: ' Mes Projets',
+   text: '',
+   infos: [
+      {
+         data: ' ',
+      },
+      {
+         data: '',
+      },
+      {
+         data: '',
+      },
+   ],
+   capacity: [
+      {
+         name: 'Javascript',
+      },
+      {
+         name: 'React | NextJS',
+      },
+      {
+         name: '',
+      },
+   ],
+   image: background,
+};

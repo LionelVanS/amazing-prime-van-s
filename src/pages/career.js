@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { HeroBannerProvider } from '@/utils/context/heroBanner';
 
-import careerBackground from '../../public/images/careerpage-background.jpg';
+import careerBackground from '../../public/images/hero-banner/careerpage-background.jpg';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
 
