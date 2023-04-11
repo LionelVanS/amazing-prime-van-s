@@ -5,10 +5,10 @@ import { useRouter } from 'next/router';
 import ArrowIcon from '../../../../Icons/ArrowIcon';
 import styled from 'styled-components';
 
-export default function NavLink({ link, isHoveredLink }) {
+export default function NavLink({ link, openLink }) {
    const router = useRouter();
    return (
-      <NavBarLinkDiv isHoveredLink={isHoveredLink}>
+      <NavBarLinkDiv openLink={openLink}>
          <Link
             href={link.path}
             className={router.pathname == link.path ? 'active' : ''}
@@ -30,20 +30,19 @@ const NavBarLinkDiv = styled.div`
       align-items: center;
       transition: color 150ms linear;
 
-      // Conduct when user is travelling through DropDownMenu
+      // Conduct when user is travelling in DropDownMenu
       background-color: ${(props) =>
-         props.isHoveredLink != '' ? colors.lightGreyBackground : ''};
+         props.openLink != '' ? colors.lightGreyBackground : ''};
       box-shadow: ${(props) =>
-         props.isHoveredLink != '' ? 'inset 0 -1rem 3rem -2rem #000}' : ''};
+         props.openLink != '' ? 'inset 0 -1rem 3rem -2rem #000}' : ''};
 
       :hover {
          color: white;
       }
-      color: ${(props) =>
-         props.isHoveredLink != '' ? colors.text : colors.text};
+      color: ${(props) => (props.openLink != '' ? colors.text : colors.text)};
       svg {
          transform: ${(props) =>
-            props.isHoveredLink != '' ? 'rotate(180deg)' : 'rotate(0)'};
+            props.openLink != '' ? 'rotate(180deg)' : 'rotate(0)'};
          width: 1.2vw;
          height: 1.2vw;
          margin-left: 0.5vw;
@@ -51,6 +50,7 @@ const NavBarLinkDiv = styled.div`
       }
    }
 
+   // Class active for link's page who is visited
    .active {
       ::after {
          content: '';
