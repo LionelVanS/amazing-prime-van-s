@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
-
 import { colors } from '@/utils/style/colors';
-
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 
@@ -14,6 +12,7 @@ export default function App({ Component, pageProps }) {
                name="viewport"
                content="width=device-width, initial-scale=1"
             />
+            <link rel="shortcut icon" href="./images/favicon.png" />
          </Head>
          <GlobalStyle />
          <Header />
