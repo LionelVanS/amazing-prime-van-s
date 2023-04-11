@@ -10,9 +10,9 @@ import { useEffect, useState } from 'react';
 import { colors } from '@/utils/style/colors';
 
 export default function Header() {
+   // Listening to the scroll to determinate where header should be
    const [isScroll, setIsScroll] = useState(false);
 
-   // Listening to the scroll to determinate where header should be
    useEffect(() => {
       function handleScroll() {
          if (window.scrollY >= 1) {
@@ -38,24 +38,30 @@ export default function Header() {
       boxShadow: isScroll ? '0px 5px 10px rgba(0, 0, 0, 0.64)' : '',
    };
 
-   // Background disappearance when scrolling down
+   // Overlay disappearance when scrolling down
    const backgroundOpacity = {
-      display: isScroll ? 'none' : 'block',
-      transition: { duration: '1s' },
+      initial: { opacity: 1 },
+      opacity: isScroll ? 0 : 1,
+      transition: { duration: 0.2 },
    };
 
    return (
       <HeaderPosition>
          <StyledHeader animate={[slideAnimation, boxShadow]}>
-            {/* <Overlay animate={[slideAnimation]}></Overlay> */}
             <Logo />
             <NavBar />
             <SearchIcon />
             <ProfilUser />
+            <OverlayDiv animate={backgroundOpacity} />
          </StyledHeader>
       </HeaderPosition>
    );
 }
+
+const HeaderPosition = styled.div`
+   width: 100%;
+   height: 3.5vw;
+`;
 
 const StyledHeader = styled(motion.header)`
    width: 60vw;
@@ -72,14 +78,10 @@ const StyledHeader = styled(motion.header)`
    border-radius: 0.5vw;
 `;
 
-const HeaderPosition = styled.div`
-   width: 100%;
-   height: 3.5vw;
-`;
-
-const Overlay = styled(motion.div)`
+const OverlayDiv = styled(motion.div)`
    width: 100%;
    height: inherit;
    position: fixed;
-   /* background-color: ${colors.appBackground}; */
+   z-index: -1;
+   background-color: ${colors.appBackground};
 `;
