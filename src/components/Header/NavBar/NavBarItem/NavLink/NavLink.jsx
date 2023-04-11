@@ -52,7 +52,6 @@ const NavBarLinkDiv = styled.div`
    }
 
    .active {
-      /* color: #fff; */
       ::after {
          content: '';
          z-index: 3;
@@ -61,7 +60,7 @@ const NavBarLinkDiv = styled.div`
          position: absolute;
          bottom: 0;
          left: 0;
-         /* background-color: #fff; */
+         background-color: #fff;
       }
    }
 `;
