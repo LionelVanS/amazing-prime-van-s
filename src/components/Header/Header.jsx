@@ -31,6 +31,7 @@ export default function Header() {
    // Slide animation from the top when scrolling down
    const slideAnimation = {
       top: isScroll ? '1vw' : '0',
+      transition: { duration: 0.2 },
    };
 
    // Box shadow appearance when scrolling down
