@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
 import NavBarItem from './NavBarItem/NavBarItem';
+import links from '../../../utils/Data/links';
 
 export default function NavBar() {
    return (
@@ -20,55 +20,3 @@ const Nav = styled.nav`
       align-items: center;
    }
 `;
-
-const links = [
-   // HOMEPAGE
-   {
-      name: 'Accueil',
-      path: '/',
-      subNav: [
-         {
-            name: 'Profil',
-            path: '/profil',
-         },
-      ],
-   },
-
-   // CAREER PAGE
-   {
-      name: 'Parcours',
-      path: '/career',
-      subNav: [
-         {
-            name: 'Expériences',
-            path: '/career#experiences',
-         },
-         {
-            name: 'Formations',
-            path: '/career#formations',
-         },
-      ],
-   },
-
-   // SKILLS PAGE
-   {
-      name: 'Compétences',
-      path: '/skills',
-      subNav: [
-         {
-            name: 'Techniques',
-            path: '/skills#Techniques',
-         },
-         {
-            name: 'Transversales',
-            path: '/skills#Transversales',
-         },
-      ],
-   },
-
-   // PORTFOLIO PAGE
-   {
-      name: 'Portfolio',
-      path: '/portfolio',
-   },
-];
