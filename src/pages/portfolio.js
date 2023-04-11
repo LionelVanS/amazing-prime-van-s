@@ -8,6 +8,10 @@ export default function Portfolio() {
       <>
          <Head>
             <title>Prime Van S: Portfolios</title>
+            <meta
+               name="description"
+               content="Jetez un oeil à mes dernieres réalisations !"
+            />
          </Head>
          <main>
             <LargeCardProvider largeCardData={largeCardData}>

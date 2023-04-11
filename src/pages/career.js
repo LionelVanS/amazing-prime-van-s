@@ -21,6 +21,10 @@ export default function Career() {
       <>
          <Head>
             <title>Prime Van S: Parcours</title>
+            <meta
+               name="description"
+               content="Consultez mon parcours professionnel !"
+            />
          </Head>
          <main>
             <HeroBannerProvider heroBannerData={heroBannerData}>

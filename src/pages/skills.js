@@ -16,6 +16,10 @@ export default function Skills() {
       <>
          <Head>
             <title>Prime Van S: Compétences</title>
+            <meta
+               name="description"
+               content="Prenez connaissances de mes compétences !"
+            />
          </Head>
          <SkillsMain>
             <H1>Mes Compétences</H1>

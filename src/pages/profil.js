@@ -8,6 +8,10 @@ export default function Profil() {
       <>
          <Head>
             <title>Prime Van S: Profil</title>
+            <meta
+               name="description"
+               content="Consultez mon profil pour en apprendre plus sur moi !"
+            />
          </Head>
          <main>
             <LargeCardProvider largeCardData={largeCardData}>
