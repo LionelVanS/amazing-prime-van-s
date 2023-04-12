@@ -21,7 +21,7 @@ const IncludeDiv = styled.div`
    p {
       font-size: 1vw;
       margin-left: 1rem;
-      font-weight: bold;
+      font-weight: 700;
    }
    span {
       margin-left: 1vw;

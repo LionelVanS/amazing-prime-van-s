@@ -34,13 +34,12 @@ const InfoDiv = styled.div`
    display: flex;
    flex-flow: column;
    padding: 0 1vw;
+   font-size: 1vw;
    p {
-      font-size: 1vw;
-      font-weight: bold;
+      font-weight: 500;
       margin: 0.5vw 1vw 1vw 0.5vw;
    }
    a {
-      font-size: 1vw;
       color: ${colors.text};
       padding: 0.5vw 1.5vw;
       border-radius: 0.5vw;

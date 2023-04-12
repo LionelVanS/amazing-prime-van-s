@@ -14,7 +14,7 @@ const AboutMe = styled.div`
    margin-top: 1vw;
    p {
       font-size: 1.2vw;
-      font-weight: bold;
+      font-weight: 700;
       margin-left: 1vw;
    }
 `;

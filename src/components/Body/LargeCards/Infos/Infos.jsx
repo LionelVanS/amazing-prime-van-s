@@ -21,7 +21,7 @@ export default function Infos() {
 const InfoDiv = styled.div`
    p {
       font-size: 1vw;
-      font-weight: bold;
+      font-weight: 500;
       margin-right: 1.5vw;
       color: ${colors.text};
    }

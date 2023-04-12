@@ -24,7 +24,7 @@ const AboutLinkDiv = styled.div`
    }
    p {
       font-size: 2vw;
-      font-weight: bold;
+      font-weight: 700;
       margin-left: 2rem;
    }
 `;

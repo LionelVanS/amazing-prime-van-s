@@ -18,7 +18,7 @@ const ContactDiv = styled.div`
       align-items: center;
       p {
          font-size: 1.5vw;
-         font-weight: bold;
+         font-weight: 700;
          margin-left: 1vw;
       }
       svg {

@@ -22,7 +22,7 @@ const TimeDiv = styled.div`
       height: 1.3vw;
       line-height: 1.5;
       font-size: 0.8vw;
-      font-weight: bold;
+      font-weight: 700;
       color: #fff;
       background-color: ${colors.spanBackground};
       padding: 0.1vw 0.4vw;

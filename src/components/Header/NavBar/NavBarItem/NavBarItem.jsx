@@ -26,5 +26,5 @@ const NavItem = styled.li`
    position: relative;
    height: 3.5vw;
    font-size: 1vw;
-   font-weight: 450;
+   font-weight: 500;
 `;

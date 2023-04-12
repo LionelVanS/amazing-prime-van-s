@@ -35,6 +35,6 @@ const DropDownDiv = styled(motion.div)`
    background-color: #000;
    cursor: auto;
    p {
-      font-weight: bold;
+      font-weight: 700;
    }
 `;

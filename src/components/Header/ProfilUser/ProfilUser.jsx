@@ -40,7 +40,7 @@ const ProfilDiv = styled.div`
    }
    > p {
       font-size: 1vw;
-      font-weight: 450;
+      font-weight: 500;
       margin: 0;
       padding-left: 1vw;
       color: ${colors.text};
