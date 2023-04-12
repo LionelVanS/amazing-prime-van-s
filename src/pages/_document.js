@@ -26,7 +26,12 @@ export default class MyDocument extends Document {
    render() {
       return (
          <Html lang="fr">
-            <Head />
+            <Head>
+               <link
+                  rel="stylesheet"
+                  href="https://fonts.cdnfonts.com/css/amazon-ember"
+               />
+            </Head>
             <body>
                <Main />
                <NextScript />

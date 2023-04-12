@@ -23,11 +23,6 @@ export default function App({ Component, pageProps }) {
 }
 
 const GlobalStyle = createGlobalStyle`
-      @font-face {
-         font-family: Amazon-Ember;
-         src: url(./font/AmazonEmber.woff2);
-         font-display: swap;
-      }
       * {
          box-sizing: border-box;
       }
@@ -35,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
       body {
          margin:0;
          background-color: ${colors.appBackground};
-         font-family: 'Amazon-Ember', sans-serif;
+         font-family: 'Amazon Ember', sans-serif;
          overflow-x: hidden;
          position:relative;
       }
