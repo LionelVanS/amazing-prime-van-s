@@ -26,7 +26,7 @@ const IncludeDiv = styled.div`
    span {
       margin-left: 1vw;
       background-color: ${colors.spanBackground};
-      border-radius: 0.3rem;
-      padding: 0 0.2rem;
+      border-radius: 0.5rem;
+      padding: 0.05vw 0.3vw;
    }
 `;
