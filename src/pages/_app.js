@@ -23,25 +23,24 @@ export default function App({ Component, pageProps }) {
 }
 
 const GlobalStyle = createGlobalStyle`
+      @font-face {
+         font-family: Amazon-Ember;
+         src: url(./font/AmazonEmber.woff2);
+         font-display: swap;
+      }
+      * {
+         box-sizing: border-box;
+      }
       html,
       body {
          margin:0;
          background-color: ${colors.appBackground};
-         @font-face {
-            font-family: Amazon-Ember;
-            src: url(./font/AmazonEmber.woff2);
-            font-display: swap;
-         }
-         
          font-family: 'Amazon-Ember', sans-serif;
          overflow-x: hidden;
          position:relative;
       }
       main{
          margin-bottom:5vw;
-      }
-      * {
-         box-sizing: border-box;
       }
       h1,h2, h3, p {
          color:#fff;
