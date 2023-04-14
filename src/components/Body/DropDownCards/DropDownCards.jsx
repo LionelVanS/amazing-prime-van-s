@@ -58,5 +58,5 @@ const CardsWrapper = styled.div`
    display: flex;
    margin-left: 3vw;
    transform: translateX(${(props) => props.currentPosition}vw);
-   transition: transform 0.3s ease-in;
+   transition: transform 0.5s ease-in-out;
 `;
