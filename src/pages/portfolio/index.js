@@ -27,7 +27,6 @@ export default function Portfolio() {
                   title="Mes Projets"
                />
             </section>
-            <a href="/portfolio/project">Cliquez ici</a>
          </main>
       </>
    );
