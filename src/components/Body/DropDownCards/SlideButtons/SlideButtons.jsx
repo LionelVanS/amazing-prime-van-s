@@ -33,7 +33,7 @@ export default function SlideButtons({
          }
          {
             // If user is in end of cards, there is no next button
-            (currentPosition = 0 ? (
+            currentPosition == -78 ? (
                ''
             ) : (
                <button
@@ -44,7 +44,7 @@ export default function SlideButtons({
                >
                   <ChevronRightIcon />
                </button>
-            ))
+            )
          }
       </SliderCommandDiv>
    );
