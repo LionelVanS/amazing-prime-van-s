@@ -6,13 +6,18 @@ import ArrowIcon from '../../../../Icons/ArrowIcon';
 import styled from 'styled-components';
 
 export default function NavLink({ link, openLink }) {
+   // Verifying path to apply .active class if user is on this path
    const router = useRouter();
+   const isActive = (pathname) => {
+      if (pathname === '/') {
+         return router.pathname === '/';
+      } else {
+         return router.pathname.startsWith(pathname);
+      }
+   };
    return (
       <NavBarLinkDiv openLink={openLink}>
-         <Link
-            href={link.path}
-            className={router.pathname == link.path ? 'active' : ''}
-         >
+         <Link href={link.path} className={isActive(link.path) ? 'active' : ''}>
             {link.name}
             <ArrowIcon />
          </Link>
@@ -35,11 +40,11 @@ const NavBarLinkDiv = styled.div`
          props.openLink != '' ? colors.lightGreyBackground : ''};
       box-shadow: ${(props) =>
          props.openLink != '' ? 'inset 0 -1rem 3rem -2rem #000}' : ''};
+      color: ${colors.text};
 
       :hover {
          color: white;
       }
-      color: ${(props) => (props.openLink != '' ? colors.text : colors.text)};
       svg {
          transform: ${(props) =>
             props.openLink != '' ? 'rotate(180deg)' : 'rotate(0)'};
