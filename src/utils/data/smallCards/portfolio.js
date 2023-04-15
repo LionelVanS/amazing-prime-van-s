@@ -5,37 +5,41 @@ import portfolioLogo from '../../../../public/images/projects/portfolio.png';
 
 const portfolioSmallCardsData = [
    {
+      id: 1,
       title: 'Kanap',
       logo: kanapLogo,
-      link: '/portfolio',
+      link: '/portfolio/project',
       date: '2022',
       duration: '1 an',
       text: '',
    },
    {
+      id: 2,
       title: 'Piiquante',
       logo: piiquanteLogo,
-      link: 'https://www.celestin-materiaux.fr/',
+      link: '/portfolio/project',
       date: '2007',
       duration: '16 ans',
       text: '',
    },
    {
+      id: 3,
       title: 'Groupomania',
       logo: groupomaniaLogo,
-      link: 'https://www.mplus-materiaux.fr/',
+      link: '/portfolio/project',
       date: '2022',
       duration: '1 an',
       text: '',
    },
    {
+      id: 4,
       title: 'Portfolio',
       logo: portfolioLogo,
-      link: 'https://www.dssmith.com/fr/',
+      link: '/portfolio/project',
       date: '2022',
       duration: '1 an',
       text: '',
    },
 ];
 
-module.exports = portfolioSmallCardsData;
+export default portfolioSmallCardsData;
