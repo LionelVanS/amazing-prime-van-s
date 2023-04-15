@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { LargeCardProvider } from '@/utils/context/largeCard';
-import profilLargeCardData from '@/utils/data/largeCard/profil';
+import largeCardData from '@/utils/data/home/profil/largeCard';
 import LargeCards from '@/components/Body/LargeCards/LargeCards';
 
 export default function Profil() {
@@ -14,7 +14,7 @@ export default function Profil() {
             />
          </Head>
          <main>
-            <LargeCardProvider largeCardData={profilLargeCardData}>
+            <LargeCardProvider largeCardData={largeCardData}>
                <LargeCards />
             </LargeCardProvider>
          </main>

@@ -1,14 +1,14 @@
-import intermarcheBg from '../../../../public/images/career/intermarche.png';
-import ghndBg from '../../../../public/images/career/ghnd.png';
-import dsSmithBg from '../../../../public/images/career/ds-smith.png';
-import celestinBg from '../../../../public/images/career/celestin.png';
-import mPlusBg from '../../../../public/images/career/m+.png';
-import tecumsehBg from '../../../../public/images/career/tecumseh.png';
-import vanSPhotoBg from '../../../../public/images/career/van-s-photo.png';
-import nemeraBg from '../../../../public/images/career/nemera.png';
-import votreLogoBg from '../../../../public/images/career/votre-logo.png';
+import intermarcheBg from '/public/images/career/logos/intermarche.png';
+import ghndBg from '/public/images/career/logos/ghnd.png';
+import dsSmithBg from '/public/images/career/logos/ds-smith.png';
+import celestinBg from '/public/images/career/logos/celestin.png';
+import mPlusBg from '/public/images/career/logos/m+.png';
+import tecumsehBg from '/public/images/career/logos/tecumseh.png';
+import vanSPhotoBg from '/public/images/career/logos/van-s-photo.png';
+import nemeraBg from '/public/images/career/logos/nemera.png';
+import votreLogoBg from '/public/images/career/logos/votre-logo.png';
 
-const careerSmallCardsData = [
+const smallCardsData = [
    {
       title: 'GHND',
       logo: ghndBg,
@@ -83,4 +83,4 @@ const careerSmallCardsData = [
    },
 ];
 
-module.exports = careerSmallCardsData;
+export default smallCardsData;

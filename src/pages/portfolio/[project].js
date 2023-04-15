@@ -5,8 +5,10 @@ import {
    getPortfolioStaticProps,
 } from '@/utils/functions/portfolioStaticProps';
 
-import portfolioSmallCardsData from '../../utils/data/smallCards/portfolio';
+import portfolioSmallCardsData from '../../utils/data/portfolio/projectsData';
 import Error404 from '../_error';
+import { LargeCardProvider } from '@/utils/context/largeCard';
+import LargeCards from '@/components/Body/LargeCards/LargeCards';
 
 export default function Project() {
    const router = useRouter();
@@ -26,7 +28,9 @@ export default function Project() {
             <meta name="description" content={`Page du projet ${data.title}`} />
          </Head>
          <main>
-            <h1 style={{ textAlign: 'center' }}>{data.title}</h1>
+            <LargeCardProvider largeCardData={data}>
+               <LargeCards />
+            </LargeCardProvider>
          </main>
       </>
    );

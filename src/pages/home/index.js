@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { HeroBannerProvider } from '@/utils/context/heroBanner';
-import homePageSmallCardsData from '@/utils/data/smallCards/home';
-import homePageHeroBannerData from '@/utils/data/heroBanner/home';
+import homePageSmallCardsData from '@/utils/data/home/smallCardsData';
+import homePageHeroBannerData from '@/utils/data/home/heroBannerData';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
 

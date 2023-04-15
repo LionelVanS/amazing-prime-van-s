@@ -2,11 +2,11 @@ const links = [
    // HOMEPAGE
    {
       name: 'Accueil',
-      path: '/accueil',
+      path: '/home',
       subNav: [
          {
             name: 'Profil',
-            path: '/accueil/profil',
+            path: '/home/profil',
          },
       ],
    },

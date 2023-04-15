@@ -1,12 +1,12 @@
 // BACKGROUNDS STATIC IMAGES
-import bg1 from '../../../../public/images/stack/1.jpg';
-import bg3 from '../../../../public/images/stack/3.jpg';
-import bg2 from '../../../../public/images/stack/2.jpg';
-import bg4 from '../../../../public/images/stack/4.jpg';
-import bg5 from '../../../../public/images/stack/5.jpg';
-import bg6 from '../../../../public/images/stack/6.jpg';
+import bg1 from '/public/images/skills/1.jpg';
+import bg2 from '/public/images/skills/2.jpg';
+import bg3 from '/public/images/skills/3.jpg';
+import bg4 from '/public/images/skills/4.jpg';
+import bg5 from '/public/images/skills/5.jpg';
+import bg6 from '/public/images/skills/6.jpg';
 
-const skillsSmallCardsData = [
+const smallCardsData = [
    {
       name: 'Techniques',
       datas: [
@@ -33,4 +33,4 @@ const skillsSmallCardsData = [
    },
 ];
 
-module.exports = skillsSmallCardsData;
+export default smallCardsData;

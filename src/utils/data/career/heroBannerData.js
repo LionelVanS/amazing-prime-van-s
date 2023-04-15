@@ -1,12 +1,12 @@
-import careerBackground from '../../../../public/images/hero-banner/careerpage-background.jpg';
+import background from '/public/images/career/heroBanner/herobanner-background.jpg';
 
-const careerHeroBannerData = {
+const heroBannerData = {
    title: 'Mon Parcours',
    secondPartTitle: 'De 2007 A 2023',
    subtitle: 'Ne restez pas spectateur de ma réussite !',
-   image: careerBackground,
+   image: background,
    infos: 'BTP | Logistique | Production',
    link: '/formation',
 };
 
-module.exports = careerHeroBannerData;
+export default heroBannerData;

@@ -1,6 +1,6 @@
-import background from 'public/images/hero-banner/portfolio-background.jpg';
+import background from '/public/images/portfolio/heroBanner-background.jpg';
 
-const portfolioHeroBannerData = {
+const heroBannerData = {
    title: 'Portfolio',
    secondPartTitle: '',
    subtitle: 'Développeur Front-End React',
@@ -9,4 +9,4 @@ const portfolioHeroBannerData = {
    link: '#projects',
 };
 
-module.exports = portfolioHeroBannerData;
+export default heroBannerData;

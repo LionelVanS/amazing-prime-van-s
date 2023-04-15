@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styled from 'styled-components';
-import skillsSmallCardsData from '@/utils/data/smallCards/skills';
+import smallCardsData from '@/utils/data/skills/smallCardsData';
 import SimpleCard from '@/components/Body/SimpleCard/SimpleCard';
 
 export default function Skills() {
@@ -15,7 +15,7 @@ export default function Skills() {
          </Head>
          <SkillsMain>
             <H1>Mes Compétences</H1>
-            {skillsSmallCardsData.map((datas) => (
+            {smallCardsData.map((datas) => (
                <section key={datas.name} id={datas.name}>
                   <h2>{datas.name}</h2>
                   <CardsDiv>

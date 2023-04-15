@@ -3,8 +3,8 @@ import { HeroBannerProvider } from '@/utils/context/heroBanner';
 
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
-import careerHeroBannerData from '@/utils/data/heroBanner/career';
-import careerSmallCardsData from '@/utils/data/smallCards/career';
+import heroBannerData from '@/utils/data/career/heroBannerData';
+import smallCardsData from '@/utils/data/career/smallCardsData';
 
 export default function Career() {
    return (
@@ -17,12 +17,12 @@ export default function Career() {
             />
          </Head>
          <main>
-            <HeroBannerProvider heroBannerData={careerHeroBannerData}>
+            <HeroBannerProvider heroBannerData={heroBannerData}>
                <HeroBanner />
             </HeroBannerProvider>
             <section id="experiences">
                <DropDownCards
-                  datas={careerSmallCardsData}
+                  datas={smallCardsData}
                   title="Mes Expériences Professionnelles"
                />
             </section>

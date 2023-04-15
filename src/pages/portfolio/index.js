@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
 import { HeroBannerProvider } from '@/utils/context/heroBanner';
-import portfolioHeroBannerData from '@/utils/data/heroBanner/portfolio';
-import portfolioSmallCardsData from '@/utils/data/smallCards/portfolio';
+import heroBannerData from '@/utils/data/portfolio/heroBannerData';
+import projectsData from '@/utils/data/portfolio/projectsData';
 
 import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
@@ -18,14 +18,11 @@ export default function Portfolio() {
             />
          </Head>
          <main>
-            <HeroBannerProvider heroBannerData={portfolioHeroBannerData}>
+            <HeroBannerProvider heroBannerData={heroBannerData}>
                <HeroBanner />
             </HeroBannerProvider>
             <section id="projects">
-               <DropDownCards
-                  datas={portfolioSmallCardsData}
-                  title="Mes Projets"
-               />
+               <DropDownCards datas={projectsData} title="Mes Projets" />
             </section>
          </main>
       </>

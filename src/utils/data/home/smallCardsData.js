@@ -1,11 +1,11 @@
-import skillSmallCardsBg from '../../../../public/images/small-card/small-cards-skills.jpg';
-import careerSmallCardsBg from '../../../../public/images/small-card/small-cards-career.jpg';
-import portfolioSmallCardsBg from '../../../../public/images/small-card/small-cards-portfolio.jpg';
+import skillsBackground from '/public/images/home/smallCards/small-cards-skills.jpg';
+import careerBackground from '/public/images/home/smallCards/small-cards-career.jpg';
+import portfolioBackground from '/public/images/home/smallCards/small-cards-portfolio.jpg';
 
-const homePageSmallCardsData = [
+const smallCardsData = [
    {
       title: 'Le Parcours',
-      background: careerSmallCardsBg,
+      background: careerBackground,
       link: '/career#experiences',
       date: '2007',
       duration: '16 ans',
@@ -13,7 +13,7 @@ const homePageSmallCardsData = [
    },
    {
       title: "L'Outil",
-      background: skillSmallCardsBg,
+      background: skillsBackground,
       link: '/skills#technologies',
       date: '1989',
       duration: '34 ans',
@@ -21,7 +21,7 @@ const homePageSmallCardsData = [
    },
    {
       title: 'Projets 2.0',
-      background: portfolioSmallCardsBg,
+      background: portfolioBackground,
       link: '/portfolio',
       date: '2022',
       duration: '1 an',
@@ -29,4 +29,4 @@ const homePageSmallCardsData = [
    },
 ];
 
-module.exports = homePageSmallCardsData;
+export default smallCardsData;
