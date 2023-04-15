@@ -5,7 +5,7 @@ export default function Logo() {
    return (
       <>
          <LogoDiv>
-            <Link href="/">
+            <Link href="/accueil">
                <Image
                   src="/images/logo.png"
                   alt="logo prime van s"
