@@ -1,6 +1,6 @@
 import styled from 'styled-components';
+import links from '../../../utils/data/header/links';
 import NavBarItem from './NavBarItem/NavBarItem';
-import links from '../../../utils/Data/links';
 
 export default function NavBar() {
    return (
