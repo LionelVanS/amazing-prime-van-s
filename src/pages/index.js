@@ -10,7 +10,11 @@ export default function LandingPage() {
                content="Bienvenue sur mon portfolio. Il s'agit d'un clône du site prime vidéo."
             />
          </Head>
-         <main></main>
+         <main>
+            <div>
+               <h1 style={{ textAlign: 'center' }}>LANDING PAGE</h1>
+            </div>
+         </main>
       </>
    );
 }
