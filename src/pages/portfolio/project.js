@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function Portfolio() {
+export default function Project() {
    return (
       <>
          <Head>
@@ -8,7 +8,7 @@ export default function Portfolio() {
             <meta name="description" content="Page d un projet" />
          </Head>
          <main>
-            <h1 style={{ textAlign: 'center' }}>Page d'un projet</h1>
+            <h1 style={{ textAlign: 'center' }}>Page d un projet</h1>
          </main>
       </>
    );
