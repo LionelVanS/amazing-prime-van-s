@@ -6,7 +6,7 @@ const homePageHeroBannerData = {
    subtitle: 'Développeur Front-End React',
    infos: 'Javascript | React',
    image: homeBackground,
-   link: '/profil',
+   link: 'accueil/profil',
 };
 
 module.exports = homePageHeroBannerData;
