@@ -20,7 +20,7 @@ const careerSmallCardsData = [
    {
       title: 'Van S Photographie',
       logo: vanSPhotoBg,
-      link: '/portfolio',
+      link: 'https://www.instagram.com/van.s.photographie/',
       date: '2022',
       duration: '1 an',
       text: '',
