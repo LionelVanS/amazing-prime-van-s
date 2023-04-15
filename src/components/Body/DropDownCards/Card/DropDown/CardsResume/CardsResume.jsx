@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-
+import { useRouter } from 'next/router';
 import PlayIcon from '@/components/Icons/PlayIcon';
 import PLusIcon from '@/components/Icons/PlusIcon';
 import DotIcon from '@/components/Icons/DotIcon';
+import { handleClick } from '@/utils/functions/handleClick';
 
-export default function CardsResume({ data, isExternalLink }) {
+export default function CardsResume({ data }) {
+   const router = useRouter();
+
    return (
       <ResumeDiv>
-         <Link
-            href={data.link}
-            target={isExternalLink ? '_blank' : ''}
-            rel={isExternalLink ? 'noopener noreferrer' : ''}
-         >
+         <Link href={data.link} onClick={(e) => handleClick(e, router, data)}>
             <PlayIcon />
             <p>En Savoir Plus</p>
          </Link>
@@ -36,6 +35,7 @@ const ResumeDiv = styled.div`
       }
       > svg {
          width: 2.5vw;
+         fill: #fff;
       }
    }
 `;
