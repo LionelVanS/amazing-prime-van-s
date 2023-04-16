@@ -1,19 +1,30 @@
+// LOGOS
+import ohmyfoodLogo from '/public/images/portfolio/projects/ohmyfood.png';
+import lapanthereLogo from '/public/images/portfolio/projects/lapanthere.png';
 import kanapLogo from '/public/images/portfolio/projects/kanap.png';
 import piiquanteLogo from '/public/images/portfolio/projects/piiquante.png';
 import groupomaniaLogo from '/public/images/portfolio/projects/groupomania.png';
 import portfolioLogo from '/public/images/portfolio/projects/portfolio.png';
 
-import background from '/public/images/portfolio/heroBanner-background.jpg';
+// HEROBANNER'S BACKGROUND
+import ohmyfoodBackground from '/public/images/portfolio/projects/ohmyfood-background.jpg';
+import laPanthereBackground from '/public/images/portfolio/projects/lapanthere-background.jpg';
+import kanapBackground from '/public/images/portfolio/projects/kanap-background.jpg';
+import piiquanteBackground from '/public/images/portfolio/projects/piiquante-background.jpg';
+import groupomaniaBackground from '/public/images/portfolio/projects/groupomania-background.jpg';
+import portfolioBackground from '/public/images/portfolio/projects/portfolio-background.jpg';
 
 const portfolioSmallCardsData = [
    {
       id: 1,
-      title: 'Kanap',
-      logo: kanapLogo,
-      link: '/portfolio/project',
+      title: 'Oh My Food',
+      logo: ohmyfoodLogo,
+      image: ohmyfoodBackground,
+      link: 'project',
+      deploy: 'https://lionelvans.github.io/Ohmyfood/',
       date: '2022',
-      duration: '1 an',
-      text: '',
+      duration: "Projet d'école",
+      text: 'Ce projet a pour objectif de travailler avec Sass, et de maitriser les animations',
       infos: [
          {
             data: '06 / 04 / 1989',
@@ -36,15 +47,16 @@ const portfolioSmallCardsData = [
             name: 'Sympathique',
          },
       ],
-      image: background,
    },
    {
       id: 2,
-      title: 'Piiquante',
-      logo: piiquanteLogo,
-      link: '/portfolio/project',
-      date: '2007',
-      duration: '16 ans',
+      title: 'La Panthère',
+      logo: lapanthereLogo,
+      image: laPanthereBackground,
+      link: 'project',
+      deploy: 'https://lionelvans.github.io/LaPanthere/',
+      date: '2022',
+      duration: "Projet d'école",
       text: '',
       infos: [
          {
@@ -68,15 +80,16 @@ const portfolioSmallCardsData = [
             name: 'Sympathique',
          },
       ],
-      image: background,
    },
    {
       id: 3,
-      title: 'Groupomania',
-      logo: groupomaniaLogo,
-      link: '/portfolio/project',
+      title: 'Kanap',
+      logo: kanapLogo,
+      image: kanapBackground,
+      link: 'project',
+      deploy: '',
       date: '2022',
-      duration: '1 an',
+      duration: "Projet d'école",
       text: '',
       infos: [
          {
@@ -100,15 +113,16 @@ const portfolioSmallCardsData = [
             name: 'Sympathique',
          },
       ],
-      image: background,
    },
    {
       id: 4,
-      title: 'Portfolio',
-      logo: portfolioLogo,
-      link: '/portfolio/project',
-      date: '2022',
-      duration: '1 an',
+      title: 'Piiquante',
+      logo: piiquanteLogo,
+      image: piiquanteBackground,
+      link: 'project',
+      deploy: '',
+      date: '2007',
+      duration: "Projet d'école",
       text: '',
       infos: [
          {
@@ -132,7 +146,72 @@ const portfolioSmallCardsData = [
             name: 'Sympathique',
          },
       ],
-      image: background,
+   },
+   {
+      id: 5,
+      title: 'Groupomania',
+      logo: groupomaniaLogo,
+      image: groupomaniaBackground,
+      link: 'project',
+      deploy: '',
+      date: '2022',
+      duration: "Projet d'école",
+      text: '',
+      infos: [
+         {
+            data: '06 / 04 / 1989',
+         },
+         {
+            data: '34 ans',
+         },
+         {
+            data: '',
+         },
+      ],
+      capacity: [
+         {
+            name: 'Curieux',
+         },
+         {
+            name: 'Passionné',
+         },
+         {
+            name: 'Sympathique',
+         },
+      ],
+   },
+   {
+      id: 6,
+      title: 'Portfolio',
+      logo: portfolioLogo,
+      image: portfolioBackground,
+      link: 'project',
+      deploy: '',
+      date: '2022',
+      duration: "Projet d'école",
+      text: '',
+      infos: [
+         {
+            data: '06 / 04 / 1989',
+         },
+         {
+            data: '34 ans',
+         },
+         {
+            data: '',
+         },
+      ],
+      capacity: [
+         {
+            name: 'Curieux',
+         },
+         {
+            name: 'Passionné',
+         },
+         {
+            name: 'Sympathique',
+         },
+      ],
    },
 ];
 
