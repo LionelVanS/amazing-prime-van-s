@@ -2,7 +2,7 @@ export function handleClick(e, router, data) {
    e.preventDefault();
 
    switch (true) {
-      case data.link.includes('/portfolio/'):
+      case data.link.includes('project'):
          router.push(`/portfolio/${data.id}`);
          break;
 
