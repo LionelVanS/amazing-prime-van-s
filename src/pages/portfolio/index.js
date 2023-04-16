@@ -4,7 +4,7 @@ import { HeroBannerProvider } from '@/utils/context/heroBanner';
 import heroBannerData from '@/utils/data/portfolio/heroBannerData';
 import projectsData from '@/utils/data/portfolio/projectsData';
 
-import DropDownCards from '@/components/Body/DropDownCards/DropDownCards';
+import DropDownCards from '@/components/Body/smallCards/DropDownCards/DropDownCards';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 
 export default function Portfolio() {

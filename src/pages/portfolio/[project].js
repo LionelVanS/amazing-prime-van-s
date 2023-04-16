@@ -6,7 +6,7 @@ import {
 } from '@/utils/functions/portfolioStaticProps';
 
 import portfolioSmallCardsData from '../../utils/data/portfolio/projectsData';
-import Error404 from '../_error';
+import Error404 from '../404';
 import { LargeCardProvider } from '@/utils/context/largeCard';
 import LargeCards from '@/components/Body/LargeCards/LargeCards';
 

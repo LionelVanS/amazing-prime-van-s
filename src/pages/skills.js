@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import smallCardsData from '@/utils/data/skills/smallCardsData';
-import SimpleCard from '@/components/Body/SimpleCard/SimpleCard';
+import SimpleCard from '@/components/Body/smallCards/SimpleCard/SimpleCard';
 
 export default function Skills() {
    return (
