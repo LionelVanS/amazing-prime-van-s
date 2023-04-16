@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from 'react';
 import Card from './Card/Card';
 import SlideButtons from './SlideButtons/SlideButtons';
 
@@ -10,8 +9,8 @@ export default function DropDownCards({ datas, title }) {
 
    // Contains boolean to handle visibility of next or previous button
    const [viewSlideButton, setViewSlideButton] = useState(false);
+   // const decalage = datas.length - 5 * 100;
 
-   const router = useRouter();
    return (
       <>
          <CardsContainer>
@@ -46,7 +45,7 @@ export default function DropDownCards({ datas, title }) {
    );
 }
 
-const CardsContainer = styled.section`
+const CardsContainer = styled.div`
    height: 35vw;
    position: relative;
    h2 {

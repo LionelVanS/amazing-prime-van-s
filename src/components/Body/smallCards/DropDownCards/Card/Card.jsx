@@ -24,18 +24,21 @@ export default function Card({ data }) {
       <ContentArticle
          onMouseOver={() => setOpeningCard(data.title)}
          onMouseOut={() => setOpeningCard(' ')}
-         isHovered={isHoveredCard}
+         isHoveredCard={isHoveredCard}
       >
          <CardLink
             data={data}
             isHoveredCard={isHoveredCard}
             isExternalLink={isExternalLink}
          />
-         {isHoveredCard ? (
-            <DropDown data={data} isExternalLink={isExternalLink} />
-         ) : (
-            ''
-         )}
+         {
+            // Drop the card which is hovered
+            isHoveredCard ? (
+               <DropDown data={data} isExternalLink={isExternalLink} />
+            ) : (
+               ''
+            )
+         }
       </ContentArticle>
    );
 }
@@ -45,8 +48,9 @@ const ContentArticle = styled.article`
    height: 10vw;
    margin: 0 0.5vw;
    position: relative;
-   z-index: ${(props) => (props.isHovered ? 2 : 1)};
+   z-index: ${(props) => (props.isHoveredCard ? 2 : 1)};
    :hover {
+      box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.61);
       transition: transform 100ms 150ms ease-in;
       transform: scale(1.3);
    }

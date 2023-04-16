@@ -2,6 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export default function BackgroundImage({ data, isHoveredCard }) {
+   // Contains background image or logo if there is no background image
    const image = data.background ? data.background : data.logo;
    return (
       <ImageDiv background={data.background} isHoveredCard={isHoveredCard}>

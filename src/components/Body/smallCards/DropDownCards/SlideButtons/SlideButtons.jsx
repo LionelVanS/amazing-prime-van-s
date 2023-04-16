@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { previousCards, nextCards } from '@/utils/functions/slide';
 import { colors } from '@/utils/style/colors';
-import ChevronLeftIcon from '@/components/Icons/ChevronLeftIcon';
-import ChevronRightIcon from '@/components/Icons/ChevronRightIcon';
+import LeftButton from './LeftButton/LeftButton';
+import RightButton from './RightButton/RightButton';
 
 export default function SlideButtons({
    currentPosition,
@@ -21,14 +20,10 @@ export default function SlideButtons({
             currentPosition == 0 ? (
                ''
             ) : (
-               <button
-                  onClick={(e) =>
-                     previousCards(e, currentPosition, setCurrentPosition)
-                  }
-                  className="left-button"
-               >
-                  <ChevronLeftIcon />
-               </button>
+               <LeftButton
+                  currentPosition={currentPosition}
+                  setCurrentPosition={setCurrentPosition}
+               />
             )
          }
          {
@@ -36,14 +31,10 @@ export default function SlideButtons({
             currentPosition == -78 ? (
                ''
             ) : (
-               <button
-                  onClick={(e) =>
-                     nextCards(e, currentPosition, setCurrentPosition)
-                  }
-                  className="right-button"
-               >
-                  <ChevronRightIcon />
-               </button>
+               <RightButton
+                  currentPosition={currentPosition}
+                  setCurrentPosition={setCurrentPosition}
+               />
             )
          }
       </SliderCommandDiv>
