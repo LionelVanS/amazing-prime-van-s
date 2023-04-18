@@ -9,7 +9,7 @@ import bg6 from '/public/images/skills/6.jpg';
 const smallCardsData = [
    {
       name: 'Techniques',
-      datas: [
+      data: [
          { title: 'HTML', background: bg1 },
          { title: 'CSS', background: bg2 },
          { title: 'Sass', background: bg5 },
@@ -24,7 +24,7 @@ const smallCardsData = [
    },
    {
       name: 'Transversales',
-      datas: [
+      data: [
          { title: 'Figma', background: bg1 },
          { title: 'GitHub', background: bg3 },
          { title: 'Photoshop', background: bg2 },

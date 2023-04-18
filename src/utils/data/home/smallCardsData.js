@@ -6,6 +6,7 @@ const smallCardsData = [
    {
       title: 'Le Parcours',
       background: careerBackground,
+      include: 'Expériences incluses',
       link: '/career#experiences',
       date: '2007',
       duration: '16 ans',
@@ -15,6 +16,7 @@ const smallCardsData = [
       title: "L'Outil",
       background: skillsBackground,
       link: '/skills#technologies',
+      include: 'Compétences incluses',
       date: '1989',
       duration: '34 ans',
       text: 'Une hache pour seul outil, aucune technologie ne saurait lui résister. Sa cible, la réussite.',
@@ -22,6 +24,7 @@ const smallCardsData = [
    {
       title: 'Projets 2.0',
       background: portfolioBackground,
+      include: 'Projets perso non inclus',
       link: '/portfolio',
       date: '2022',
       duration: '1 an',

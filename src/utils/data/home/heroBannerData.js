@@ -6,7 +6,7 @@ const heroBannerData = {
    subtitle: 'Développeur Front-End React',
    infos: 'Javascript | React',
    image: background,
-   link: 'accueil/profil',
+   link: 'home/profil',
 };
 
 export default heroBannerData;

@@ -21,8 +21,8 @@ const links = [
             path: '/career#experiences',
          },
          {
-            name: 'Formations',
-            path: '/career#formations',
+            name: 'Formation',
+            path: '/career/formation',
          },
       ],
    },
@@ -50,4 +50,4 @@ const links = [
    },
 ];
 
-module.exports = links;
+export default links;

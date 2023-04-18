@@ -14,14 +14,18 @@ import piiquanteBackground from '/public/images/portfolio/projects/piiquante-bac
 import groupomaniaBackground from '/public/images/portfolio/projects/groupomania-background.jpg';
 import portfolioBackground from '/public/images/portfolio/projects/portfolio-background.jpg';
 
+// ICONS
+import GithubIcon from '@/components/Icons/GithubIcon';
+import WebIcon from '@/components/Icons/WebIcon';
+
 const portfolioSmallCardsData = [
    {
       id: 1,
       title: 'Oh My Food',
       logo: ohmyfoodLogo,
       image: ohmyfoodBackground,
+      reason: "Projet d'école",
       link: 'project',
-      deploy: 'https://lionelvans.github.io/Ohmyfood/',
       date: '2022',
       duration: "Projet d'école",
       text: 'Ce projet a pour objectif de travailler avec Sass, et de maitriser les animations',
@@ -47,37 +51,61 @@ const portfolioSmallCardsData = [
             name: 'Sympathique',
          },
       ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/Ohmyfood',
+            icon: <GithubIcon />,
+         },
+         {
+            name: 'Visitez le site',
+            link: 'https://lionelvans.github.io/Ohmyfood/',
+            icon: <WebIcon />,
+         },
+      ],
    },
    {
       id: 2,
       title: 'La Panthère',
       logo: lapanthereLogo,
       image: laPanthereBackground,
+      reason: "Projet d'école",
       link: 'project',
-      deploy: 'https://lionelvans.github.io/LaPanthere/',
       date: '2022',
       duration: "Projet d'école",
       text: '',
       infos: [
          {
-            data: '06 / 04 / 1989',
+            data: 'exemple',
          },
          {
-            data: '34 ans',
+            data: 'exemple',
          },
          {
-            data: '',
+            data: 'exemple',
          },
       ],
       capacity: [
          {
-            name: 'Curieux',
+            name: 'exemple',
          },
          {
-            name: 'Passionné',
+            name: 'exemple',
          },
          {
-            name: 'Sympathique',
+            name: 'exemple',
+         },
+      ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/LaPanthere',
+            icon: <GithubIcon />,
+         },
+         {
+            name: 'Visitez le site',
+            link: 'https://lionelvans.github.io/LaPanthere/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -86,6 +114,7 @@ const portfolioSmallCardsData = [
       title: 'Kanap',
       logo: kanapLogo,
       image: kanapBackground,
+      reason: "Projet d'école",
       link: 'project',
       deploy: '',
       date: '2022',
@@ -93,24 +122,31 @@ const portfolioSmallCardsData = [
       text: '',
       infos: [
          {
-            data: '06 / 04 / 1989',
+            data: 'exemple',
          },
          {
-            data: '34 ans',
+            data: '34 exemple',
          },
          {
-            data: '',
+            data: 'exemple',
          },
       ],
       capacity: [
          {
-            name: 'Curieux',
+            name: 'exemple',
          },
          {
-            name: 'Passionné',
+            name: 'exemple',
          },
          {
-            name: 'Sympathique',
+            name: 'exemple',
+         },
+      ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/Kanap',
+            icon: <GithubIcon />,
          },
       ],
    },
@@ -119,6 +155,7 @@ const portfolioSmallCardsData = [
       title: 'Piiquante',
       logo: piiquanteLogo,
       image: piiquanteBackground,
+      reason: "Projet d'école",
       link: 'project',
       deploy: '',
       date: '2007',
@@ -126,24 +163,31 @@ const portfolioSmallCardsData = [
       text: '',
       infos: [
          {
-            data: '06 / 04 / 1989',
+            data: 'exemple',
          },
          {
-            data: '34 ans',
+            data: 'exemple',
          },
          {
-            data: '',
+            data: 'exemple',
          },
       ],
       capacity: [
          {
-            name: 'Curieux',
+            name: 'exemple',
          },
          {
-            name: 'Passionné',
+            name: 'exemple',
          },
          {
-            name: 'Sympathique',
+            name: 'exemple',
+         },
+      ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/Piiquante',
+            icon: <GithubIcon />,
          },
       ],
    },
@@ -152,6 +196,7 @@ const portfolioSmallCardsData = [
       title: 'Groupomania',
       logo: groupomaniaLogo,
       image: groupomaniaBackground,
+      reason: "Projet d'école",
       link: 'project',
       deploy: '',
       date: '2022',
@@ -159,24 +204,31 @@ const portfolioSmallCardsData = [
       text: '',
       infos: [
          {
-            data: '06 / 04 / 1989',
+            data: 'exemple',
          },
          {
-            data: '34 ans',
+            data: 'exemple',
          },
          {
-            data: '',
+            data: 'exemple',
          },
       ],
       capacity: [
          {
-            name: 'Curieux',
+            name: 'exemple',
          },
          {
-            name: 'Passionné',
+            name: 'exemple',
          },
          {
-            name: 'Sympathique',
+            name: 'exemple',
+         },
+      ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/Groupomania',
+            icon: <GithubIcon />,
          },
       ],
    },
@@ -185,6 +237,7 @@ const portfolioSmallCardsData = [
       title: 'Portfolio',
       logo: portfolioLogo,
       image: portfolioBackground,
+      reason: 'Projet personnel',
       link: 'project',
       deploy: '',
       date: '2022',
@@ -192,24 +245,31 @@ const portfolioSmallCardsData = [
       text: '',
       infos: [
          {
-            data: '06 / 04 / 1989',
+            data: 'exemple',
          },
          {
-            data: '34 ans',
+            data: 'exemple',
          },
          {
-            data: '',
+            data: 'exemple',
          },
       ],
       capacity: [
          {
-            name: 'Curieux',
+            name: 'exemple',
          },
          {
-            name: 'Passionné',
+            name: 'exemple',
          },
          {
-            name: 'Sympathique',
+            name: 'exemple',
+         },
+      ],
+      links: [
+         {
+            name: 'Repo Github',
+            link: 'https://github.com/LionelVanS/amazing-prime-van-s',
+            icon: <GithubIcon />,
          },
       ],
    },
