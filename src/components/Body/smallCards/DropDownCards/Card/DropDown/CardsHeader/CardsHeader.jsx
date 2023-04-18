@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 import TickIcon from '@/components/Icons/TickIcon';
 
-export default function CardsHeader() {
+export default function CardsHeader({ data }) {
    return (
       <HeaderDiv>
          <TickIcon />
-         <p>Included with me</p>
+         <p>{data.include || data.reason}</p>
       </HeaderDiv>
    );
 }
