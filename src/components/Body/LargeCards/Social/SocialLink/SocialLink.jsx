@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import styled from 'styled-components';
 import { colors } from '@/utils/style/colors';
+import { handleClick } from '@/utils/functions/handleClick';
+import { useRouter } from 'next/router';
 
 export default function SocialLink({ link }) {
+   const router = useRouter;
    return (
-      <LinkDiv>
-         <Link href={link.url} target="_blank" rel="noopener noreferrer">
-            {link.icon}
-         </Link>
-      </LinkDiv>
+      <Link href={link.link} onClick={(e) => handleClick(e, router, link)}>
+         <LinkDiv>{link.icon}</LinkDiv>
+      </Link>
    );
 }
 
