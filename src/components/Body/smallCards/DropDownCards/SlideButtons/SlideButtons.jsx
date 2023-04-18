@@ -17,20 +17,17 @@ export default function SlideButtons({
       >
          {
             // If user is in start of cards, there is no previous button
-            currentPosition == 0 ? (
-               ''
-            ) : (
+            currentPosition != 0 && (
                <LeftButton
                   currentPosition={currentPosition}
                   setCurrentPosition={setCurrentPosition}
                />
             )
          }
+
          {
             // If user is in end of cards, there is no next button
-            currentPosition == -78 ? (
-               ''
-            ) : (
+            currentPosition != -78 && (
                <RightButton
                   currentPosition={currentPosition}
                   setCurrentPosition={setCurrentPosition}
