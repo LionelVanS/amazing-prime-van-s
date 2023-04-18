@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import Background from './Background/Background';
-import SoftSkills from './SoftSkills/SoftSkills';
+import CapacityList from './CapacityList/CapacityList';
 import Infos from './Infos/Infos';
 import Text from './Text/Text';
-import IncludeWithMe from './IncludeWithMe';
+import Description from './Description/Description';
 import Contact from './Contact/Contact';
 import Social from './Social/Social';
 import { useLargeCard } from '@/utils/context/largeCard';
@@ -17,8 +17,8 @@ export default function LargeCards() {
                <h1>{datas.title}</h1>
                <Text />
                <Infos />
-               <SoftSkills />
-               <IncludeWithMe />
+               <CapacityList />
+               <Description />
                <LinksDiv>
                   <Contact />
                   <Social />
