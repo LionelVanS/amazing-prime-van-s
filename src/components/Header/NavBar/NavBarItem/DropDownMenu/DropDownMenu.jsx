@@ -10,15 +10,14 @@ export default function DropDownMenu({ link, setOpenLink }) {
       <>
          <DropDownMenuDiv>
             <ul>
-               {subMenuLinks
-                  ? subMenuLinks.map((link, index) => (
-                       <MenuItem
-                          key={index}
-                          link={link}
-                          setOpenLink={setOpenLink}
-                       />
-                    ))
-                  : ''}
+               {subMenuLinks &&
+                  subMenuLinks.map((link, index) => (
+                     <MenuItem
+                        key={index}
+                        link={link}
+                        setOpenLink={setOpenLink}
+                     />
+                  ))}
             </ul>
          </DropDownMenuDiv>
       </>
