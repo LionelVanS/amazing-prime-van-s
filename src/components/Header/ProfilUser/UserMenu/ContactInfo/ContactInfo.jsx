@@ -1,16 +1,21 @@
-export default function ContactInfo({ infoLink }) {
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { handleClick } from '@/utils/functions/handleClick';
+import contactLinks from '@/utils/data/header/profilUser/contactLinks';
+
+export default function ContactInfo() {
+   const router = useRouter();
    return (
       <>
          <p>Informations</p>
-         {infoLink.map((link, index) => (
-            <a
+         {contactLinks.map((data, index) => (
+            <Link
                key={index}
-               href={link.url}
-               target={link.isWebLink ? '_blank' : '_self'}
-               rel="noopener noreferrer"
+               href={data.link}
+               onClick={(e) => handleClick(e, router, data)}
             >
-               {link.name}
-            </a>
+               {data.name}
+            </Link>
          ))}
       </>
    );

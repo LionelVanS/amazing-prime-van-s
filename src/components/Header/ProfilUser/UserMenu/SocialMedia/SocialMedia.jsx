@@ -1,17 +1,20 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { handleClick } from '@/utils/functions/handleClick';
+import socialLinks from '@/utils/data/header/profilUser/socialLinks';
 
-export default function SocialMedia({ mediaLinks }) {
+export default function SocialMedia() {
+   const router = useRouter;
    return (
       <>
          <p>Réseaux</p>
-         {mediaLinks.map((link, index) => (
+         {socialLinks.map((data, index) => (
             <Link
                key={index}
-               href={link.url}
-               target="_blank"
-               rel="noopener noreferrer"
+               href={data.link}
+               onClick={(e) => handleClick(e, router, data)}
             >
-               {link.name}
+               {data.name}
             </Link>
          ))}
       </>
