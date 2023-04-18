@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 
 import CardsContent from './CardsContent/CardsContent';
 import CardsHeader from './CardsHeader/CardsHeader';
-import CardsResume from './CardsResume/CardsResume';
+import CardsAbout from './CardsAbout/CardsAbout';
 
-export default function DropDownCards({ data, isExternalLink }) {
+export default function DropDownCards({ data }) {
    if (!data) {
       return;
    }
@@ -16,8 +16,8 @@ export default function DropDownCards({ data, isExternalLink }) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.1 }}
          >
-            <CardsHeader />
-            <CardsResume data={data} isExternalLink={isExternalLink} />
+            <CardsHeader data={data} />
+            <CardsAbout data={data} />
             <CardsContent data={data} />
          </DropDownDiv>
       </>
