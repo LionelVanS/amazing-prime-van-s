@@ -4,6 +4,7 @@ import smallCardsData from '@/utils/data/skills/smallCardsData';
 import SimpleCard from '@/components/Body/smallCards/SimpleCard/SimpleCard';
 
 export default function Skills() {
+   console.log(smallCardsData);
    return (
       <>
          <Head>
@@ -15,11 +16,11 @@ export default function Skills() {
          </Head>
          <SkillsMain>
             <H1>Mes Compétences</H1>
-            {smallCardsData.map((datas) => (
-               <section key={datas.name} id={datas.name}>
-                  <h2>{datas.name}</h2>
+            {smallCardsData.map((data) => (
+               <section key={data.name} id={data.name}>
+                  <h2>{data.name}</h2>
                   <CardsDiv>
-                     <SimpleCard datas={datas} />
+                     <SimpleCard data={data} />
                   </CardsDiv>
                </section>
             ))}
