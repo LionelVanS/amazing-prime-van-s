@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import BackgroundImage from '../BackgroundImage/BackgroundImage';
 
-export default function SimpleCard({ datas }) {
-   const cardData = datas.datas;
+export default function SimpleCard({ data }) {
+   const cardData = data.data;
    return (
       <>
          {cardData.map((data, index) => (
