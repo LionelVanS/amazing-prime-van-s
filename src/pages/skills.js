@@ -4,7 +4,6 @@ import smallCardsData from '@/utils/data/skills/smallCardsData';
 import SimpleCard from '@/components/Body/smallCards/SimpleCard/SimpleCard';
 
 export default function Skills() {
-   console.log(smallCardsData);
    return (
       <>
          <Head>
