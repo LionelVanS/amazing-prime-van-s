@@ -1,21 +1,21 @@
 import { useLargeCard } from '@/utils/context/largeCard';
 import styled from 'styled-components';
 
-export default function SoftSkills() {
+export default function CapacityList() {
    const datas = useLargeCard();
-   const softSkills = datas.capacity;
+   const capacities = datas.capacity;
    return (
-      <SoftSkillsDiv>
-         {softSkills.map((skill, index) => (
+      <ListDiv>
+         {capacities.map((capacity, index) => (
             <li key={index}>
-               <p>{skill.name}</p>
+               <p>{capacity.name}</p>
             </li>
          ))}
-      </SoftSkillsDiv>
+      </ListDiv>
    );
 }
 
-const SoftSkillsDiv = styled.div`
+const ListDiv = styled.div`
    p {
       font-size: 1vw;
       margin-right: 1.5vw;
