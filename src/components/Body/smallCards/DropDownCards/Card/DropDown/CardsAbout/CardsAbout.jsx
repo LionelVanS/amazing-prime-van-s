@@ -5,8 +5,9 @@ import PlayIcon from '@/components/Icons/PlayIcon';
 import PLusIcon from '@/components/Icons/PlusIcon';
 import DotIcon from '@/components/Icons/DotIcon';
 import { handleClick } from '@/utils/functions/handleClick';
+import { colors } from '@/utils/style/colors';
 
-export default function CardsResume({ data }) {
+export default function CardsAbout({ data }) {
    const router = useRouter();
 
    return (
@@ -16,8 +17,12 @@ export default function CardsResume({ data }) {
             <p>En Savoir Plus</p>
          </Link>
          <OptionDiv>
-            <PLusIcon />
-            <DotIcon />
+            <StyledIconDiv>
+               <PLusIcon />
+            </StyledIconDiv>
+            <StyledIconDiv>
+               <DotIcon />
+            </StyledIconDiv>
          </OptionDiv>
       </ResumeDiv>
    );
@@ -45,7 +50,15 @@ const OptionDiv = styled.div`
    justify-content: space-between;
    margin-left: 2.5vw;
    line-height: 0;
+`;
+
+const StyledIconDiv = styled.div`
+   padding: 0.3vw;
+   background-color: ${colors.spanBackground};
+   border-radius: 50%;
    svg {
+      width: 1.2vw;
+      height: 1.2vw;
       cursor: pointer;
    }
 `;
