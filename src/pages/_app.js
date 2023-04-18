@@ -3,8 +3,11 @@ import { createGlobalStyle } from 'styled-components';
 import { colors } from '@/utils/style/colors';
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
+import { useRouter } from 'next/router';
 
 export default function App({ Component, pageProps }) {
+   const router = useRouter();
+   const isLandingPage = router.asPath === '/';
    return (
       <>
          <Head>
@@ -15,9 +18,9 @@ export default function App({ Component, pageProps }) {
             <link rel="shortcut icon" href="./images/favicon.png" />
          </Head>
          <GlobalStyle />
-         <Header />
+         {!isLandingPage && <Header />}
          <Component {...pageProps} />
-         <Footer />
+         {!isLandingPage && <Footer />}
       </>
    );
 }
@@ -28,6 +31,8 @@ const GlobalStyle = createGlobalStyle`
       }
       html,
       body {
+         min-height: 100vh;
+         scroll-behavior: smooth;
          margin:0;
          background-color: ${colors.appBackground};
          font-family: 'Amazon Ember', sans-serif;
@@ -42,16 +47,16 @@ const GlobalStyle = createGlobalStyle`
       }
       h1{
          font-size: 2.5vw;
-      margin: 0;
+         margin: 0;
       }
       h2 {
          margin: 2.5vw 0 1vw 0;
          font-size: 1.5vw;
       }
       li {
-          list-style-type: none;
+         list-style-type: none;
       }
-
+      
       a {
          color: #fff;
          text-decoration: none;
