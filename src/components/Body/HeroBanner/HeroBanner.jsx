@@ -78,7 +78,7 @@ const TitleDiv = styled(motion.div)`
    top: 4vw;
 `;
 
-const AboutDiv = styled(motion.div)`
+const AboutDiv = styled.div`
    z-index: 1;
    position: absolute;
    bottom: 6vw;
