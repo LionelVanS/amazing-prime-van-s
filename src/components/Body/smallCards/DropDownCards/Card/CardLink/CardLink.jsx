@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import BackgroundImage from '../../../BackgroundImage/BackgroundImage';
 import { handleClick } from '@/utils/functions/handleClick';
+import BackgroundImage from '../../../BackgroundImage/BackgroundImage';
 
 export default function CardLink({ data, isHoveredCard }) {
    const router = useRouter();
