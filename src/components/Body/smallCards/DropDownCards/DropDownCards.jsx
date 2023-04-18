@@ -9,7 +9,6 @@ export default function DropDownCards({ datas, title }) {
 
    // Contains boolean to handle visibility of next or previous button
    const [viewSlideButton, setViewSlideButton] = useState(false);
-   // const decalage = datas.length - 5 * 100;
 
    return (
       <>
@@ -17,11 +16,9 @@ export default function DropDownCards({ datas, title }) {
             <h2>{title}</h2>
 
             {
-               // If datas contains less than 5 objects there is no slide buttons
-               // If not there is slide buttons
-               datas.length <= 5 ? (
-                  ''
-               ) : (
+               // If datas contains more than 5 objects there is slide buttons
+               // If not there is no slide buttons
+               datas.length >= 5 && (
                   <SlideButtons
                      currentPosition={currentPosition}
                      setCurrentPosition={setCurrentPosition}
