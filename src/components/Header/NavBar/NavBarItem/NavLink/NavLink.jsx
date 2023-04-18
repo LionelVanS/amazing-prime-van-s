@@ -1,31 +1,55 @@
+import styled from 'styled-components';
 import Link from 'next/link';
-import { colors } from '@/utils/style/colors';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
+import { colors } from '@/utils/style/colors';
+import { getActiveLink } from '@/utils/functions/getActiveLink';
 
 import ArrowIcon from '../../../../Icons/ArrowIcon';
-import styled from 'styled-components';
 
 export default function NavLink({ link, openLink }) {
    // Verifying path to apply .active class if user is on this path
    const router = useRouter();
-   const isActive = (pathname) => {
-      if (pathname === '/') {
-         return router.pathname === '/';
-      } else {
-         return router.pathname.startsWith(pathname);
-      }
+
+   // Verify on which route user is
+   const activeLink = getActiveLink(router, link.path);
+
+   const AnimateLink = motion(Link);
+
+   const hover = {
+      background: {
+         backgroundColor: openLink
+            ? colors.lightGreyBackground
+            : colors.appBackground,
+         transition: { duration: 0 },
+      },
+      shadow: {
+         boxShadow: 'inset 0 -1rem 3rem -2rem #000',
+      },
+      rotate: {
+         initial: { transform: 'rotate(0deg)' },
+         transform: openLink ? 'rotate(180deg)' : '',
+         // transition: { duration: 0.15 },
+      },
    };
+
    return (
-      <NavBarLinkDiv openLink={openLink}>
-         <Link href={link.path} className={isActive(link.path) ? 'active' : ''}>
+      <NavBarLinkDiv animate={[hover.background, hover.shadow]}>
+         <AnimateLink
+            href={link.path}
+            className={activeLink ? 'active' : ''}
+            style={{ color: openLink ? '#fff' : colors.text }}
+         >
             {link.name}
-            <ArrowIcon />
-         </Link>
+            <motion.svg animate={hover.rotate} transition={{ duration: 0.15 }}>
+               <ArrowIcon />
+            </motion.svg>
+         </AnimateLink>
       </NavBarLinkDiv>
    );
 }
 
-const NavBarLinkDiv = styled.div`
+const NavBarLinkDiv = styled(motion.div)`
    height: 100%;
    line-height: 1px;
    > a {
@@ -33,25 +57,10 @@ const NavBarLinkDiv = styled.div`
       padding: 0 1vw;
       display: flex;
       align-items: center;
-      transition: color 150ms linear;
-
-      // Conduct when user is travelling in DropDownMenu
-      background-color: ${(props) =>
-         props.openLink != '' ? colors.lightGreyBackground : ''};
-      box-shadow: ${(props) =>
-         props.openLink != '' ? 'inset 0 -1rem 3rem -2rem #000}' : ''};
-      color: ${colors.text};
-
-      :hover {
-         color: white;
-      }
       svg {
-         transform: ${(props) =>
-            props.openLink != '' ? 'rotate(180deg)' : 'rotate(0)'};
          width: 1.2vw;
          height: 1.2vw;
          margin-left: 0.5vw;
-         transition: transform 150ms ease-in-out;
       }
    }
 
