@@ -7,8 +7,8 @@ export default function BackgroundImage() {
       <Image
          src={datas.image}
          alt="background"
-         width="2500"
-         height="1667"
+         width="auto"
+         height="auto"
          priority
       />
    );

@@ -12,8 +12,8 @@ export default function Background() {
          <Image
             src={background}
             alt="background"
-            width="1469"
-            height="979"
+            width="auto"
+            height="auto"
             priority
          />
       </BackgroundDiv>
@@ -34,7 +34,7 @@ const BackgroundDiv = styled.div`
 `;
 
 const OverlayDiv = styled.div`
-   width: 75%;
+   width: 100%;
    height: 100%;
    position: absolute;
    top: 0;
@@ -45,7 +45,7 @@ const OverlayDiv = styled.div`
    background: linear-gradient(
       to right,
       ${colors.appBackground},
-      75%,
+      ${colors.appBackground} 25%,
       transparent
    );
 `;
