@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import TickIcon from '@/components/Icons/TickIcon';
+import { useLargeCard } from '@/utils/context/largeCard';
 
 export default function IncludeWithMe() {
+   const data = useLargeCard();
    return (
       <AboutMe>
          <TickIcon />
-         <p> Inclus avec Moi</p>
+         <p>{data.include || data.reason}</p>
       </AboutMe>
    );
 }
