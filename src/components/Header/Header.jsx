@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { devices } from '../../utils/style/breakpoints';
-
-import NavBar from './NavBar/NavBar';
-import SearchIcon from '../Icons/SearchIcon';
-import ProfilUser from './ProfilUser/ProfilUser';
-import Logo from './Logo/Logo';
 import { useEffect, useState } from 'react';
 import { colors } from '@/utils/style/colors';
 
-export default function Header() {
-   // Listening to the scroll to determinate where header should be
-   const [isScroll, setIsScroll] = useState(false);
+import Logo from './Logo/Logo';
+import NavBar from './NavBar/NavBar';
+import SearchIcon from '../Icons/SearchIcon';
+import ProfilUser from './ProfilUser/ProfilUser';
 
+export default function Header() {
+   // LISTENING SCROLL
+   const [isScroll, setIsScroll] = useState(false);
    useEffect(() => {
       function handleScroll() {
-         if (window.scrollY >= 1) {
+         if (window.scrollY > 0) {
             setIsScroll(true);
          } else {
             setIsScroll(false);
@@ -28,37 +27,37 @@ export default function Header() {
       };
    }, []);
 
-   // Slide animation from the top when scrolling down
-   const slideAnimation = {
-      top: isScroll ? '1vw' : '0',
-      transition: { duration: 0.2 },
-   };
-
-   // Box shadow appearance when scrolling down
-   const boxShadow = {
-      boxShadow: isScroll ? '0px 5px 10px rgba(0, 0, 0, 0.64)' : '',
-   };
-
-   // Overlay disappearance when scrolling down
-   const backgroundOpacity = {
-      initial: { opacity: 1 },
-      opacity: isScroll ? 0 : 1,
-      transition: { duration: 0.2 },
+   const animation = {
+      slide: {
+         top: isScroll ? '1vw' : 0,
+         transition: { duration: 0.2 },
+      },
+      shadow: {
+         boxShadow: isScroll
+            ? '0px 5px 10px rgba(0, 0, 0, 0.64)'
+            : '0 0 0 rgba(0, 0, 0, 0.64)',
+         transition: { duration: 0 },
+      },
+      opacity: {
+         opacity: isScroll ? 0 : 1,
+         transition: { delay: 0.1, duration: 0.1 },
+      },
    };
 
    return (
       <HeaderPosition>
-         <StyledHeader animate={[slideAnimation, boxShadow]}>
+         <StyledHeader animate={[animation.slide, animation.shadow]}>
             <Logo />
             <NavBar />
             <SearchIcon />
             <ProfilUser />
-            <OverlayDiv animate={backgroundOpacity} />
+            <OverlayDiv animate={[animation.slide, animation.opacity]} />
          </StyledHeader>
       </HeaderPosition>
    );
 }
 
+// STYLES
 const HeaderPosition = styled.div`
    width: 100%;
    height: 3.5vw;
