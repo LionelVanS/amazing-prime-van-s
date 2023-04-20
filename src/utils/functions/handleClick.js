@@ -10,6 +10,9 @@ export function handleClick(e, router, data) {
          window.open(data.link, '_blank', 'noopener,noreferrer');
          break;
 
+      case router.pathname == '/':
+         router.push('/home');
+         break;
       default:
          router.push(data.link);
    }
