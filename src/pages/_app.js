@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
             />
             <link rel="shortcut icon" href="./images/favicon.png" />
          </Head>
-         <GlobalStyle />
+         <GlobalStyle isLandingPage={isLandingPage} />
          {!isLandingPage && <Header />}
          <Component {...pageProps} />
          {!isLandingPage && <Footer />}
@@ -34,7 +34,8 @@ const GlobalStyle = createGlobalStyle`
          min-height: 100vh;
          scroll-behavior: smooth;
          margin:0;
-         background-color: ${colors.appBackground};
+         background-color: ${(props) =>
+            props.isLandingPage ? '#000' : colors.appBackground};
          font-family: 'Amazon Ember', sans-serif;
          overflow-x: hidden;
          position:relative;
