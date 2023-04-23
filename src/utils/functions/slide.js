@@ -1,5 +1,5 @@
 // Handle click on previous's cards button
-function previousCards(e, currentPosition, setCurrentPosition) {
+export function previousCards(e, currentPosition, setCurrentPosition) {
    e.preventDefault;
    if (currentPosition == 0) {
       return;
@@ -8,7 +8,7 @@ function previousCards(e, currentPosition, setCurrentPosition) {
 }
 
 // Handle click on next's cards button
-function nextCards(e, currentPosition, setCurrentPosition) {
+export function nextCards(e, currentPosition, setCurrentPosition) {
    const endOfSLides = -78;
    e.preventDefault();
    if (currentPosition == endOfSLides) {
@@ -16,5 +16,3 @@ function nextCards(e, currentPosition, setCurrentPosition) {
    }
    setCurrentPosition(endOfSLides);
 }
-
-module.exports = { previousCards, nextCards };
