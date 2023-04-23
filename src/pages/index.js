@@ -2,7 +2,7 @@ import Head from 'next/head';
 import styled from 'styled-components';
 import { useMemo, useState } from 'react';
 import AnimatedSentences from '@/components/Body/LandingPage/AnimatedSentences';
-import ImageLink from '@/components/Body/LandingPage/imageLink';
+import ImageLink from '@/components/Body/LandingPage/ImageLink';
 import texts from '@/utils/data/landingPage/textData';
 
 export default function LandingPage() {
