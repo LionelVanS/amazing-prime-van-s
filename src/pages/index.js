@@ -1,30 +1,32 @@
 import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 import styled from 'styled-components';
-import { handleClick } from '@/utils/functions/handleClick';
-import { useEffect, useState } from 'react';
-import { converttextToLetters } from '@/utils/functions/convertTextToLetters';
-import { motion } from 'framer-motion';
-import whiteRabbit from '../../public/images/white-rabbit.png';
-import Image from 'next/image';
-import { animatedSentences } from '@/utils/functions/getAnimatedSentences';
+import { useMemo, useState } from 'react';
+import AnimatedSentences from '@/components/Body/LandingPage/AnimatedSentences';
+import ImageLink from '@/components/Body/LandingPage/imageLink';
+import texts from '@/utils/data/landingPage/textData';
 
 export default function LandingPage() {
-   const router = useRouter();
-   const [wakeUpLetters, setWakeUpLetters] = useState();
-   const [matrixLetters, setMatrixLetters] = useState();
-   const [rabbitLetters, setRabbitLetters] = useState();
+   // Contains array of letters
+   const [lettersArray, setLettersArray] = useState([]);
 
-   const text = 'Wake up, Recruter...';
-   const title = 'The Matrix has you...';
-   const rabbit = 'Follow the White Rabbit.';
+   // Contains length of the two first sentences
+   const [wakeUpTextLength, setWakeUpTextLength] = useState();
+   const [matrixTextLength, setMatrixTextLength] = useState();
 
-   useEffect(() => {
-      setWakeUpLetters(converttextToLetters(text));
-      setMatrixLetters(converttextToLetters(title));
-      setRabbitLetters(converttextToLetters(rabbit));
-   }, [text, title, rabbit]);
+   // Get object to put in lettersObject
+   useMemo(() => {
+      const newLettersArray = texts.map((el) => {
+         return {
+            id: el.id,
+            letters: el.text.split(''),
+            length: el.text.length,
+         };
+      });
+
+      setLettersArray(newLettersArray);
+      setWakeUpTextLength(newLettersArray[0].length);
+      setMatrixTextLength(newLettersArray[1].length);
+   }, []);
 
    return (
       <>
@@ -35,69 +37,29 @@ export default function LandingPage() {
                content="Bienvenue sur mon portfolio. Il s'agit d'un clône du site d'Amazon Prime Vidéo."
             />
          </Head>
-         <main>
+         <StyledMain>
             <StyledSection>
-               <TextDiv>
-                  <AnimateP>
-                     {wakeUpLetters &&
-                        wakeUpLetters.map((letter, index) =>
-                           animatedSentences(
-                              motion,
-                              wakeUpLetters,
-                              matrixLetters,
-                              letter,
-                              index,
-                              (parent = 'wakeUpText')
-                           )
-                        )}
-                  </AnimateP>
-                  <AnimateP>
-                     {matrixLetters &&
-                        matrixLetters.map((letter, index) =>
-                           animatedSentences(
-                              motion,
-                              wakeUpLetters,
-                              matrixLetters,
-                              letter,
-                              index,
-                              (parent = 'matrixText')
-                           )
-                        )}
-                  </AnimateP>
-                  <AnimateP>
-                     {rabbitLetters &&
-                        rabbitLetters.map((letter, index) =>
-                           animatedSentences(
-                              motion,
-                              wakeUpLetters,
-                              matrixLetters,
-                              letter,
-                              index,
-                              (parent = 'rabbitText')
-                           )
-                        )}
-                  </AnimateP>
-               </TextDiv>
-               <StyledLinkDiv
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 9 }}
-               >
-                  <Link
-                     href="/home"
-                     onClick={(e) => handleClick(e, router, { link: '/' })}
-                  >
-                     <Image
-                        src={whiteRabbit}
-                        alt="Visitez mon site portfolio"
-                     />
-                  </Link>
-               </StyledLinkDiv>
+               <div>
+                  {lettersArray.map((sentence, index) => (
+                     <ParaphDiv key={index}>
+                        <AnimatedSentences
+                           sentence={sentence}
+                           wakeUpTextLength={wakeUpTextLength}
+                           matrixTextLength={matrixTextLength}
+                        />
+                     </ParaphDiv>
+                  ))}
+               </div>
+               <ImageLink />
             </StyledSection>
-         </main>
+         </StyledMain>
       </>
    );
 }
+
+const StyledMain = styled.main`
+   margin: 0;
+`;
 
 const StyledSection = styled.section`
    height: 100vh;
@@ -107,23 +69,11 @@ const StyledSection = styled.section`
    justify-content: space-between;
 `;
 
-const AnimateP = styled.p`
+const ParaphDiv = styled.div`
+   color: #fff;
    font-family: 'Courier Prime', sans-serif;
    font-size: 1.5vw;
    font-weight: 600;
    margin: 1vw 0;
    text-shadow: 0px 0px 9px rgba(120, 196, 117, 1);
-`;
-const TextDiv = styled.div``;
-const StyledLinkDiv = styled(motion.div)`
-   display: flex;
-   justify-content: center;
-   img {
-      width: 4vw;
-      height: 4vw;
-      transition: transform 100ms ease-in-out;
-      :hover {
-         transform: scale(1.2);
-      }
-   }
 `;
