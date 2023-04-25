@@ -6,7 +6,7 @@ export default function CardsHeader({ data }) {
    return (
       <HeaderDiv>
          <TickIcon />
-         <p>{data.include || data.reason}</p>
+         <p>{data.header}</p>
       </HeaderDiv>
    );
 }
