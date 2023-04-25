@@ -1,3 +1,4 @@
+// BACKGROUND
 import background from '/public/images/home/profil/large-card-background.jpg';
 
 // ICONS
@@ -8,17 +9,23 @@ import DownloadIcon from '@/components/Icons/DownloadIcon';
 
 const largeCardData = {
    title: ' Lionel VAN SCHELLEBECK',
-   include: 'Vous ne regretterez pas !',
-   text: "Au cœur de la ville, au milieu de la foule, Lionel apparaît, les bras ouverts à l'inconnu, un sourire timide aux lèvres et le regard fuyant. Il est là, prêt à plonger dans cette mer agitée qu'est la vie. Mais Lionel n'est pas sûr de lui, il doute de ses capacités, de ses choix, de ses rêves. Il se méfie des regards des autres, des jugements, des attentes. Et pourtant, il est là, prêt à affronter l'inconnu.",
+   include: 'Livré avec toutes mes connaissances !',
+   text: [
+      {
+         paraph:
+            "Au cours de ces dix dernières années à travailler dans le domaine de la logistique, j'ai acquis de solide base en gestion de stocks et en planification de flux de travail. Cependant, mon désir de faire quelque chose de plus créatif et stimulant m'a poussé à poursuivre une formation dans le domaine du développement web, qui est une de mes passions. J'ai donc décidé de prendre un tournant dans ma carrière et de me lancer dans un nouveau défi. ",
+      },
+      {
+         paraph:
+            "Je suis maintenant prêt à mettre mes compétences en pratique dans un environnement professionnel stimulant et dynamique. Je suis convaincu que ma passion pour le développement web, combinée avec mon expérience de vie, me permettra de contribuer de manière significative et efficace à toute entreprise qui me donnera l'opportunité de travailler avec eux.",
+      },
+   ],
    infos: [
       {
          data: '06 / 04 / 1989',
       },
       {
          data: '34 ans',
-      },
-      {
-         data: '',
       },
    ],
    capacity: [
@@ -29,7 +36,7 @@ const largeCardData = {
          name: 'Passionné',
       },
       {
-         name: 'Sympathique',
+         name: "Esprit d'équipe",
       },
    ],
    image: background,

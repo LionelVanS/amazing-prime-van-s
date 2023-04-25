@@ -4,7 +4,7 @@ const heroBannerData = {
    title: 'Portfolio',
    secondPartTitle: '',
    subtitle: 'Développeur Front-End React',
-   infos: 'HTML | CSS | Javascript | React',
+   infos: 'HTML | CSS | Javascript | NodeJS | React',
    image: background,
    link: '#projects',
 };

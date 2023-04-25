@@ -3,9 +3,9 @@ import background from '/public/images/career/heroBanner/herobanner-background.j
 const heroBannerData = {
    title: 'Mon Parcours',
    secondPartTitle: 'De 2007 A 2023',
-   subtitle: 'Ne restez pas spectateur de ma réussite !',
+   subtitle: "Une vie d'expériences résumé pour vous",
    image: background,
-   infos: 'BTP | Logistique | Production',
+   infos: 'Logistique | Production',
    link: '/formation',
 };
 
