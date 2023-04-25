@@ -35,7 +35,10 @@ const LinksDiv = styled.div``;
 const CardsSection = styled.section`
    width: 100%;
    height: 45vw;
-   padding: 9.5vw 0 0 4vw;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-around;
+   padding-left: 4vw;
    position: relative;
 `;
 
