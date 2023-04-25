@@ -7,7 +7,7 @@ export default function IncludeWithMe() {
    return (
       <AboutMe>
          <TickIcon />
-         <p>{data.header}</p>
+         <p>{data.include || data.header}</p>
       </AboutMe>
    );
 }
