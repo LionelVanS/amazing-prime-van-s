@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import { LargeCardProvider } from '@/utils/context/largeCard';
 import LargeCards from '@/components/Body/LargeCards/LargeCards';
-import largeCardData from '@/utils/data/career/formation/largeCard';
+import largeCardData from '@/utils/data/career/formation/largeCardData';
 
 export default function Formation() {
    return (
