@@ -6,9 +6,7 @@ import CardsHeader from './CardsHeader/CardsHeader';
 import CardsAbout from './CardsAbout/CardsAbout';
 
 export default function DropDownCards({ data }) {
-   if (!data) {
-      return;
-   }
+   if (!data) return;
    return (
       <>
          <DropDownDiv
@@ -26,7 +24,7 @@ export default function DropDownCards({ data }) {
 
 const DropDownDiv = styled(motion.div)`
    height: 17vw;
-   padding: 0.5vw 1.5vw;
+   padding: 0.5vw 1vw;
    position: absolute;
    left: 0;
    right: 0;
