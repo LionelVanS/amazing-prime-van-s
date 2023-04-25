@@ -5,7 +5,7 @@ import { handleClick } from '@/utils/functions/handleClick';
 import { useRouter } from 'next/router';
 
 export default function SocialLink({ link }) {
-   const router = useRouter;
+   const router = useRouter();
    return (
       <Link href={link.link} onClick={(e) => handleClick(e, router, link)}>
          <LinkDiv>{link.icon}</LinkDiv>
