@@ -23,9 +23,12 @@ export default function Social() {
                      onMouseLeave={() => setIsHovered()}
                   >
                      <SocialLink link={link} />
-                     {isHovered == link.name && (
-                        <LinkDescription name={link.name} />
-                     )}
+                     {
+                        // Display name of link on hover
+                        isHovered == link.name && (
+                           <LinkDescription name={link.name} />
+                        )
+                     }
                   </li>
                ))}
             </ul>
