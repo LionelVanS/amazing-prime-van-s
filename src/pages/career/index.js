@@ -4,7 +4,7 @@ import { HeroBannerProvider } from '@/utils/context/heroBanner';
 import HeroBanner from '@/components/Body/HeroBanner/HeroBanner';
 import DropDownCards from '@/components/Body/smallCards/DropDownCards/DropDownCards';
 import heroBannerData from '@/utils/data/career/heroBannerData';
-import smallCardsData from '@/utils/data/career/smallCardsData';
+import careerData from '@/utils/data/career/careerData';
 
 export default function Career() {
    return (
@@ -22,7 +22,7 @@ export default function Career() {
             </HeroBannerProvider>
             <section id="experiences">
                <DropDownCards
-                  datas={smallCardsData}
+                  datas={careerData}
                   title="Mes Expériences Professionnelles"
                />
             </section>
