@@ -6,6 +6,10 @@ export function handleClick(e, router, data) {
          router.push(`/portfolio/${data.id}`);
          break;
 
+      case data.link.includes('experiences'):
+         router.push(`/career/${data.id}`);
+         break;
+
       case data.link.includes('http') || data.link.includes('pdf'):
          window.open(data.link, '_blank', 'noopener,noreferrer');
          break;
