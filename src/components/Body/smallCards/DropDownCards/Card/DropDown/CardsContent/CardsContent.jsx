@@ -20,7 +20,6 @@ export default function DropDownCardsContent({ data }) {
          default:
             tempText = text;
       }
-      console.log(tempText.length);
 
       // If the text has more than 290 characters, it will be croped
       if (tempText.length > 290) {
