@@ -6,7 +6,7 @@ const heroBannerData = {
    subtitle: "Une vie d'expériences résumé pour vous",
    image: background,
    infos: 'Logistique | Production',
-   link: '/formation',
+   link: '/career/formation',
 };
 
 export default heroBannerData;
