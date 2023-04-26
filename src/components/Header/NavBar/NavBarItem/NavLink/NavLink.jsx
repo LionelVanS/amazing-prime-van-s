@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
 import { colors } from '@/utils/style/colors';
 import { getActiveLink } from '@/utils/functions/getActiveLink';
 
@@ -12,60 +12,47 @@ export default function NavLink({ link, openLink }) {
    const router = useRouter();
 
    // Verify on which route user is
-   const activeLink = getActiveLink(router, link.path);
+   const [activeLink, setActiveLink] = useState(false);
 
-   const AnimateLink = motion(Link);
-
-   const hover = {
-      background: {
-         backgroundColor: openLink
-            ? colors.lightGreyBackground
-            : colors.appBackground,
-         transition: { duration: 0 },
-      },
-      shadow: {
-         boxShadow: 'inset 0 -1rem 3rem -2rem #000',
-      },
-      rotate: {
-         initial: { transform: 'rotate(0deg)' },
-         transform: openLink ? 'rotate(180deg)' : '',
-         // transition: { duration: 0.15 },
-      },
-   };
+   useEffect(() => {
+      setActiveLink(getActiveLink(router, link.path));
+   }, [router.pathname]);
 
    return (
-      <NavBarLinkDiv animate={[hover.background, hover.shadow]}>
-         <AnimateLink
+      <NavLinkDiv openLink={openLink}>
+         <Link
             href={link.path}
             className={activeLink ? 'active' : ''}
-            style={{ color: openLink ? '#fff' : colors.text }}
+            openLink={openLink}
+            activeLink={activeLink}
          >
             {link.name}
-            <motion.svg animate={hover.rotate} transition={{ duration: 0.15 }}>
-               <ArrowIcon />
-            </motion.svg>
-         </AnimateLink>
-      </NavBarLinkDiv>
+            <ArrowIcon openLink={openLink} />
+         </Link>
+      </NavLinkDiv>
    );
 }
 
-const NavBarLinkDiv = styled(motion.div)`
+const NavLinkDiv = styled.div`
    height: 100%;
    line-height: 1px;
-   > a {
+   background-color: ${(props) =>
+      props.openLink ? colors.lightGreyBackground : ''};
+   a {
       height: inherit;
       padding: 0 1vw;
       display: flex;
       align-items: center;
-      svg {
-         width: 1.2vw;
-         height: 1.2vw;
-         margin-left: 0.5vw;
+      transition: all 200ms ease;
+      color: ${colors.text};
+      :hover {
+         color: #fff;
       }
    }
 
-   // Class active for link's page who is visited
+   // Class active for link's page which user is
    .active {
+      color: #fff;
       ::after {
          content: '';
          z-index: 3;
