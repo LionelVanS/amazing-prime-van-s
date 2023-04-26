@@ -1,11 +1,8 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import {
-   getPortfolioStaticPaths,
-   getPortfolioStaticProps,
-} from '@/utils/functions/portfolioStaticProps';
+import { getPaths, getProps } from '@/utils/functions/getStaticData';
 
-import portfolioSmallCardsData from '../../utils/data/portfolio/projectsData';
+import projectsData from '../../utils/data/portfolio/projectsData';
 import Error404 from '../404';
 import { LargeCardProvider } from '@/utils/context/largeCard';
 import LargeCards from '@/components/Body/LargeCards/LargeCards';
@@ -13,8 +10,9 @@ import LargeCards from '@/components/Body/LargeCards/LargeCards';
 export default function Project() {
    const router = useRouter();
    const { project } = router.query;
+
    // Contain data of selected project
-   const data = portfolioSmallCardsData[parseInt(project) - 1];
+   const data = projectsData[parseInt(project) - 1];
 
    // Verifying if there is data or if path is exactly correct
    if (!data || isNaN(project)) {
@@ -38,7 +36,7 @@ export default function Project() {
 
 // Get path for selected project
 async function getStaticPaths() {
-   const paths = getPortfolioStaticPaths();
+   const paths = getPaths(projectsData, 'project');
    return {
       paths,
       fallback: true,
@@ -47,6 +45,6 @@ async function getStaticPaths() {
 
 // Get data for selected project
 function getStaticProps({ params }) {
-   const data = getPortfolioStaticProps(params);
+   const data = getProps(projectsData, 'project', params);
    return { data: data.data || null };
 }
