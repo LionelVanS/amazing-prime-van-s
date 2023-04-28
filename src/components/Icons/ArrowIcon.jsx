@@ -1,3 +1,4 @@
+import { devices } from '@/utils/style/breakpoints';
 import styled from 'styled-components';
 
 export default function ArrowIcon({ openLink }) {
@@ -17,9 +18,16 @@ export default function ArrowIcon({ openLink }) {
 }
 
 const StyledSvg = styled.svg`
-   width: 1.2vw;
-   height: 1.2vw;
+   width: 1.2rem;
+   height: 1.2rem;
    margin-left: 0.5vw;
    transition: all 100ms ease-in;
    transform: ${(props) => (props.openLink ? 'rotate(180deg)' : '')};
+   @media (${devices.mobileL}) {
+      // Toggle animation
+   }
+   @media ${devices.tablet} {
+      width: 0.8rem;
+      height: 0.8rem;
+   }
 `;

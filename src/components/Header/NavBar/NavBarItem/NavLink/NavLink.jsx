@@ -6,6 +6,7 @@ import { colors } from '@/utils/style/colors';
 import { getActiveLink } from '@/utils/functions/getActiveLink';
 
 import ArrowIcon from '../../../../Icons/ArrowIcon';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function NavLink({ link, openLink }) {
    // Verifying path to apply .active class if user is on this path
@@ -23,8 +24,8 @@ export default function NavLink({ link, openLink }) {
          <Link
             href={link.path}
             className={activeLink ? 'active' : ''}
-            openLink={openLink}
-            activeLink={activeLink}
+            openlink={openLink}
+            scroll={false}
          >
             {link.name}
             <ArrowIcon openLink={openLink} />
@@ -38,8 +39,11 @@ const NavLinkDiv = styled.div`
    line-height: 1px;
    background-color: ${(props) =>
       props.openLink ? colors.lightGreyBackground : ''};
+   box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.5);
    a {
       height: inherit;
+      font-size: 1.2rem;
+      font-weight: 400;
       padding: 0 1vw;
       display: flex;
       align-items: center;
@@ -47,6 +51,12 @@ const NavLinkDiv = styled.div`
       color: ${colors.text};
       :hover {
          color: #fff;
+      }
+   }
+
+   @media ${devices.tablet} {
+      a {
+         font-size: 1rem;
       }
    }
 

@@ -1,32 +1,24 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { devices } from '../../utils/style/breakpoints';
 import { useEffect, useState } from 'react';
+import { handleScroll } from '@/utils/functions/handleScroll';
+import { devices } from '../../utils/style/breakpoints';
 import { colors } from '@/utils/style/colors';
 
 import Logo from './Logo/Logo';
 import NavBar from './NavBar/NavBar';
 import SearchIcon from '../Icons/SearchIcon';
 import ProfilUser from './ProfilUser/ProfilUser';
+import ToggleMenu from './ToggleMenu/ToggleMenu';
 
 export default function Header() {
-   // LISTENING SCROLL
    const [isScroll, setIsScroll] = useState(false);
-   useEffect(() => {
-      function handleScroll() {
-         if (window.scrollY > 0) {
-            setIsScroll(true);
-         } else {
-            setIsScroll(false);
-         }
-      }
-      window.addEventListener('scroll', handleScroll);
 
-      return () => {
-         window.removeEventListener('scroll', handleScroll);
-      };
+   useEffect(() => {
+      handleScroll(setIsScroll);
    }, []);
 
+   // ANIMATIONS
    const animation = {
       slide: {
          top: isScroll ? '1vw' : 0,
@@ -47,10 +39,13 @@ export default function Header() {
    return (
       <HeaderPosition>
          <StyledHeader animate={[animation.slide, animation.shadow]}>
+            <ToggleMenu />
             <Logo />
             <NavBar />
-            <SearchIcon />
-            <ProfilUser />
+            <StyledDiv>
+               <SearchIcon />
+               <ProfilUser />
+            </StyledDiv>
             <OverlayDiv animate={[animation.slide, animation.opacity]} />
          </StyledHeader>
       </HeaderPosition>
@@ -60,11 +55,14 @@ export default function Header() {
 // STYLES
 const HeaderPosition = styled.div`
    width: 100%;
-   height: 3.5vw;
+   height: 4rem;
+   @media ${devices.tablet} {
+      height: 2.5rem;
+   }
 `;
 
 const StyledHeader = styled(motion.header)`
-   width: 60vw;
+   width: 70vw;
    height: inherit;
    margin: 0 auto;
    z-index: 5;
@@ -76,8 +74,20 @@ const StyledHeader = styled(motion.header)`
    right: 0;
    background-color: ${colors.appBackground};
    border-radius: 0.5vw;
+   @media ${devices.mobileL} {
+      width: 100%;
+      padding: 0 3vw;
+      justify-content: space-between;
+   }
+   @media ${devices.tablet} {
+      height: 2.5rem;
+   }
 `;
 
+const StyledDiv = styled.div`
+   display: flex;
+   align-items: center;
+`;
 const OverlayDiv = styled(motion.div)`
    width: 100%;
    height: inherit;

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from '@/utils/style/colors';
 import MenuItem from './MenuItem/MenuItem';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function DropDownMenu({ link, setOpenLink }) {
    const subMenuLinks = link.subNav;
@@ -27,7 +28,7 @@ export default function DropDownMenu({ link, setOpenLink }) {
 const DropDownMenuDiv = styled.div`
    background-color: ${colors.lightGreyBackground};
    position: absolute;
-   top: 3.5vw;
+   top: 4rem;
    right: 0;
    left: 0;
    border-radius: 0 0 0.5vw 0.5vw;
@@ -36,5 +37,8 @@ const DropDownMenuDiv = styled.div`
    ul {
       display: flex;
       flex-flow: column;
+   }
+   @media ${devices.tablet} {
+      top: 2.5rem;
    }
 `;

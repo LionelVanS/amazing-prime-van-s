@@ -4,6 +4,7 @@ import { colors } from '@/utils/style/colors';
 
 import ContactInfo from './ContactInfo/ContactInfo';
 import SocialMedia from './SocialMedia/SocialMedia';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function UserMenu() {
    return (
@@ -22,12 +23,15 @@ export default function UserMenu() {
 const UserMenuDiv = styled.div`
    position: absolute;
    padding: 1vw;
-   top: 3.5vw;
+   top: 4rem;
    right: 0;
    background-color: ${colors.lightGreyBackground};
    border-radius: 0 0 0.5vw 0.5vw;
    display: flex;
    z-index: 2;
+   @media ${devices.tablet} {
+      top: 2.5rem;
+   }
 `;
 
 const InfoDiv = styled.div`

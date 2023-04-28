@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import { devices } from '@/utils/style/breakpoints';
+import { colors } from '@/utils/style/colors';
 
 export default function MenuItem({ link, setOpenLink }) {
    return (
@@ -21,11 +23,15 @@ const LinkLi = styled.li`
       transition: none;
       width: inherit;
       height: inherit;
+      color: ${colors.text};
    }
    :hover {
       background-color: white;
       a {
          color: black;
       }
+   }
+   @media ${devices.tablet} {
+      font-size: 0.8rem;
    }
 `;

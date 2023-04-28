@@ -1,3 +1,4 @@
+import { devices } from '@/utils/style/breakpoints';
 import styled from 'styled-components';
 
 export default function SearchIcon() {
@@ -21,8 +22,8 @@ export default function SearchIcon() {
 }
 
 const SearchIconDiv = styled.div`
-   height: 100%;
-   width: 4vw;
+   width: 4rem;
+   height: 4rem;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -32,6 +33,14 @@ const SearchIconDiv = styled.div`
       background-color: #191e25;
    }
    svg {
-      width: 1.5vw;
+      width: 2rem;
+      @media ${devices.tablet} {
+         width: 1.5rem;
+         height: 1.5rem;
+      }
+   }
+   @media ${devices.tablet} {
+      width: 2.5rem;
+      height: 2.5rem;
    }
 `;

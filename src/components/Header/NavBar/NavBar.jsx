@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import links from '../../../utils/data/header/links';
 import NavBarItem from './NavBarItem/NavBarItem';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function NavBar() {
    return (
@@ -18,5 +19,8 @@ const Nav = styled.nav`
    ul {
       display: flex;
       align-items: center;
+   }
+   @media (${devices.mobileL}) {
+      display: none;
    }
 `;

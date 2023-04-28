@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+import { useState } from 'react';
 
 import { colors } from '@/utils/style/colors';
 import { devices } from '@/utils/style/breakpoints';
-
-import { useState } from 'react';
 
 import UserMenu from './UserMenu/UserMenu';
 
@@ -29,7 +28,7 @@ export default function ProfilUser() {
 }
 
 const ProfilDiv = styled.div`
-   height: 3.5vw;
+   height: 4rem;
    display: flex;
    align-items: center;
    cursor: pointer;
@@ -46,13 +45,20 @@ const ProfilDiv = styled.div`
       color: ${colors.text};
    }
    > img {
-      width: 2.3vw;
-      height: 2.3vw;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       margin: 0 1vw;
+      @media ${devices.tablet} {
+         width: 2rem;
+         height: 2rem;
+      }
+   }
+   @media ${devices.tablet} {
+      height: 2.5rem;
    }
 
-   @media (${devices.tablet}) {
+   @media ${devices.tablet}, ${devices.mobileL} {
       > p {
          display: none;
       }

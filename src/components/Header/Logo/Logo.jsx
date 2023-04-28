@@ -28,6 +28,6 @@ const LogoDiv = styled.div`
 `;
 
 const Image = styled.img`
-   width: 6.7vw;
-   height: 1.3vw;
+   width: 127px;
+   height: 24px;
 `;
