@@ -28,11 +28,11 @@ export default function App({ Component, pageProps }) {
 const GlobalStyle = createGlobalStyle`
       * {
          box-sizing: border-box;
+         scroll-behavior: smooth!important;
       }
       html,
       body {
          min-height: 100vh;
-         scroll-behavior: smooth;
          margin:0;
          background-color: ${(props) =>
             props.isLandingPage ? '#000' : colors.appBackground};
