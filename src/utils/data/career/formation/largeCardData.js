@@ -17,7 +17,7 @@ const largeCardData = {
       },
       {
          paraph:
-            "Mon apprentissage a nécessité beaucoup de courage pour parvenir à décrocher le sésame tant convoité. La formation est aussi compacte que le temps pour les réaliser ! Bien qu'aujourd'hui ce soit terminée, je reste conscient que mon enseignement ne fait que commencer.",
+            "Mon apprentissage a nécessité beaucoup de courage pour parvenir à décrocher le sésame tant convoité. La formation est aussi compacte que le temps pour réaliser les projets ! Bien qu'aujourd'hui ce soit terminée, je reste conscient que mon enseignement ne fait que commencer. J'ai désormais hâte de monter en compétences auprès d'une équipe motivée et dynamique !",
       },
    ],
    infos: [

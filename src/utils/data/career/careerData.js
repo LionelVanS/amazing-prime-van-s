@@ -23,13 +23,15 @@ import intermarcheBg from '/public/images/career/background/intermarche.jpg';
 import DownloadIcon from '@/components/Icons/DownloadIcon';
 import WebIcon from '@/components/Icons/WebIcon';
 
+const competences = 'Mes compétences à votre service !';
+
 const smallCardsData = [
    {
       id: 1,
       title: 'GHND',
       logo: ghnd,
       image: ghndBg,
-      header: 'Gestionnaire - Responsable',
+      header: [...competences],
       link: 'experiences',
       date: '2011 - 2014',
       duration: '+ de 3 ans',
@@ -88,14 +90,14 @@ const smallCardsData = [
       title: 'Van S Photographie',
       logo: vanSPhoto,
       image: vanSPhotoBg,
-      header: 'Photographe',
+      header: [...competences],
       link: 'experiences',
       date: '2008 - 2011',
       duration: '+ de 3 ans',
       text: [
          {
             paraph:
-               "Depuis adolescent je rêvais de devenir un artiste et durant ces 3 ans je l'ai été. D'un côté j'étais photographe de portraits à mon compte, et d'un autre côté je travaillais avec plusieurs associations. Il m'arrivait fréquemment de couvrir des évènements comme des concerts. ",
+               "Depuis tout jeune je me sens l'âme d'un artiste et durant ces 3 ans je l'ai été. D'un côté j'étais photographe de portraits à mon compte, et d'un autre côté je travaillais avec plusieurs associations. Il m'arrivait fréquemment de couvrir des évènements comme des concerts. ",
          },
          {
             paraph: '',
@@ -103,13 +105,16 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Poste Occupé:',
+            data: 'Postes Occupés:',
          },
          {
-            data: 'Photgraphe de portraits',
+            data: 'Photographe de portraits',
          },
          {
             data: "Photographe d'évènementiels",
+         },
+         {
+            data: '',
          },
       ],
       capacity: [
@@ -117,25 +122,25 @@ const smallCardsData = [
             name: 'Compétences Clés:',
          },
          {
-            name: 'Talent',
+            name: 'Organisation',
          },
          {
-            name: 'SASS',
+            name: 'Ecoute',
          },
          {
-            name: 'Github',
+            name: 'Négociation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.instagram.com/van.s.photographie/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -144,7 +149,7 @@ const smallCardsData = [
       title: 'Célestin Matériaux',
       logo: celestin,
       image: celestinBg,
-      header: 'Magasinier Cariste',
+      header: [...competences],
       link: 'experiences',
       date: '2016',
       duration: '- de 1 ans',
@@ -159,39 +164,49 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
+            data: 'Magasinier',
          },
          {
-            data: 'Versionnage',
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: 'Concentration',
          },
          {
-            name: 'SASS',
+            name: 'Ecoute/Bienveillance',
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.celestin-materiaux.fr/',
+            icon: <WebIcon />,
+         },
+         {
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
+         },
+         {
+            name: 'Visitez le site',
+            link: 'https://www.celestin-materiaux.fr/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -200,7 +215,7 @@ const smallCardsData = [
       title: 'M+ Matériaux',
       logo: mPlus,
       image: mPlusBg,
-      header: 'Magasinier Cariste',
+      header: [...competences],
       link: 'experiences',
       date: '2017',
       duration: '- de 1 an',
@@ -215,39 +230,39 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
+            data: 'Magasinier',
          },
          {
-            data: 'Versionnage',
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: 'Concentration',
          },
          {
-            name: 'SASS',
+            name: 'Ecoute/Bienveillance',
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.mplus-materiaux.fr/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -256,7 +271,7 @@ const smallCardsData = [
       title: 'DS Smith',
       logo: dsSmith,
       image: dsSmithBg,
-      header: 'Cariste Approvisionneur',
+      header: [...competences],
       link: 'experiences',
       date: '2018',
       duration: '- de 1 an',
@@ -271,39 +286,36 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
-         },
-         {
-            data: 'Versionnage',
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: 'Concentration',
          },
          {
-            name: 'SASS',
+            name: 'Gestion du temps',
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.dssmith.com/fr/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -312,7 +324,7 @@ const smallCardsData = [
       title: 'Tecumseh',
       logo: tecumseh,
       image: tecumsehBg,
-      header: 'Agent de quai - Magasinier Cariste',
+      header: [...competences],
       link: 'experiences',
       date: '2018',
       duration: '- de 1 an',
@@ -327,39 +339,42 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
+            data: 'Agent de Quai',
          },
          {
-            data: 'Versionnage',
+            data: 'Magasinier',
+         },
+         {
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: "Gestion de l'espace",
          },
          {
-            name: 'SASS',
+            name: 'Fermeté',
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.tecumseh.com/fr/eu/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -368,7 +383,7 @@ const smallCardsData = [
       title: 'Nemera',
       logo: nemera,
       image: nemeraBg,
-      header: 'Cariste Approvisionneur',
+      header: [...competences],
       link: 'experiences',
       date: '2018 - 2019',
       duration: '- de 1 an',
@@ -383,39 +398,39 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
+            data: 'Magasinier',
          },
          {
-            data: 'Versionnage',
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: 'Gestion du temps',
          },
          {
-            name: 'SASS',
+            name: "Esprit d'équipe",
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.nemera.net/',
+            icon: <WebIcon />,
          },
       ],
    },
@@ -424,7 +439,7 @@ const smallCardsData = [
       title: 'Intermarché',
       logo: intermarche,
       image: intermarcheBg,
-      header: 'Cariste Approvisionneur',
+      header: [...competences],
       link: 'experiences',
       date: '2022',
       duration: '+ de 1 an',
@@ -439,39 +454,39 @@ const smallCardsData = [
       ],
       infos: [
          {
-            data: 'Notions importantes:',
+            data: 'Poste Occupé:',
          },
          {
-            data: 'Animations CSS',
+            data: 'Magasinier',
          },
          {
-            data: 'Versionnage',
+            data: 'Cariste',
          },
       ],
       capacity: [
          {
-            name: 'Technologies Utilisées :',
+            name: 'Compétences Clés:',
          },
          {
-            name: 'HTML/CSS',
+            name: "Esprit d'équipe",
          },
          {
-            name: 'SASS',
+            name: 'Ecoute/Bienveillance',
          },
          {
-            name: 'Github',
+            name: 'Organisation',
          },
       ],
       links: [
          {
-            name: 'Repo Github',
-            link: 'https://github.com/LionelVanS/Ohmyfood',
-            // icon: <GithubIcon />,
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
          },
          {
             name: 'Visitez le site',
-            link: 'https://lionelvans.github.io/Ohmyfood/',
-            // icon: <WebIcon />,
+            link: 'https://www.mousquetaires.com/nos-filiales/logistique/alimentaire/',
+            icon: <WebIcon />,
          },
       ],
    },
