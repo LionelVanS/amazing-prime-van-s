@@ -1,8 +1,15 @@
+// ICONS
+import BriefCaseIcon from '@/components/Icons/BriefCaseIcon';
+import HomeIcon from '@/components/Icons/HomeIcon';
+import PenIcon from '@/components/Icons/PenIcon';
+import PuzzleIcon from '@/components/Icons/PuzzleIcon';
+
 const links = [
    // HOMEPAGE
    {
       name: 'Accueil',
       path: '/home',
+      icon: <HomeIcon />,
       subNav: [
          {
             name: 'Profil',
@@ -15,6 +22,7 @@ const links = [
    {
       name: 'Parcours',
       path: '/career',
+      icon: <BriefCaseIcon />,
       subNav: [
          {
             name: 'Expériences',
@@ -31,6 +39,7 @@ const links = [
    {
       name: 'Compétences',
       path: '/skills',
+      icon: <PuzzleIcon />,
       subNav: [
          {
             name: 'Techniques',
@@ -47,6 +56,7 @@ const links = [
    {
       name: 'Portfolio',
       path: '/portfolio',
+      icon: <PenIcon />,
    },
 ];
 
