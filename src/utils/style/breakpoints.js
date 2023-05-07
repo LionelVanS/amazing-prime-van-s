@@ -1,10 +1,10 @@
 export const sizes = {
-   mobileM: '680',
-   mobileL: '880',
-   tabletMin: '881',
-   tabletMax: '1399',
-   desktop: '1400',
-   desktopL: '1800',
+   mobileM: 680,
+   mobileL: 880,
+   tabletMin: 881,
+   tabletMax: 1399,
+   desktop: 1400,
+   desktopL: 1800,
 };
 
 export const devices = {
