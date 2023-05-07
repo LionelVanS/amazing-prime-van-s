@@ -6,6 +6,7 @@ import PLusIcon from '@/components/Icons/PlusIcon';
 import DotIcon from '@/components/Icons/DotIcon';
 import { handleClick } from '@/utils/functions/handleClick';
 import { colors } from '@/utils/style/colors';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function CardsAbout({ data }) {
    const router = useRouter();
@@ -31,12 +32,16 @@ export default function CardsAbout({ data }) {
 const ResumeDiv = styled.div`
    display: flex;
    align-items: center;
+   justify-content: space-between;
    margin-top: 0.5vw;
    a {
       display: flex;
       p {
          font-size: 0.8vw;
          margin-left: 0.5vw;
+         @media ${devices.tablet} {
+            font-size: 1vw;
+         }
       }
       > svg {
          width: 2.5vw;
@@ -48,8 +53,11 @@ const OptionDiv = styled.div`
    width: 4vw;
    display: flex;
    justify-content: space-between;
-   margin-left: 2.5vw;
+   gap: 0.5vw;
    line-height: 0;
+   @media ${devices.tablet} {
+      width: 6vw;
+   }
 `;
 
 const StyledIconDiv = styled.div`
@@ -60,5 +68,9 @@ const StyledIconDiv = styled.div`
       width: 1.2vw;
       height: 1.2vw;
       cursor: pointer;
+      @media ${devices.tablet} {
+         width: 2vw;
+         height: 2vw;
+      }
    }
 `;
