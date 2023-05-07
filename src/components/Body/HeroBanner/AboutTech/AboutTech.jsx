@@ -4,12 +4,12 @@ import TickIcon from '../../../Icons/TickIcon';
 import { useHeroBanner } from '@/utils/context/heroBanner';
 
 export default function AboutTech() {
-   const datas = useHeroBanner();
+   const data = useHeroBanner();
    return (
       <IncludeDiv>
          <TickIcon />
          <p>
-            {datas.infos}
+            {data.infos}
             <span>Et +</span>
          </p>
       </IncludeDiv>

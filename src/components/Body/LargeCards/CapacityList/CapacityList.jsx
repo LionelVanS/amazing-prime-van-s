@@ -2,8 +2,8 @@ import { useLargeCard } from '@/utils/context/largeCard';
 import styled from 'styled-components';
 
 export default function CapacityList() {
-   const datas = useLargeCard();
-   const capacities = datas.capacity;
+   const data = useLargeCard();
+   const capacities = data.capacity;
    return (
       <ListDiv>
          {capacities.map((capacity, index) => (

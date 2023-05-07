@@ -2,8 +2,8 @@ import { useLargeCard } from '@/utils/context/largeCard';
 import styled from 'styled-components';
 
 export default function Text() {
-   const datas = useLargeCard();
-   const text = datas.text;
+   const data = useLargeCard();
+   const text = data.text;
 
    return (
       <TextDiv>

@@ -4,10 +4,10 @@ import PlayIcon from '../../../Icons/PlayIcon';
 import { useHeroBanner } from '@/utils/context/heroBanner';
 
 export default function AboutLink() {
-   const datas = useHeroBanner();
+   const data = useHeroBanner();
    return (
       <AboutLinkDiv>
-         <Link href={datas.link}>
+         <Link href={data.link}>
             <PlayIcon />
             <p>En Savoir Plus</p>
          </Link>

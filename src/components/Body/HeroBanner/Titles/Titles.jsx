@@ -2,13 +2,13 @@ import { useHeroBanner } from '@/utils/context/heroBanner';
 import styled from 'styled-components';
 
 export default function Titles() {
-   const datas = useHeroBanner();
+   const data = useHeroBanner();
    return (
       <>
          <Title>
-            <h1>{datas.title}</h1>
-            <h1>{datas.secondPartTitle}</h1>
-            <h2>{datas.subtitle}</h2>
+            <h1>{data.title}</h1>
+            <h1>{data.secondPartTitle}</h1>
+            <h2>{data.subtitle}</h2>
          </Title>
       </>
    );

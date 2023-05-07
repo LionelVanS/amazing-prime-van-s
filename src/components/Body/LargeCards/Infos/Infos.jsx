@@ -3,8 +3,8 @@ import { colors } from '@/utils/style/colors';
 import styled from 'styled-components';
 
 export default function Infos() {
-   const datas = useLargeCard();
-   const profilInfos = datas.infos;
+   const data = useLargeCard();
+   const profilInfos = data.infos;
    return (
       <InfoDiv>
          <ul>

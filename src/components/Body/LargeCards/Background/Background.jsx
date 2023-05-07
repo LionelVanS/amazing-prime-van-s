@@ -4,8 +4,8 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export default function Background() {
-   const datas = useLargeCard();
-   const background = datas.image;
+   const data = useLargeCard();
+   const background = data.image;
    return (
       <BackgroundDiv>
          <OverlayDiv />

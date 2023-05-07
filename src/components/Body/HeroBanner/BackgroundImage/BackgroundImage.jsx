@@ -2,10 +2,10 @@ import { useHeroBanner } from '@/utils/context/heroBanner';
 import Image from 'next/image';
 
 export default function BackgroundImage() {
-   const datas = useHeroBanner();
+   const data = useHeroBanner();
    return (
       <Image
-         src={datas.image}
+         src={data.image}
          alt="background"
          width="auto"
          height="auto"

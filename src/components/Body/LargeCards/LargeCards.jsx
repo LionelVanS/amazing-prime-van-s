@@ -9,12 +9,12 @@ import Social from './Social/Social';
 import { useLargeCard } from '@/utils/context/largeCard';
 
 export default function LargeCards() {
-   const datas = useLargeCard();
+   const data = useLargeCard();
    return (
       <>
          <CardsSection>
             <ContentDiv>
-               <h1>{datas.title}</h1>
+               <h1>{data.title}</h1>
                <Text />
                <Infos />
                <CapacityList />
