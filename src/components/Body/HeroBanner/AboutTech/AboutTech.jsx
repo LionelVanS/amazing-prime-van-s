@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { colors } from '@/utils/style/colors';
 import TickIcon from '../../../Icons/TickIcon';
 import { useHeroBanner } from '@/utils/context/heroBanner';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function AboutTech() {
    const data = useHeroBanner();
@@ -28,5 +29,15 @@ const IncludeDiv = styled.div`
       background-color: ${colors.spanBackground};
       border-radius: 0.5rem;
       padding: 0.05vw 0.3vw;
+   }
+   @media ${devices.mobileL} {
+      p {
+         font-size: 2vw;
+      }
+   }
+   @media ${devices.tablet} {
+      p {
+         font-size: 1.5vw;
+      }
    }
 `;

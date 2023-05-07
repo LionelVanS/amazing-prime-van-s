@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+import { devices } from '@/utils/style/breakpoints';
+
 import Titles from './Titles/Titles';
 import AboutTech from './AboutTech/AboutTech';
 import AboutLink from './AboutLink/AboutLink';
 import BackgroundImage from './BackgroundImage/BackgroundImage';
-import { motion } from 'framer-motion';
 
 export default function HeroBanner() {
    return (
@@ -82,6 +85,9 @@ const AboutDiv = styled.div`
    z-index: 1;
    position: absolute;
    bottom: 6vw;
+   @media ${devices.mobileL} {
+      bottom: 4vw;
+   }
 `;
 
 const BackgroundDiv = styled.div`
