@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { devices } from '@/utils/style/breakpoints';
-import PreviousButton from './PreviousButton/PreviousButton';
-import NextButton from './NextButton/NextButton';
 import { useEffect, useState } from 'react';
+
+import { devices } from '@/utils/style/breakpoints';
 import { checkIfFirstCard, checkIfLastCard } from '@/utils/functions/getCardId';
 
+import PreviousButton from './PreviousButton/PreviousButton';
+import NextButton from './NextButton/NextButton';
+
 export default function SlideButtons({
-   viewSlideButton,
-   setViewSlideButton,
    data,
    displayedCards,
    setdisplayedCards,
@@ -35,11 +35,7 @@ export default function SlideButtons({
    }, [displayedCards]);
 
    return (
-      <SliderCommandDiv
-         viewSlideButton={viewSlideButton}
-         onMouseOver={() => setViewSlideButton(true)}
-         onMouseLeave={() => setViewSlideButton(false)}
-      >
+      <SliderCommandDiv>
          {isFirstCard ? '' : <PreviousButton {...ButtonsProps} />}
 
          {isLastCard ? '' : <NextButton {...ButtonsProps} />}
@@ -48,8 +44,6 @@ export default function SlideButtons({
 }
 
 const SliderCommandDiv = styled.div`
-   /* opacity: ${(props) => (props.viewSlideButton ? 1 : 0)}; */
-   opacity: 1;
    button {
       background: none;
       border: none;

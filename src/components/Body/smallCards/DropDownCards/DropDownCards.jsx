@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { devices, sizes } from '@/utils/style/breakpoints';
-import Card from './Card/Card';
-import SlideButtons from './SlideButtons/SlideButtons';
 import { handleScreenSizeChanges } from '@/utils/functions/handleScreenSize';
 import { getNumberOfCardsToShow } from '@/utils/functions/getNumberOfCardsToShow';
 
+import Card from './Card/Card';
+import SlideButtons from './SlideButtons/SlideButtons';
+
 export default function DropDownCards({ data, title }) {
    const [screenWidth, setScreenWidth] = useState();
-   const [viewSlideButton, setViewSlideButton] = useState(false);
 
    const [displayedCards, setdisplayedCards] = useState([]);
    const [numberOfCards, setNumberOfCards] = useState();
@@ -52,8 +53,6 @@ export default function DropDownCards({ data, title }) {
 
    // PROPS
    const slideButtonsProps = {
-      viewSlideButton,
-      setViewSlideButton,
       data,
       displayedCards,
       setdisplayedCards,
@@ -65,8 +64,6 @@ export default function DropDownCards({ data, title }) {
 
    const cardsWrapperProps = {
       key: animationKey,
-      onMouseOver: () => setViewSlideButton(true),
-      onMouseLeave: () => setViewSlideButton(false),
       initial: animationVariants.initial,
       animate: animationVariants.animate,
       exit: animationVariants.exit,
@@ -77,7 +74,9 @@ export default function DropDownCards({ data, title }) {
       <>
          <CardsContainer>
             <h2>{title}</h2>
-            {data.length > 5 && <SlideButtons {...slideButtonsProps} />}
+            {/* {(data.length > 5 || screenWidth < sizes.mobileM) && ( */}
+            <SlideButtons {...slideButtonsProps} />
+            {/* )} */}
             <AnimatePresence>
                <CardsWrapper {...cardsWrapperProps}>
                   {displayedCards.map((data, index) => (
@@ -96,6 +95,15 @@ const CardsContainer = styled.div`
 
    h2 {
       margin-left: 3.5vw;
+      @media ${devices.tablet} {
+         font-size: 2vw;
+      }
+      @media ${devices.mobileL} {
+         font-size: 2.5vw;
+      }
+      @media ${devices.mobileM} {
+         font-size: 3vw;
+      }
    }
    @media ${devices.mobileL}, ${devices.mobileM} {
       height: 25vw;
