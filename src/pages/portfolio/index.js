@@ -22,7 +22,7 @@ export default function Portfolio() {
                <HeroBanner />
             </HeroBannerProvider>
             <section id="projects">
-               <DropDownCards datas={projectsData} title="Mes Projets" />
+               <DropDownCards data={projectsData} title="Mes Projets" />
             </section>
          </main>
       </>

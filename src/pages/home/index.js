@@ -21,7 +21,7 @@ export default function Home() {
             </HeroBannerProvider>
             <section>
                <DropDownCards
-                  datas={homePageSmallCardsData}
+                  data={homePageSmallCardsData}
                   title="Ajoutés Récemment"
                />
             </section>

@@ -22,7 +22,7 @@ export default function Career() {
             </HeroBannerProvider>
             <section id="experiences">
                <DropDownCards
-                  datas={careerData}
+                  data={careerData}
                   title="Mes Expériences Professionnelles"
                />
             </section>
