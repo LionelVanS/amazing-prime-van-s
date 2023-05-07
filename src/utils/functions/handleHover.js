@@ -1,4 +1,4 @@
-export function handleHover(e, data, setOpenedCard, setTooClose) {
+export function handleHover(e, data, setOpenedCard, setTooClose, sizes) {
    if (!data) return;
 
    const card = e.currentTarget;
@@ -7,8 +7,11 @@ export function handleHover(e, data, setOpenedCard, setTooClose) {
    const leftPosition = cardPosition.left;
    const screenWidth = window.innerWidth;
    const maxPosition = 100;
+   const mobile = screenWidth <= sizes.mobileL;
 
    switch (true) {
+      case mobile:
+         return;
       case e.type === 'mouseout':
          setOpenedCard(' ');
          setTooClose('');
