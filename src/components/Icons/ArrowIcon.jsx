@@ -1,7 +1,7 @@
 import { devices } from '@/utils/style/breakpoints';
 import styled from 'styled-components';
 
-export default function ArrowIcon({ openLink }) {
+export default function ArrowIcon({ openLink, openedToggleMenu }) {
    return (
       <StyledSvg
          xmlns="http://www.w3.org/2000/svg"
@@ -11,6 +11,7 @@ export default function ArrowIcon({ openLink }) {
          strokeLinecap="round"
          strokeLinejoin="round"
          openLink={openLink}
+         openedToggleMenu={openedToggleMenu}
       >
          <polyline points="6 9 12 15 18 9"></polyline>
       </StyledSvg>
@@ -22,7 +23,8 @@ const StyledSvg = styled.svg`
    height: 1.2rem;
    margin-left: 0.5vw;
    transition: all 100ms ease-in;
-   transform: ${(props) => (props.openLink ? 'rotate(180deg)' : '')};
+   transform: ${(props) =>
+      props.openLink || props.openedToggleMenu ? 'rotate(180deg)' : ''};
    @media (${devices.mobileL}) {
       // Toggle animation
    }

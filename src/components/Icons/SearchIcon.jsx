@@ -34,7 +34,7 @@ const SearchIconDiv = styled.div`
    }
    svg {
       width: 2rem;
-      @media ${devices.tablet} {
+      @media ${devices.tablet}, ${devices.mobileL} {
          width: 1.5rem;
          height: 1.5rem;
       }
@@ -42,5 +42,9 @@ const SearchIconDiv = styled.div`
    @media ${devices.tablet} {
       width: 2.5rem;
       height: 2.5rem;
+   }
+   @media ${devices.mobileL} {
+      width: 3rem;
+      height: 3rem;
    }
 `;

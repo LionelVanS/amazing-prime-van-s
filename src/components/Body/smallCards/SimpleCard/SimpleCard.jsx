@@ -1,23 +1,24 @@
 import styled from 'styled-components';
 import BackgroundImage from '../BackgroundImage/BackgroundImage';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function SimpleCard({ data }) {
    const cardData = data.data;
    return (
       <>
          {cardData.map((data, index) => (
-            <ContentArticle key={index}>
+            <CardArticle key={index}>
                <h3>{data.title}</h3>
                <BackgroundImage data={data} />
-            </ContentArticle>
+            </CardArticle>
          ))}
       </>
    );
 }
 
-const ContentArticle = styled.article`
+const CardArticle = styled.article`
    width: 17.5vw;
-   height: 10vw;
+   aspect-ratio: 16/9;
    display: flex;
    flex-flow: row wrap;
    align-items: center;
@@ -28,5 +29,17 @@ const ContentArticle = styled.article`
    h3 {
       font-size: 1vw;
       z-index: 1;
+   }
+   @media ${devices.mobileL} {
+      width: 29vw;
+      h3 {
+         font-size: 2vw;
+      }
+   }
+   @media ${devices.tablet} {
+      width: 22vw;
+      h3 {
+         font-size: 1.5vw;
+      }
    }
 `;
