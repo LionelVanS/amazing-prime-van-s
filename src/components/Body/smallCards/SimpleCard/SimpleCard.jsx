@@ -17,29 +17,29 @@ export default function SimpleCard({ data }) {
 }
 
 const CardArticle = styled.article`
-   width: 17.5vw;
    aspect-ratio: 16/9;
    display: flex;
-   flex-flow: row wrap;
    align-items: center;
    padding-left: 1vw;
    border-radius: 0.8vw;
    position: relative;
-   overflow: hidden;
    h3 {
       font-size: 1vw;
       z-index: 1;
    }
+   @media ${devices.tablet} {
+      h3 {
+         font-size: 1.5vw;
+      }
+   }
    @media ${devices.mobileL} {
-      width: 29vw;
       h3 {
          font-size: 2vw;
       }
    }
-   @media ${devices.tablet} {
-      width: 22vw;
+   @media ${devices.mobileM} {
       h3 {
-         font-size: 1.5vw;
+         font-size: 3vw;
       }
    }
 `;
