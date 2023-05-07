@@ -26,19 +26,13 @@ const CardArticle = styled.article`
    h3 {
       font-size: 1vw;
       z-index: 1;
-   }
-   @media ${devices.tablet} {
-      h3 {
+      @media ${devices.tablet} {
          font-size: 1.5vw;
       }
-   }
-   @media ${devices.mobileL} {
-      h3 {
+      @media ${devices.mobileL} {
          font-size: 2vw;
       }
-   }
-   @media ${devices.mobileM} {
-      h3 {
+      @media ${devices.mobileM} {
          font-size: 3vw;
       }
    }
