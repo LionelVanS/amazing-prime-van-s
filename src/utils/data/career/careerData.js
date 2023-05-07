@@ -494,7 +494,7 @@ const smallCardsData = [
       id: 9,
       title: 'Votre Entreprise',
       logo: votreLogo,
-      header: 'Développeur Web Front-End',
+      header: [...competences],
       link: '',
       date: '2023 - ...',
       duration: 'Au moins 2 ans',
