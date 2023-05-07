@@ -1,5 +1,5 @@
 export const sizes = {
-   mobileM: '448',
+   mobileM: '680',
    mobileL: '880',
    tabletMin: '881',
    tabletMax: '1399',
