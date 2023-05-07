@@ -9,7 +9,7 @@ import Logo from './Logo/Logo';
 import NavBar from './NavBar/NavBar';
 import SearchIcon from '../Icons/SearchIcon';
 import ProfilUser from './ProfilUser/ProfilUser';
-import ToggleMenu from './ToggleMenu/ToggleMenu';
+import ToggleMenuButton from './Mobile/ToggleMenuButton/ToggleMenuButton';
 
 export default function Header() {
    const [isScroll, setIsScroll] = useState(false);
@@ -39,7 +39,7 @@ export default function Header() {
    return (
       <HeaderPosition>
          <StyledHeader animate={[animation.slide, animation.shadow]}>
-            <ToggleMenu />
+            <ToggleMenuButton />
             <Logo />
             <NavBar />
             <StyledDiv>
@@ -59,6 +59,9 @@ const HeaderPosition = styled.div`
    @media ${devices.tablet} {
       height: 2.5rem;
    }
+   @media ${devices.mobileL} {
+      height: 3rem;
+   }
 `;
 
 const StyledHeader = styled(motion.header)`
@@ -76,7 +79,6 @@ const StyledHeader = styled(motion.header)`
    border-radius: 0.5vw;
    @media ${devices.mobileL} {
       width: 100%;
-      padding: 0 3vw;
       justify-content: space-between;
    }
    @media ${devices.tablet} {

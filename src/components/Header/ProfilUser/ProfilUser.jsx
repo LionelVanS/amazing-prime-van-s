@@ -1,19 +1,42 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { handleScreenSizeChanges } from '@/utils/functions/handleScreenSize';
 import { colors } from '@/utils/style/colors';
-import { devices } from '@/utils/style/breakpoints';
+import { devices, sizes } from '@/utils/style/breakpoints';
+import socialLinks from '@/utils/data/header/profilUser/socialLinks';
+import contactLinks from '@/utils/data/header/profilUser/contactLinks';
 
 import UserMenu from './UserMenu/UserMenu';
+import OverlayMenu from '../Mobile/OverlayMenu/OverlayMenu';
+import { handleUserMenuEvent } from '@/utils/functions/handleUserMenuEvent';
 
 export default function ProfilUser() {
-   const [userMenuIsOpen, setUserMenuIsOpen] = useState(false);
+   const [userMenuIsHovered, setUserMenuIsHovered] = useState(false);
+   const [userMenuIsClicked, setUserMenuIsClicked] = useState(false);
+   const [screenWidth, setScreenWidth] = useState();
+
+   useEffect(() => {
+      setScreenWidth(window.innerWidth);
+      handleScreenSizeChanges(setScreenWidth);
+   }, []);
+
+   const userMenuProps = {
+      screenWidth,
+      sizes,
+      setUserMenuIsHovered,
+      setUserMenuIsClicked,
+      userMenuIsClicked,
+      userMenuIsHovered,
+   };
 
    return (
       <ProfilDiv
-         onMouseOver={() => setUserMenuIsOpen(true)}
-         onMouseOut={() => setUserMenuIsOpen(false)}
+         onMouseEnter={(e) => handleUserMenuEvent(e, userMenuProps)}
+         onMouseLeave={(e) => handleUserMenuEvent(e, userMenuProps)}
+         onClick={(e) => handleUserMenuEvent(e, userMenuProps)}
+         userMenuIsClicked={userMenuIsClicked}
+         userMenuIsHovered={userMenuIsHovered}
       >
          <p>Lionel</p>
          <Image
@@ -22,7 +45,18 @@ export default function ProfilUser() {
             width="40"
             height="40"
          />
-         {userMenuIsOpen ? <UserMenu /> : ' '}
+
+         {userMenuIsHovered && (
+            <UserMenu socialLinks={socialLinks} contactLinks={contactLinks} />
+         )}
+
+         {userMenuIsClicked && (
+            <OverlayMenu
+               socialLinks={socialLinks}
+               contactLinks={contactLinks}
+               parent="profilUser"
+            />
+         )}
       </ProfilDiv>
    );
 }
@@ -33,10 +67,10 @@ const ProfilDiv = styled.div`
    align-items: center;
    cursor: pointer;
    position: relative;
-   &:hover {
-      background-color: ${colors.lightGreyBackground};
-      box-shadow: inset 0 -1rem 1rem -1.5rem black;
-   }
+   background-color: ${(props) =>
+      props.userMenuIsHovered ? colors.lightGreyBackground : ''};
+   box-shadow: inset 0 -1rem 1rem -1.5rem black;
+
    > p {
       font-size: 1vw;
       font-weight: 500;
@@ -53,6 +87,17 @@ const ProfilDiv = styled.div`
          width: 2rem;
          height: 2rem;
       }
+      @media ${devices.mobileL} {
+         width: 1.5rem;
+         height: 1.5rem;
+         margin: 0 auto;
+      }
+   }
+   @media ${devices.mobileL} {
+      width: 5rem;
+      height: 3rem;
+      background-color: ${(props) =>
+         props.userMenuIsClicked ? colors.lightGreyBackground : ''};
    }
    @media ${devices.tablet} {
       height: 2.5rem;

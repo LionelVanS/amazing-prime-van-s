@@ -1,20 +1,19 @@
 import styled from 'styled-components';
-
+import { devices } from '@/utils/style/breakpoints';
 import { colors } from '@/utils/style/colors';
 
 import ContactInfo from './ContactInfo/ContactInfo';
 import SocialMedia from './SocialMedia/SocialMedia';
-import { devices } from '@/utils/style/breakpoints';
 
-export default function UserMenu() {
+export default function UserMenu({ socialLinks, contactLinks }) {
    return (
       <UserMenuDiv>
          <InfoDiv>
-            <SocialMedia />
+            <SocialMedia socialLinks={socialLinks} />
          </InfoDiv>
 
          <InfoDiv>
-            <ContactInfo />
+            <ContactInfo contactLinks={contactLinks} />
          </InfoDiv>
       </UserMenuDiv>
    );

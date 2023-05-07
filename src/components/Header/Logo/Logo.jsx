@@ -1,3 +1,4 @@
+import { devices } from '@/utils/style/breakpoints';
 import Link from 'next/link';
 import styled from 'styled-components';
 
@@ -30,4 +31,8 @@ const LogoDiv = styled.div`
 const Image = styled.img`
    width: 127px;
    height: 24px;
+   @media ${devices.mobileL}, ${devices.tablet} {
+      width: 100px;
+      height: 20px;
+   }
 `;

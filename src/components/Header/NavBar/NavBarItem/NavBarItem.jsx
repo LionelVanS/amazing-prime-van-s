@@ -26,7 +26,6 @@ export default function NavBarItem({ link }) {
 const NavItem = styled.li`
    position: relative;
    height: 4rem;
-   font-size: 1vrem;
    font-weight: 500;
    @media ${devices.tablet} {
       height: 2.5rem;
