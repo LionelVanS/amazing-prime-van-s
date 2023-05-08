@@ -1,8 +1,10 @@
-import Link from 'next/link';
 import styled from 'styled-components';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 import { colors } from '@/utils/style/colors';
 import { handleClick } from '@/utils/functions/handleClick';
-import { useRouter } from 'next/router';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function SocialLink({ link }) {
    const router = useRouter();
@@ -24,6 +26,14 @@ const LinkDiv = styled.div`
    svg {
       width: 1.5vw;
       fill: #fff;
+      @media ${devices.tablet} {
+      }
+      @media ${devices.mobileL} {
+         width: 3vw;
+      }
+      @media ${devices.mobileM} {
+         width: 5vw;
+      }
    }
    :hover {
       background-color: #fff;
@@ -31,5 +41,14 @@ const LinkDiv = styled.div`
       svg {
          fill: #000;
       }
+   }
+
+   @media ${devices.mobileL} {
+      width: 4vw;
+      height: 4vw;
+   }
+   @media ${devices.mobileM} {
+      width: 7vw;
+      height: 7vw;
    }
 `;

@@ -1,3 +1,4 @@
+import { devices } from '@/utils/style/breakpoints';
 import styled from 'styled-components';
 
 export default function Footer() {
@@ -19,5 +20,14 @@ const StyledFooter = styled.footer`
    p {
       text-align: center;
       font-size: 1vw;
+      @media ${devices.tablet} {
+         font-size: 1.5vw;
+      }
+      @media ${devices.mobileL} {
+         font-size: 1.5vw;
+      }
+      @media ${devices.mobileM} {
+         font-size: 2vw;
+      }
    }
 `;

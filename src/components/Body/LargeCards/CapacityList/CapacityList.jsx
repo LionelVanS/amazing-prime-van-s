@@ -1,5 +1,7 @@
-import { useLargeCard } from '@/utils/context/largeCard';
 import styled from 'styled-components';
+
+import { useLargeCard } from '@/utils/context/largeCard';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function CapacityList() {
    const data = useLargeCard();
@@ -21,5 +23,14 @@ const ListDiv = styled.div`
       margin-right: 1.5vw;
       text-decoration: underline;
       cursor: pointer;
+      @media ${devices.tablet} {
+         font-size: 1.5vw;
+      }
+      @media ${devices.mobileL} {
+         font-size: 2vw;
+      }
+      @media ${devices.mobileM} {
+         font-size: 2.5vw;
+      }
    }
 `;

@@ -21,6 +21,7 @@ export default function Background() {
 }
 
 const BackgroundDiv = styled.div`
+   height: 20vw;
    img {
       width: 100%;
       height: 100%;

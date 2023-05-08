@@ -4,6 +4,7 @@ import { useState } from 'react';
 import SocialLink from './SocialLink/SocialLink';
 import LinkDescription from './LinkDescription/LinkDescription';
 import { useLargeCard } from '@/utils/context/largeCard';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function Social() {
    // Contains socialLinks.name of hovered icon

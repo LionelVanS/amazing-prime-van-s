@@ -1,12 +1,15 @@
 import styled from 'styled-components';
-import Background from './Background/Background';
-import CapacityList from './CapacityList/CapacityList';
-import Infos from './Infos/Infos';
+
+import { useLargeCard } from '@/utils/context/largeCard';
+import { devices } from '@/utils/style/breakpoints';
+
 import Text from './Text/Text';
+import Infos from './Infos/Infos';
+import CapacityList from './CapacityList/CapacityList';
 import Description from './Description/Description';
 import Contact from './Contact/Contact';
 import Social from './Social/Social';
-import { useLargeCard } from '@/utils/context/largeCard';
+import Background from './Background/Background';
 
 export default function LargeCards() {
    const data = useLargeCard();
@@ -19,10 +22,10 @@ export default function LargeCards() {
                <Infos />
                <CapacityList />
                <Description />
-               <LinksDiv>
+               <div>
                   <Contact />
                   <Social />
-               </LinksDiv>
+               </div>
             </ContentDiv>
             <Background />
          </CardsSection>
@@ -30,16 +33,32 @@ export default function LargeCards() {
    );
 }
 
-const LinksDiv = styled.div``;
-
 const CardsSection = styled.section`
    width: 100%;
-   height: 45vw;
+   height: 95vh;
    display: flex;
    flex-flow: column;
    justify-content: space-around;
    padding-left: 4vw;
    position: relative;
+   @media ${devices.tablet} {
+      height: 50vw;
+      h1 {
+         font-size: 3vw;
+      }
+   }
+   @media ${devices.mobileL} {
+      height: 70vw;
+      h1 {
+         font-size: 3.5vw;
+      }
+   }
+   @media ${devices.mobileM} {
+      height: 100vw;
+      h1 {
+         font-size: 4.5vw;
+      }
+   }
 `;
 
 const ContentDiv = styled.div`
@@ -50,5 +69,14 @@ const ContentDiv = styled.div`
    ul,
    a {
       display: flex;
+   }
+   @media ${devices.tablet} {
+      width: 50%;
+   }
+   @media ${devices.mobileL} {
+      width: 60%;
+   }
+   @media ${devices.mobileM} {
+      width: 60%;
    }
 `;

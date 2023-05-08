@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+
+import { devices } from '@/utils/style/breakpoints';
+
 import PlayIcon from '@/components/Icons/PlayIcon';
 
 export default function Contact() {
@@ -27,6 +30,26 @@ const ContactDiv = styled.div`
       :hover {
          svg {
             transform: scale(1.1);
+         }
+      }
+
+      @media ${devices.tablet} {
+         p {
+            font-size: 1.5vw;
+         }
+      }
+      @media ${devices.mobileL} {
+         p {
+            font-size: 2vw;
+         }
+      }
+      @media ${devices.mobileM} {
+         p {
+            font-size: 2.5vw;
+            margin-left: 3vw;
+         }
+         svg {
+            width: 9vw;
          }
       }
    }
