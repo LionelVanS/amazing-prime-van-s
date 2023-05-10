@@ -1,10 +1,12 @@
-import ArrowIcon from '@/components/Icons/ArrowIcon';
-import { devices } from '@/utils/style/breakpoints';
-import { useState } from 'react';
 import styled from 'styled-components';
-import OverlayMenu from '../OverlayMenu/OverlayMenu';
+import { useState } from 'react';
+
+import { devices } from '@/utils/style/breakpoints';
 import { colors } from '@/utils/style/colors';
 import links from '@/utils/data/header/links';
+
+import OverlayMenu from '../OverlayMenu/OverlayMenu';
+import ArrowIcon from '@/components/Icons/ArrowIcon';
 
 export default function ToggleMenuButton() {
    const [openedToggleMenu, setOpenedToggleMenu] = useState(false);

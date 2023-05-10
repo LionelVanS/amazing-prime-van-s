@@ -1,9 +1,10 @@
-import { colors } from '@/utils/style/colors';
 import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import { colors } from '@/utils/style/colors';
+
 import NavBarMobile from '../NavBarMobile/NavBarMobile';
 import SocialMedia from '../../ProfilUser/UserMenu/SocialMedia/SocialMedia';
 import ContactInfo from '../../ProfilUser/UserMenu/ContactInfo/ContactInfo';
-import { useEffect, useState } from 'react';
 
 export default function OverlayMenu({
    links,
