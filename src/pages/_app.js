@@ -1,9 +1,11 @@
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
-import { colors } from '@/utils/style/colors';
-import Footer from '@/components/Footer/Footer';
-import Header from '@/components/Header/Header';
 import { useRouter } from 'next/router';
+import { colors } from '@/utils/style/colors';
+import { devices } from '@/utils/style/breakpoints';
+
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 export default function App({ Component, pageProps }) {
    const router = useRouter();
@@ -42,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
       }
       main{
          margin-bottom:5vw;
+         @media ${devices.mobileL}{
+            margin-top:3rem!important;
+            margin-bottom:2rem!important;
+         }
       }
       h1,h2, h3, p {
          color:#fff;
