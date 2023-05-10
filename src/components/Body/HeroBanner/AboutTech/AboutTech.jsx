@@ -34,10 +34,17 @@ const IncludeDiv = styled.div`
       p {
          font-size: 2vw;
       }
+      svg {
+         width: 2.5vw;
+      }
    }
+
    @media ${devices.tablet} {
       p {
          font-size: 1.5vw;
+      }
+      svg {
+         width: 2vw;
       }
    }
 `;

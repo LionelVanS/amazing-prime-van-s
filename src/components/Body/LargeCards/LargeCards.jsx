@@ -54,7 +54,7 @@ const CardsSection = styled.section`
       }
    }
    @media ${devices.mobileM} {
-      height: 100vw;
+      height: 110vw;
       h1 {
          font-size: 4.5vw;
       }
