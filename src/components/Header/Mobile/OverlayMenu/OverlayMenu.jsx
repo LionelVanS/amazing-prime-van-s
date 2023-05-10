@@ -15,39 +15,40 @@ export default function OverlayMenu({
    const [showProfil, setShowProfil] = useState(false);
 
    useEffect(() => {
-      if (parent == 'toggleMenuButton') {
-         setShowMenu(true);
-         setShowProfil(false);
-      } else if (parent == 'profilUser') {
-         setShowProfil(true);
-         setShowMenu(false);
-      } else {
-         setShowProfil(false);
-         setShowMenu(false);
+      switch (parent) {
+         case 'toggleMenuButton':
+            setShowProfil(false);
+            setShowMenu(true);
+            break;
+         case 'profilUser':
+            setShowMenu(false);
+            setShowProfil(true);
+            break;
+         default:
+            setShowProfil(false);
+            setShowMenu(false);
       }
    }, [parent]);
 
-   if (showMenu && !showProfil) {
-      return (
-         <StyledMenuDiv>
-            <NavBarMobile links={links} />
-         </StyledMenuDiv>
-      );
-   }
-   if (showProfil && !showMenu) {
-      return (
-         <StyledMenuDiv>
-            <InfoDiv>
-               <SocialMedia socialLinks={socialLinks} />
-            </InfoDiv>
-            <InfoDiv>
-               <ContactInfo contactLinks={contactLinks} />
-            </InfoDiv>
-         </StyledMenuDiv>
-      );
-   } else {
-      return null;
-   }
+   return (
+      <>
+         {showMenu && (
+            <StyledMenuDiv>
+               <NavBarMobile links={links} />
+            </StyledMenuDiv>
+         )}
+         {showProfil && (
+            <StyledMenuDiv>
+               <InfoDiv>
+                  <SocialMedia socialLinks={socialLinks} />
+               </InfoDiv>
+               <InfoDiv>
+                  <ContactInfo contactLinks={contactLinks} />
+               </InfoDiv>
+            </StyledMenuDiv>
+         )}
+      </>
+   );
 }
 
 const StyledMenuDiv = styled.div`
