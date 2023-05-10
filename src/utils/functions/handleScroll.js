@@ -1,5 +1,10 @@
-export function handleScroll(setIsScroll) {
+export function handleScroll(setIsScroll, screenWidth, sizes) {
    function listenScroll() {
+      if (screenWidth < sizes.mobileL) {
+         setIsScroll(false);
+         return;
+      }
+
       if (window.scrollY > 0) {
          setIsScroll(true);
       } else {
