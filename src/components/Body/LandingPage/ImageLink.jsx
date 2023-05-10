@@ -8,7 +8,7 @@ export default function ImageLink() {
    const linkApparition = {
       initial: { opacity: 0 },
       animate: { opacity: 1 },
-      transition: { delay: 9, duration: 1 },
+      transition: { delay: 8, duration: 1 },
    };
 
    return (
