@@ -1,22 +1,29 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { handleScroll } from '@/utils/functions/handleScroll';
-import { devices } from '../../utils/style/breakpoints';
+
+import { devices, sizes } from '../../utils/style/breakpoints';
 import { colors } from '@/utils/style/colors';
+import { handleScreenSizeChanges } from '@/utils/functions/handleScreenSize';
+import { handleScroll } from '@/utils/functions/handleScroll';
 
 import Logo from './Logo/Logo';
 import NavBar from './NavBar/NavBar';
 import SearchIcon from '../Icons/SearchIcon';
 import ProfilUser from './ProfilUser/ProfilUser';
 import ToggleMenuButton from './Mobile/ToggleMenuButton/ToggleMenuButton';
+import SubMenu from './Mobile/SubMenu/SubMenu';
 
 export default function Header() {
    const [isScroll, setIsScroll] = useState(false);
+   const [screenWidth, setScreenWidth] = useState();
 
    useEffect(() => {
-      handleScroll(setIsScroll);
-   }, []);
+      setScreenWidth(window.innerWidth);
+      handleScreenSizeChanges(setScreenWidth);
+
+      handleScroll(setIsScroll, screenWidth, sizes);
+   }, [screenWidth]);
 
    // ANIMATIONS
    const animation = {
@@ -37,18 +44,21 @@ export default function Header() {
    };
 
    return (
-      <HeaderPosition>
-         <StyledHeader animate={[animation.slide, animation.shadow]}>
-            <ToggleMenuButton />
-            <Logo />
-            <NavBar />
-            <StyledDiv>
-               <SearchIcon />
-               <ProfilUser />
-            </StyledDiv>
-            <OverlayDiv animate={[animation.slide, animation.opacity]} />
-         </StyledHeader>
-      </HeaderPosition>
+      <>
+         <HeaderPosition>
+            <StyledHeader animate={[animation.slide, animation.shadow]}>
+               <ToggleMenuButton />
+               <Logo />
+               <NavBar />
+               <StyledDiv>
+                  <SearchIcon />
+                  <ProfilUser />
+               </StyledDiv>
+               <OverlayDiv animate={[animation.slide, animation.opacity]} />
+            </StyledHeader>
+         </HeaderPosition>
+         <SubMenu />
+      </>
    );
 }
 
@@ -96,4 +106,7 @@ const OverlayDiv = styled(motion.div)`
    position: fixed;
    z-index: -1;
    background-color: ${colors.appBackground};
+   @media ${devices.mobileL} {
+      display: none;
+   }
 `;
