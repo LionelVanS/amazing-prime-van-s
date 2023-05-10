@@ -1,10 +1,11 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { getPaths, getProps } from '@/utils/functions/getStaticData';
 
-import careerData from '../../utils/data/career/careerData';
-import Error404 from '../404';
+import { getPaths, getProps } from '@/utils/functions/getStaticData';
 import { LargeCardProvider } from '@/utils/context/largeCard';
+import careerData from '../../utils/data/career/careerData';
+
+import Error404 from '../404';
 import LargeCards from '@/components/Body/LargeCards/LargeCards';
 
 export default function Experiences() {
@@ -16,7 +17,6 @@ export default function Experiences() {
    const data = careerData[parseInt(experiences) - 1];
 
    // Verifying if there is data or if path is exactly correct
-
    if (!data || isNaN(experiences)) {
       return <Error404 />;
    }
