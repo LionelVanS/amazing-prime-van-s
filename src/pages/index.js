@@ -4,10 +4,14 @@ import { useMemo, useState } from 'react';
 import AnimatedSentences from '@/components/Body/LandingPage/AnimatedSentences';
 import ImageLink from '@/components/Body/LandingPage/ImageLink';
 import texts from '@/utils/data/landingPage/textData';
+import SkipButton from '@/components/Body/LandingPage/SkipButton';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function LandingPage() {
    // Contains array of letters
    const [lettersArray, setLettersArray] = useState([]);
+
+   const [letAnimation, setLetAnimation] = useState(true);
 
    // Contains length of the two first sentences
    const [wakeUpTextLength, setWakeUpTextLength] = useState();
@@ -26,6 +30,10 @@ export default function LandingPage() {
       setLettersArray(newLettersArray);
       setWakeUpTextLength(newLettersArray[0].length);
       setMatrixTextLength(newLettersArray[1].length);
+
+      setTimeout(() => {
+         setLetAnimation(false);
+      }, 7500);
    }, []);
 
    return (
@@ -50,7 +58,7 @@ export default function LandingPage() {
                      </ParaphDiv>
                   ))}
                </div>
-               <ImageLink />
+               {letAnimation ? <SkipButton /> : <ImageLink />}
             </StyledSection>
          </StyledMain>
       </>
@@ -59,6 +67,9 @@ export default function LandingPage() {
 
 const StyledMain = styled.main`
    margin: 0;
+   @media ${devices.mobileL} {
+      margin: 0 !important;
+   }
 `;
 
 const StyledSection = styled.section`
