@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 import { getDelay } from '@/utils/functions/getDelay';
+import styled from 'styled-components';
+import { devices } from '@/utils/style/breakpoints';
 
 export default function AnimatedSentences({
    sentence,
@@ -23,14 +25,26 @@ export default function AnimatedSentences({
 
       return letters === ' ' ? (
          // If the character is a whitespace
-         <motion.span key={index} {...lettersApparition}>
+         <TextSpan key={index} {...lettersApparition}>
             &nbsp;
-         </motion.span>
+         </TextSpan>
       ) : (
          // If the character is a letter
-         <motion.span key={index} {...lettersApparition}>
+         <TextSpan key={index} {...lettersApparition}>
             {letters}
-         </motion.span>
+         </TextSpan>
       );
    });
 }
+
+const TextSpan = styled(motion.span)`
+   @media ${devices.tablet} {
+      font-size: 2vw;
+   }
+   @media ${devices.mobileL} {
+      font-size: 2.5vw;
+   }
+   @media ${devices.mobileM} {
+      font-size: 3vw;
+   }
+`;
