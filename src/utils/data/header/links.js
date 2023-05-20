@@ -8,14 +8,8 @@ const links = [
    // HOMEPAGE
    {
       name: 'Accueil',
-      path: '/home',
+      path: '/',
       icon: <HomeIcon />,
-      subNav: [
-         {
-            name: 'Profil',
-            path: '/home/profil',
-         },
-      ],
    },
 
    // CAREER PAGE

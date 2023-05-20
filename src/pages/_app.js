@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { createGlobalStyle } from 'styled-components';
-import { useRouter } from 'next/router';
 import { colors } from '@/utils/style/colors';
 import { devices } from '@/utils/style/breakpoints';
 
@@ -8,8 +7,6 @@ import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer/Footer';
 
 export default function App({ Component, pageProps }) {
-   const router = useRouter();
-   const isLandingPage = router.asPath === '/';
    return (
       <>
          <Head>
@@ -19,10 +16,10 @@ export default function App({ Component, pageProps }) {
             />
             <link rel="shortcut icon" href="./images/favicon.png" />
          </Head>
-         <GlobalStyle isLandingPage={isLandingPage} />
-         {!isLandingPage && <Header />}
+         <GlobalStyle />
+         <Header />
          <Component {...pageProps} />
-         {!isLandingPage && <Footer />}
+         <Footer />
       </>
    );
 }
@@ -36,8 +33,7 @@ const GlobalStyle = createGlobalStyle`
       body {
          min-height: 100vh;
          margin:0;
-         background-color: ${(props) =>
-            props.isLandingPage ? '#000' : colors.appBackground};
+         background-color: ${colors.appBackground};
          font-family: 'Amazon Ember', sans-serif;
          overflow-x: hidden;
          position:relative;
