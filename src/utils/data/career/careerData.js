@@ -7,6 +7,7 @@ import dsSmith from '/public/images/career/logos/ds-smith.png';
 import tecumseh from '/public/images/career/logos/tecumseh.png';
 import nemera from '/public/images/career/logos/nemera.png';
 import intermarche from '/public/images/career/logos/intermarche.png';
+import carrefour from '/public/images/career/logos/carrefour.png';
 import votreLogo from '/public/images/career/logos/votre-logo.png';
 
 // BACKGROUND
@@ -34,7 +35,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2011 - 2014',
-      duration: '+ de 3 ans',
+      job: 'Magasinier',
       text: [
          {
             paraph:
@@ -93,7 +94,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2008 - 2011',
-      duration: '+ de 3 ans',
+      job: 'Photographe',
       text: [
          {
             paraph:
@@ -152,7 +153,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2016',
-      duration: '- de 1 ans',
+      job: 'Magasinier Cariste',
       text: [
          {
             paraph:
@@ -198,16 +199,6 @@ const smallCardsData = [
             link: 'https://www.celestin-materiaux.fr/',
             icon: <WebIcon />,
          },
-         {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
-            name: 'Visitez le site',
-            link: 'https://www.celestin-materiaux.fr/',
-            icon: <WebIcon />,
-         },
       ],
    },
    {
@@ -218,7 +209,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2017',
-      duration: '- de 1 an',
+      job: 'Magasinier Cariste',
       text: [
          {
             paraph:
@@ -274,7 +265,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2018',
-      duration: '- de 1 an',
+      job: 'Cariste',
       text: [
          {
             paraph:
@@ -327,7 +318,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2018',
-      duration: '- de 1 an',
+      job: 'Réceptionnaire',
       text: [
          {
             paraph:
@@ -386,7 +377,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2018 - 2019',
-      duration: '- de 1 an',
+      job: 'Cariste',
       text: [
          {
             paraph:
@@ -442,7 +433,7 @@ const smallCardsData = [
       header: [...competences],
       link: 'experiences',
       date: '2022',
-      duration: '+ de 1 an',
+      job: 'Cariste',
       text: [
          {
             paraph:
@@ -492,13 +483,65 @@ const smallCardsData = [
    },
    {
       id: 9,
+      title: 'Carrefour',
+      logo: carrefour,
+      image: intermarcheBg,
+      header: [...competences],
+      link: 'experiences',
+      date: '2023',
+      job: 'Réceptionnaire',
+      text: [
+         {
+            paraph:
+               "Au sein de l'équipe de réception du magasin Carrefour Anglet, mon rôle était de réceptionner la marchandise, de contrôler la conformité de la livraison et d'acheminer les produits selon les règles établies.",
+         },
+         {
+            paraph: '',
+         },
+      ],
+      infos: [
+         {
+            data: 'Poste Occupé:',
+         },
+         {
+            data: 'Réceptionnaire',
+         },
+      ],
+      capacity: [
+         {
+            name: 'Compétences Clés:',
+         },
+         {
+            name: "Esprit d'équipe",
+         },
+         {
+            name: 'Gestion du temps',
+         },
+         {
+            name: 'Organisation',
+         },
+      ],
+      links: [
+         {
+            name: 'Télécharger mon CV',
+            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+            icon: <DownloadIcon />,
+         },
+         {
+            name: 'Visitez le site',
+            link: 'https://www.carrefour.fr/',
+            icon: <WebIcon />,
+         },
+      ],
+   },
+   {
+      id: 9,
       title: 'Votre Entreprise',
       logo: votreLogo,
       header: [...competences],
       link: '',
       date: '2023 - ...',
-      duration: 'Au moins 2 ans',
-
+      job: 'Développeur Front',
       text: [
          {
             paraph:
