@@ -19,6 +19,7 @@ import dsSmithBg from '/public/images/career/background/dssmith.jpg';
 import tecumsehBg from '/public/images/career/background/tecumseh.jpg';
 import nemeraBg from '/public/images/career/background/nemera.jpg';
 import intermarcheBg from '/public/images/career/background/intermarche.jpg';
+import carrefourBg from '/public/images/career/background/carrefour.jpg';
 
 // ICONS
 import DownloadIcon from '@/components/Icons/DownloadIcon';
@@ -485,7 +486,7 @@ const smallCardsData = [
       id: 9,
       title: 'Carrefour',
       logo: carrefour,
-      image: intermarcheBg,
+      image: carrefourBg,
       header: [...competences],
       link: 'experiences',
       date: '2023',
