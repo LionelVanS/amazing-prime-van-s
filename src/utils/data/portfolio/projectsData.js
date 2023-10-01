@@ -27,7 +27,7 @@ const portfolioSmallCardsData = [
       header: 'Dynamiser un site web',
       link: 'project',
       date: '2022',
-      duration: "Projet d'école",
+      reason: "Projet d'école",
       text: [
          {
             paraph:
@@ -84,7 +84,7 @@ const portfolioSmallCardsData = [
       header: 'Optimiser un site web',
       link: 'project',
       date: '2022',
-      duration: "Projet d'école",
+      reason: "Projet d'école",
       text: [
          {
             paraph:
@@ -139,7 +139,7 @@ const portfolioSmallCardsData = [
       header: 'Créer un site e-commerce',
       link: 'project',
       date: '2022',
-      duration: "Projet d'école",
+      reason: "Projet d'école",
       text: [
          {
             paraph:
@@ -188,7 +188,7 @@ const portfolioSmallCardsData = [
       header: 'Construire une API sécurisée',
       link: 'project',
       date: '2007',
-      duration: "Projet d'école",
+      reason: "Projet d'école",
       text: [
          {
             paraph:
@@ -243,7 +243,7 @@ const portfolioSmallCardsData = [
       header: "Créer un réseau social d'entreprise",
       link: 'project',
       date: '2022',
-      duration: "Projet d'école",
+      reason: "Projet d'école",
       text: [
          {
             paraph:
@@ -299,7 +299,7 @@ const portfolioSmallCardsData = [
       link: 'project',
       deploy: '',
       date: '2023',
-      duration: 'Projet personnel',
+      reason: 'Projet personnel',
       text: [
          {
             paraph:
