@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { devices } from '@/utils/style/breakpoints';
-
 import Titles from './Titles/Titles';
 import AboutTech from './AboutTech/AboutTech';
 import AboutLink from './AboutLink/AboutLink';
@@ -68,26 +66,22 @@ const smallSlideAnimation = {
 // GLOBAL STYLE
 const HeroBannerSection = styled.section`
    height: 31vw;
-   padding-left: 3.5vw;
+   padding: 3.5vw;
    margin: 0 3.5vw;
    border-radius: 0.5vw;
    overflow: hidden;
    position: relative;
+   display: flex;
+   flex-flow: column;
+   justify-content: space-between;
 `;
 
 const TitleDiv = styled(motion.div)`
    z-index: 1;
-   position: absolute;
-   top: 4vw;
 `;
 
 const AboutDiv = styled.div`
    z-index: 1;
-   position: absolute;
-   bottom: 6vw;
-   @media ${devices.mobileL} {
-      bottom: 4vw;
-   }
 `;
 
 const BackgroundDiv = styled.div`
