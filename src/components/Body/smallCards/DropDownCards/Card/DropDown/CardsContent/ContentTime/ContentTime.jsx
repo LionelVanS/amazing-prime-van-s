@@ -7,7 +7,7 @@ export default function ContentTime({ data }) {
       <TimeDiv>
          <p>{data.date}</p>
          <p>{data.duration}</p>
-         <span>All</span>
+         <span>{data.reason || data.job}</span>
       </TimeDiv>
    );
 }
@@ -16,7 +16,7 @@ const TimeDiv = styled.div`
    display: flex;
    align-items: baseline;
    p {
-      margin: 0.5vw 1vw 0 0;
+      margin: 0.5vw 0.5vw 0 0;
    }
    span {
       height: 1.3vw;
