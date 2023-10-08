@@ -1,0 +1,18 @@
+import styled from 'styled-components';
+
+export default function PLusIcon() {
+   return (
+      <>
+         <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="#fff"
+            fill="#fff"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+         >
+            <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+         </svg>
+      </>
+   );
+}
