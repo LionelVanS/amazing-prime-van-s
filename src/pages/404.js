@@ -1,4 +1,3 @@
-import Logo from '@/components/Header/Logo/Logo';
 import Link from 'next/link';
 import styled from 'styled-components';
 
