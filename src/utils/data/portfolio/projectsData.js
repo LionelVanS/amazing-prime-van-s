@@ -5,6 +5,7 @@ import kanapLogo from '/public/images/portfolio/projects/kanap.png';
 import piiquanteLogo from '/public/images/portfolio/projects/piiquante.png';
 import groupomaniaLogo from '/public/images/portfolio/projects/groupomania.png';
 import portfolioLogo from '/public/images/portfolio/projects/portfolio.png';
+import vansWebLogo from '/public/images/portfolio/projects/van-s.png';
 
 // HEROBANNER'S BACKGROUND
 import ohmyfoodBackground from '/public/images/portfolio/projects/ohmyfood-background.jpg';
@@ -13,6 +14,7 @@ import kanapBackground from '/public/images/portfolio/projects/kanap-background.
 import piiquanteBackground from '/public/images/portfolio/projects/piiquante-background.jpg';
 import groupomaniaBackground from '/public/images/portfolio/projects/groupomania-background.jpg';
 import portfolioBackground from '/public/images/portfolio/projects/portfolio-background.jpg';
+import vansWebBackground from '/public/images/portfolio/projects/vansweb-background.jpg';
 
 // ICONS
 import GithubIcon from '@/components/Icons/GithubIcon';
@@ -297,7 +299,6 @@ const portfolioSmallCardsData = [
       image: portfolioBackground,
       header: 'Créer mon portfolio',
       link: 'project',
-      deploy: '',
       date: '2023',
       reason: 'Projet personnel',
       text: [
@@ -343,6 +344,61 @@ const portfolioSmallCardsData = [
             name: 'Repo Github',
             link: 'https://github.com/LionelVanS/amazing-prime-van-s',
             icon: <GithubIcon />,
+         },
+      ],
+   },
+   {
+      id: 7,
+      title: 'Van S Web',
+      logo: vansWebLogo,
+      image: vansWebBackground,
+      header: 'Créer mon site professionnel',
+      link: 'project',
+      date: '2024',
+      reason: 'Projet professionnel',
+      text: [
+         {
+            paraph:
+               "Après ma formation, la suite logique est de trouver une première expérience afin d'assoir mes connaissances, mais pas question de rester sur mes acquis, je décide donc de continuer mon apprentissage et de me lancer un challenge...",
+         },
+         {
+            paraph:
+               "Pour réaliser ce projet, je n'ai utilisé que des technologies actuelles. Après avoir appris React, je me suis lancé le défi de créer une application NextJS. Le choix entre Tailwind CSS et Styled Components fut difficile, mais souhaitant de la flexibilité pour mon style, Styled Components en est sorti gagnant. Pour gérer les animations les plus complexes, je me suis tourné vers Framer Motion qui permet une meilleure compréhension et une meilleure maintenabilité.  ",
+         },
+      ],
+      infos: [
+         {
+            data: 'Notions Importantes :',
+         },
+         {
+            data: 'SSR/CSR',
+         },
+         {
+            data: 'Lazy Loading',
+         },
+         {
+            data: "Coût d'Opportunité",
+         },
+      ],
+      capacity: [
+         {
+            name: 'Technologies Utilisées :',
+         },
+         {
+            name: 'NextJS',
+         },
+         {
+            name: 'Styled Components',
+         },
+         {
+            name: 'Framer Motion',
+         },
+      ],
+      links: [
+         {
+            name: 'Visitez le site',
+            link: 'https://lionelvans.com',
+            icon: <WebIcon />,
          },
       ],
    },
