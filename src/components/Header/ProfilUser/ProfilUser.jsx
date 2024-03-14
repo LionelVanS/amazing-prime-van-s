@@ -30,6 +30,11 @@ export default function ProfilUser() {
       userMenuIsHovered,
    };
 
+   const links = [
+      { type: 'Réseaux', data: socialLinks },
+      { type: 'Contact', data: contactLinks },
+   ];
+
    return (
       <ProfilDiv
          onMouseEnter={(e) => handleUserMenuEvent(e, userMenuProps)}
@@ -46,16 +51,10 @@ export default function ProfilUser() {
             height="40"
          />
 
-         {userMenuIsHovered && (
-            <UserMenu socialLinks={socialLinks} contactLinks={contactLinks} />
-         )}
+         {userMenuIsHovered && <UserMenu links={links} />}
 
          {userMenuIsClicked && (
-            <OverlayMenu
-               socialLinks={socialLinks}
-               contactLinks={contactLinks}
-               parent="profilUser"
-            />
+            <OverlayMenu links={links} parent="profilUser" />
          )}
       </ProfilDiv>
    );

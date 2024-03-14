@@ -3,27 +3,23 @@ import { useEffect, useState } from 'react';
 import { colors } from '@/utils/style/colors';
 
 import NavBarMobile from '../NavBarMobile/NavBarMobile';
-import SocialMedia from '../../ProfilUser/UserMenu/SocialMedia/SocialMedia';
-import ContactInfo from '../../ProfilUser/UserMenu/ContactInfo/ContactInfo';
+import Links from '../../ProfilUser/UserMenu/Links/Links';
 
-export default function OverlayMenu({
-   links,
-   socialLinks,
-   contactLinks,
-   parent,
-}) {
+export default function OverlayMenu({ links, parent }) {
    const [showMenu, setShowMenu] = useState(false);
    const [showProfil, setShowProfil] = useState(false);
 
    useEffect(() => {
       switch (parent) {
-         case 'toggleMenuButton':
+         case '':
+            break;
+         case 'menu':
             setShowProfil(false);
             setShowMenu(true);
             break;
          case 'profilUser':
-            setShowMenu(false);
             setShowProfil(true);
+            setShowMenu(false);
             break;
          default:
             setShowProfil(false);
@@ -31,25 +27,26 @@ export default function OverlayMenu({
       }
    }, [parent]);
 
-   return (
-      <>
-         {showMenu && (
-            <StyledMenuDiv>
-               <NavBarMobile links={links} />
-            </StyledMenuDiv>
-         )}
-         {showProfil && (
-            <StyledMenuDiv>
-               <InfoDiv>
-                  <SocialMedia socialLinks={socialLinks} />
-               </InfoDiv>
-               <InfoDiv>
-                  <ContactInfo contactLinks={contactLinks} />
-               </InfoDiv>
-            </StyledMenuDiv>
-         )}
-      </>
-   );
+   if (showMenu) {
+      return (
+         <StyledMenuDiv>
+            <NavBarMobile links={links} />
+         </StyledMenuDiv>
+      );
+   }
+
+   if (showProfil) {
+      return (
+         <StyledMenuDiv>
+            {links &&
+               links.map((link, index) => (
+                  <InfoDiv key={index}>
+                     <Links links={link} />
+                  </InfoDiv>
+               ))}
+         </StyledMenuDiv>
+      );
+   }
 }
 
 const StyledMenuDiv = styled.div`

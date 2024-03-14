@@ -2,19 +2,17 @@ import styled from 'styled-components';
 import { devices } from '@/utils/style/breakpoints';
 import { colors } from '@/utils/style/colors';
 
-import ContactInfo from './ContactInfo/ContactInfo';
-import SocialMedia from './SocialMedia/SocialMedia';
+import Links from './Links/Links';
 
-export default function UserMenu({ socialLinks, contactLinks }) {
+export default function UserMenu({ links }) {
    return (
       <UserMenuDiv>
-         <InfoDiv>
-            <SocialMedia socialLinks={socialLinks} />
-         </InfoDiv>
-
-         <InfoDiv>
-            <ContactInfo contactLinks={contactLinks} />
-         </InfoDiv>
+         {links &&
+            links.map((link, index) => (
+               <InfoDiv key={index}>
+                  <Links links={link} />
+               </InfoDiv>
+            ))}
       </UserMenuDiv>
    );
 }

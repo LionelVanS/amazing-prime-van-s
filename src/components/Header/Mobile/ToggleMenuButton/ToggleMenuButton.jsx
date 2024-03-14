@@ -19,9 +19,7 @@ export default function ToggleMenuButton() {
          >
             <p>Menu</p>
             <ArrowIcon openedToggleMenu={openedToggleMenu} />
-            {openedToggleMenu && (
-               <OverlayMenu links={links} parent="toggleMenuButton" />
-            )}
+            {openedToggleMenu && <OverlayMenu links={links} parent="menu" />}
          </ToggleDiv>
       </>
    );

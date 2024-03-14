@@ -19,7 +19,6 @@ export function handleUserMenuEvent(e, userMenuProps) {
    switch (true) {
       case type == ('mouseenter' || 'mouseleave') && (mobile || tabletDevice):
          return;
-         break;
       case type == 'mouseenter' && (tabletScreenSize || desktop):
          setUserMenuIsHovered(!userMenuIsHovered);
          break;
@@ -28,7 +27,6 @@ export function handleUserMenuEvent(e, userMenuProps) {
          break;
       case type == 'click' && (mobile || tabletDevice):
          setUserMenuIsClicked(!userMenuIsClicked);
-
          break;
       default:
          return;

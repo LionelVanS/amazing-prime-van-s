@@ -25,15 +25,30 @@ import carrefourBg from '/public/images/career/background/carrefour.jpg';
 import DownloadIcon from '@/components/Icons/DownloadIcon';
 import WebIcon from '@/components/Icons/WebIcon';
 
+// Dynamic Data
 const competences = 'Mes compétences à votre service !';
 
-const smallCardsData = [
+const downloadCVLink = {
+   name: 'Télécharger mon CV',
+   link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
+   icon: <DownloadIcon />,
+}
+
+// To add header to every cards
+const addDynamicData = (object) => {
+   return {
+      ...object,
+      header: competences,
+      links: object.links ? [downloadCVLink, ...object.links] : [downloadCVLink]
+   }
+}
+
+const smallCardsDataWithoutDynamicData = [
    {
       id: 1,
       title: 'GHND',
       logo: ghnd,
       image: ghndBg,
-      header: [...competences],
       link: 'experiences',
       date: '2011 - 2014',
       job: 'Magasinier',
@@ -76,11 +91,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://ghnd.fr/',
             icon: <WebIcon />,
@@ -92,7 +102,6 @@ const smallCardsData = [
       title: 'Van S Photographie',
       logo: vanSPhoto,
       image: vanSPhotoBg,
-      header: [...competences],
       link: 'experiences',
       date: '2008 - 2011',
       job: 'Photographe',
@@ -135,11 +144,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.instagram.com/van.s.photographie/',
             icon: <WebIcon />,
@@ -151,7 +155,6 @@ const smallCardsData = [
       title: 'Célestin Matériaux',
       logo: celestin,
       image: celestinBg,
-      header: [...competences],
       link: 'experiences',
       date: '2016',
       job: 'Magasinier Cariste',
@@ -207,7 +210,6 @@ const smallCardsData = [
       title: 'M+ Matériaux',
       logo: mPlus,
       image: mPlusBg,
-      header: [...competences],
       link: 'experiences',
       date: '2017',
       job: 'Magasinier Cariste',
@@ -247,11 +249,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.mplus-materiaux.fr/',
             icon: <WebIcon />,
@@ -263,7 +260,6 @@ const smallCardsData = [
       title: 'DS Smith',
       logo: dsSmith,
       image: dsSmithBg,
-      header: [...competences],
       link: 'experiences',
       date: '2018',
       job: 'Cariste',
@@ -300,11 +296,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.dssmith.com/fr/',
             icon: <WebIcon />,
@@ -316,7 +307,6 @@ const smallCardsData = [
       title: 'Tecumseh',
       logo: tecumseh,
       image: tecumsehBg,
-      header: [...competences],
       link: 'experiences',
       date: '2018',
       job: 'Réceptionnaire',
@@ -359,11 +349,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.tecumseh.com/fr/eu/',
             icon: <WebIcon />,
@@ -375,7 +360,6 @@ const smallCardsData = [
       title: 'Nemera',
       logo: nemera,
       image: nemeraBg,
-      header: [...competences],
       link: 'experiences',
       date: '2018 - 2019',
       job: 'Cariste',
@@ -415,11 +399,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.nemera.net/',
             icon: <WebIcon />,
@@ -431,7 +410,6 @@ const smallCardsData = [
       title: 'Intermarché',
       logo: intermarche,
       image: intermarcheBg,
-      header: [...competences],
       link: 'experiences',
       date: '2022',
       job: 'Cariste',
@@ -471,11 +449,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.mousquetaires.com/nos-filiales/logistique/alimentaire/',
             icon: <WebIcon />,
@@ -487,7 +460,6 @@ const smallCardsData = [
       title: 'Carrefour',
       logo: carrefour,
       image: carrefourBg,
-      header: [...competences],
       link: 'experiences',
       date: '2023',
       job: 'Réceptionnaire',
@@ -524,11 +496,6 @@ const smallCardsData = [
       ],
       links: [
          {
-            name: 'Télécharger mon CV',
-            link: '/pdf/CV_Van_Schellebeck_Lionel_DéveloppeurWeb.pdf',
-            icon: <DownloadIcon />,
-         },
-         {
             name: 'Visitez le site',
             link: 'https://www.carrefour.fr/',
             icon: <WebIcon />,
@@ -536,10 +503,9 @@ const smallCardsData = [
       ],
    },
    {
-      id: 9,
+      id: 10,
       title: 'Votre Entreprise',
       logo: votreLogo,
-      header: [...competences],
       link: '',
       date: '2023 - ...',
       job: 'Développeur Front',
@@ -554,5 +520,7 @@ const smallCardsData = [
       ],
    },
 ];
+
+const smallCardsData = smallCardsDataWithoutDynamicData.map(addDynamicData)
 
 export default smallCardsData;
