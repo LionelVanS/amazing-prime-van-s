@@ -5,7 +5,7 @@ import kanapLogo from '/public/images/portfolio/projects/kanap.png';
 import piiquanteLogo from '/public/images/portfolio/projects/piiquante.png';
 import groupomaniaLogo from '/public/images/portfolio/projects/groupomania.png';
 import portfolioLogo from '/public/images/portfolio/projects/portfolio.png';
-import vansWebLogo from '/public/images/portfolio/projects/van-s.png';
+import vansWebLogo from '/public/images/portfolio/projects/van-s-web.png';
 
 // HEROBANNER'S BACKGROUND
 import ohmyfoodBackground from '/public/images/portfolio/projects/ohmyfood-background.jpg';
